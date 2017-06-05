@@ -16,9 +16,9 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/~chrisb/blog/public/css/poole.css">
-  <link rel="stylesheet" href="/~chrisb/blog/public/css/syntax.css">
-  <link rel="stylesheet" href="/~chrisb/blog/public/css/lanyon.css">
+  <link rel="stylesheet" href="/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/blog/public/css/syntax.css">
+  <link rel="stylesheet" href="/blog/public/css/lanyon.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
 
@@ -44,7 +44,7 @@
     <meta name="twitter:title" content="Home">
   
   
-    <meta name="twitter:url" content="http://www.princeton.edu/~chrisb/blog/page2/">
+    <meta name="twitter:url" content="http://blog.chrisbaldassano.com//page2/">
   
   
     <meta name="twitter:description" content="A blog about real minds, artificial minds, using artificial minds to understand real minds, and using real minds to inspire artificial minds">
@@ -68,7 +68,7 @@
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item" href="http://www.chrisbaldassano.com">Main</a>
-    <a class="sidebar-nav-item" href="/~chrisb/blog/">Blog</a>
+    <a class="sidebar-nav-item" href="/blog/">Blog</a>
 
 
     
@@ -85,7 +85,7 @@
     
       
         
-          <a class="sidebar-nav-item" href="/~chrisb/blog/archive/">Blog Archive</a>
+          <a class="sidebar-nav-item" href="/blog/archive/">Blog Archive</a>
         
       
     
@@ -100,7 +100,7 @@
       
     
 
-    <a class="sidebar-nav-item" href="/~chrisb/blog/atom.xml">Atom feed</a>
+    <a class="sidebar-nav-item" href="/blog/atom.xml">Atom feed</a>
     
   </nav>
 
@@ -118,7 +118,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/~chrisb/blog" title="Home">Rooting for the machines</a>
+            <a href="/blog" title="Home">Rooting for the machines</a>
             <small>A Blog by Chris Baldassano</small>
           </h3>
         </div>
@@ -129,7 +129,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/~chrisb/blog/2015/12/01/race/">
+      <a href="/blog/2015/12/01/race/">
         Just how Amazing is The Amazing Race?
       </a>
     </h1>
@@ -148,7 +148,7 @@
 
 <p>We can measure how effective the Race was at picking a winner, by seeing what true skill rank the winning team had. So if the team with the highest skill (number 1) wins, that means the race did a good job. If a team with a low skill rank (like 10) wins, then the race did a very bad job of picking the million-dollar winner. This plot shows the rank of the winning team, compared to chance ((1+11)/2=6).</p>
 
-<p><img src="/%7Echrisb/blog/public/race/elim_rank.png" alt="Winning rank using loser-elimination"></p>
+<p><img src="/blog/public/race/elim_rank.png" alt="Winning rank using loser-elimination"></p>
 
 <p>This actually looks surprisingly good! Even at with lots of leg randomness (more than the actual skill difference between the teams) a team with a relatively high rank tends to win. Once the randomness gets to be an order of magnitude bigger than the differences between teams, the winner starts getting close to random.</p>
 
@@ -156,17 +156,17 @@
 
 <p>But how good is this relative to a simpler kind of competition, where the winner is the team with the most first-place wins? Rather than eliminating teams, all teams race all 9 legs, and the team coming in first the most wins the prize (ties are broken based on which team won most recently). Would this do better or worse?</p>
 
-<p><img src="/%7Echrisb/blog/public/race/elim_first_rank.png" alt="Winning rank using loser-elimination or first place wins"></p>
+<p><img src="/blog/public/race/elim_first_rank.png" alt="Winning rank using loser-elimination or first place wins"></p>
 
 <p>Turns out this is a little bit better! In general the rank of the winning team tends to be higher, meaning that a &quot;more deserving&quot; team won the money. But the size of the gap depends on how much randomness there is in each leg of the race. Which point along these curves corresponds to the actual TV show?</p>
 
 <p>To answer this, I took the per-leg rankings from the <a href="http://amazingrace.wikia.com/wiki/Main_Page">Amazing Race Wikia</a> from the past 10 seasons. Yes, there are people way more obsessed with this show than me, who have been together databases of stats from each season. I measured how consistent the rankings were from each leg of the race. If there wasn&#39;t any randomness, we&#39;d expect these to have a perfect (Kendall) correlation, while if each leg is just craziness for all teams then the correlation should be near zero. I found that this correlation varied a bit across seasons, but had a mean of 0.0992. Comparing this to the same calculation from the model, this corresponds to a noise level of about sigma=2.2.</p>
 
-<p><img src="/%7Echrisb/blog/public/race/tau_rank.png" alt="Leg ranking correlations for each noise level"></p>
+<p><img src="/blog/public/race/tau_rank.png" alt="Leg ranking correlations for each noise level"></p>
 
 <p>At this level of randomness, there is about a 10% advantage for counting-first-places competition: 37.4% of the time it picks a better team to win the money, while 28.5% of the time the current elimination setup picks a better team (they pick the same team 34.1% of the time).</p>
 
-<p><img src="/%7Echrisb/blog/public/race/frac_compare.png" alt="Comparison of methods at sigma=2.2"></p>
+<p><img src="/blog/public/race/frac_compare.png" alt="Comparison of methods at sigma=2.2"></p>
 
 <p>Of course there are some disadvantages to counting first place wins: the requires all teams to run all legs (which is logistically difficult and means we get to know each team less) and the winner might be locked-in before the final leg (ruining the suspense of the grand finale they usually have set up for the final tasks). This is likely a general tradeoff in games like this, between being fair (making the right team more likely to win) and being exciting (keeping the winner more uncertain until the end). As a game show, The Amazing Race probably makes the right choice (entertainment over fairness) but for more serious matters (political debate performance?) maybe we should pay attention to the winner of each round rather than the loser.</p>
 
@@ -178,14 +178,14 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/~chrisb/blog/2015/05/11/bigdata/">
+      <a href="/blog/2015/05/11/bigdata/">
         The Big Data bust of the 1500s&#58; lessons from the first scientific data miner
       </a>
     </h1>
 
     <span class="post-date">11 May 2015</span>
 
-    <p><img src="/%7Echrisb/blog/public/geocentric.png" alt="Geoheliocentric Model"></p>
+    <p><img src="/blog/public/geocentric.png" alt="Geoheliocentric Model"></p>
 
 <p>The Big Data craze is in full swing within many scientific fields, especially neuroscience. Since we can&#39;t hope to understand the tangled web of the brain by looking at only one tiny piece, groups have started to amass huge datasets describing brain <a href="http://neurosynth.org/">function</a> and <a href="http://www.nytimes.com/2015/01/11/magazine/sebastian-seungs-quest-to-map-the-human-brain.html">connections</a>. The idea is that, if we can get enough careful measurements all together, then we can have computers search for patterns that explain as much of the data as possible.</p>
 
@@ -213,7 +213,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/~chrisb/blog/2015/03/31/phdadvice/">
+      <a href="/blog/2015/03/31/phdadvice/">
         Seven things I learned as a PhD student
       </a>
     </h1>
@@ -224,7 +224,7 @@
 
 <h2>Get your hands dirty</h2>
 
-<p><img src="/%7Echrisb/blog/public/frizzle.jpg" alt="Magic School Bus"></p>
+<p><img src="/blog/public/frizzle.jpg" alt="Magic School Bus"></p>
 
 <p>Some early grad students get stuck in a loop of doing a lot of general talking about the kind of things they want to work on, but never really get started. Taking time to learn and plan your experiments is great, but there are a lot of things you can&#39;t learn without diving into real data. You&#39;re almost certainly going to mess things up the first one or two (or twenty) times, so start making mistakes as soon as possible. Having a deeper understanding of the data you&#39;re dealing with will be invaluable in driving the kinds of questions you&#39;ll ask and the design of your experiments.</p>
 
@@ -258,7 +258,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/~chrisb/blog/2015/03/23/networkmodel/">
+      <a href="/blog/2015/03/23/networkmodel/">
         A simple model for growing a brain
       </a>
     </h1>
@@ -269,11 +269,11 @@
 
 <p>The goal of the model is to offer some explanation for area-to-area connection patterns across species (humans, monkeys, mice). For example, the human connection matrix looks like this (from their supplementary material):</p>
 
-<p><img src="/%7Echrisb/blog/public/connmat.png" alt="Connection Matrix"></p>
+<p><img src="/blog/public/connmat.png" alt="Connection Matrix"></p>
 
 <p>Gray squares show pairs of regions that (we think) are connected to each other. This looks complicated, and it is - every region has a different connection pattern, some are similar to each other (neighboring rows), some are very dissimilar, some regions (rows) have lots of connections and others have few, etc. The Song et al. paper starts by discussing the features of these matrices that seem predictable and similar across species, but the part I found more exciting was their proposed model for how you would grow a brain with these properties.</p>
 
-<p><img src="/%7Echrisb/blog/public/connmodel.jpg" alt="Connection Model"></p>
+<p><img src="/blog/public/connmodel.jpg" alt="Connection Model"></p>
 
 <p>This figure from their paper shows the setup. You first randomly choose a bunch of points as the centers of brain regions and randomly create a bunch of neurons, assigning each neuron to belong to the closest region center (A-C). Then, to grow a connection out from a neuron, you pick a direction as a weighted average of the directions to all region centers (with closer regions weighted more heavily), and then grow in that direction a random amount (with short connections more likely than long connections) (D-G). That&#39;s it! Every neuron grows without talking to any other neuron, and they are not even really aiming anywhere in particular.</p>
 
@@ -287,7 +287,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/~chrisb/blog/2015/03/01/herostalk/">
+      <a href="/blog/2015/03/01/herostalk/">
         The Hero's Powerpoint
       </a>
     </h1>
@@ -302,42 +302,42 @@
 
 <h3>The ordinary world</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/setting.png" alt="The ordinary world">
+<p><img src="/blog/public/hero/setting.png" alt="The ordinary world">
 We&#39;re introduced to the protagonist&#39;s typical life. Things have been going the same way for some time, and the world is familiar. However, there are some questions or tensions lurking beneath the surface.</p>
 
 <h3>The breaking point</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/breaking.png" alt="The breaking point">
+<p><img src="/blog/public/hero/breaking.png" alt="The breaking point">
 The minor or unseen issues in the world burst to the forefront, disrupting the protagonist&#39;s world in a catastrophic way. Life can no longer continue as it has in the past.</p>
 
 <h3>Into the wild</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/wild.png" alt="Into the wild">
+<p><img src="/blog/public/hero/wild.png" alt="Into the wild">
 As a result, the hero is forced out into an unfamiliar world (physically or metaphorically). Their previous expertise and relationships are useless here, and they have no clear plan of action.</p>
 
 <h3>The mentor</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/mentor.png" alt="The mentor">
+<p><img src="/blog/public/hero/mentor.png" alt="The mentor">
 The protagonist meets someone in the wild who begins to guide their path. This is someone that they never would have met in their ordinary world, and whose advice they might have previously dismissed. They begin to gain insight about themselves and their new environment.</p>
 
 <h3>Formulating the plan</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/plan.png" alt="Formulating the plan">
+<p><img src="/blog/public/hero/plan.png" alt="Formulating the plan">
 With the mentor&#39;s help, the protagonist understands their final goal and formulates a plan to achieve it. They often embark on this quest alone, without the mentor&#39;s help, but with new knowledge gained from their time in the wild.</p>
 
 <h3>The failure of the plan</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/failure.png" alt="The failure of the plan">
+<p><img src="/blog/public/hero/failure.png" alt="The failure of the plan">
 Despite their careful planning, the plan fails. The hero was missing critical information, about their own abilities or the loyalties of their supposed allies. All appears lost, the hero is dead or near death, and the final goal appears impossible to recover.</p>
 
 <h3>Seizing the sword</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/seize.png" alt="Seizing the sword">
+<p><img src="/blog/public/hero/seize.png" alt="Seizing the sword">
 Miraculously, the hero is able to recover and continues the fight. A new plan is put into action, and the protagonist discovers new sources of strength. The enemy is defeated and goal achieved, albeit at great cost.</p>
 
 <h3>The return</h3>
 
-<p><img src="/%7Echrisb/blog/public/hero/ending.png" alt="The return">
+<p><img src="/blog/public/hero/ending.png" alt="The return">
 The hero returns to their ordinary world reborn, and we see the consequences of their quest. The old stability is replaced with a new one, and the hero sees old relationships in a new light.</p>
 
 <h2>Why we love the journey</h2>
@@ -374,11 +374,11 @@ The hero returns to their ordinary world reborn, and we see the consequences of 
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/~chrisb/blog/page3">Older</a>
+    <a class="pagination-item older" href="/blog/page3">Older</a>
   
   
     
-      <a class="pagination-item newer" href="/~chrisb/blog">Newer</a>
+      <a class="pagination-item newer" href="/blog">Newer</a>
     
   
 </div>

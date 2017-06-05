@@ -16,9 +16,9 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/~chrisb/blog/public/css/poole.css">
-  <link rel="stylesheet" href="/~chrisb/blog/public/css/syntax.css">
-  <link rel="stylesheet" href="/~chrisb/blog/public/css/lanyon.css">
+  <link rel="stylesheet" href="/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/blog/public/css/syntax.css">
+  <link rel="stylesheet" href="/blog/public/css/lanyon.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
 
@@ -44,7 +44,7 @@
     <meta name="twitter:title" content="How deep is the brain?">
   
   
-    <meta name="twitter:url" content="http://www.princeton.edu/~chrisb/blog/2016/07/08/deep/">
+    <meta name="twitter:url" content="http://blog.chrisbaldassano.com//2016/07/08/deep/">
   
   
     <meta name="twitter:description" content="Recent AI advances in speech recognition, game-playing, image understanding, and language translation have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &quot;multiplying and zeroing&quot; doesn&#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &quot;deep neural networks.&quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &quot;neural&quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &quot;the first device to think as the human brain.&quot;
@@ -80,7 +80,7 @@ Of course, it seems inevitable that at some point in the near future we will in 
 
 
   
-  <meta name="twitter:image:src" content="http://www.princeton.edu/~chrisb/blog/public/nytimes_crop.png">
+  <meta name="twitter:image:src" content="http://blog.chrisbaldassano.com//public/nytimes_crop.png">
 
 </head>
 
@@ -99,7 +99,7 @@ Of course, it seems inevitable that at some point in the near future we will in 
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item" href="http://www.chrisbaldassano.com">Main</a>
-    <a class="sidebar-nav-item" href="/~chrisb/blog/">Blog</a>
+    <a class="sidebar-nav-item" href="/blog/">Blog</a>
 
 
     
@@ -116,7 +116,7 @@ Of course, it seems inevitable that at some point in the near future we will in 
     
       
         
-          <a class="sidebar-nav-item" href="/~chrisb/blog/archive/">Blog Archive</a>
+          <a class="sidebar-nav-item" href="/blog/archive/">Blog Archive</a>
         
       
     
@@ -131,7 +131,7 @@ Of course, it seems inevitable that at some point in the near future we will in 
       
     
 
-    <a class="sidebar-nav-item" href="/~chrisb/blog/atom.xml">Atom feed</a>
+    <a class="sidebar-nav-item" href="/blog/atom.xml">Atom feed</a>
     
   </nav>
 
@@ -149,7 +149,7 @@ Of course, it seems inevitable that at some point in the near future we will in 
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/~chrisb/blog" title="Home">Rooting for the machines</a>
+            <a href="/blog" title="Home">Rooting for the machines</a>
             <small>A Blog by Chris Baldassano</small>
           </h3>
         </div>
@@ -161,13 +161,13 @@ Of course, it seems inevitable that at some point in the near future we will in 
   <span class="post-date">08 Jul 2016</span>
   <p>Recent AI advances in <a href="https://research.googleblog.com/2015/08/the-neural-networks-behind-google-voice.html">speech recognition</a>, <a href="https://deepmind.com/alpha-go">game-playing</a>, <a href="http://www.nytimes.com/2014/11/18/science/researchers-announce-breakthrough-in-content-recognition-software.html">image understanding</a>, and <a href="https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html">language translation</a> have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &quot;multiplying and zeroing&quot; doesn&#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &quot;deep neural networks.&quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &quot;neural&quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &quot;the first device to think as the human brain.&quot;</p>
 
-<p><img src="/%7Echrisb/blog/public/nytimes_crop.png" alt="NYT"></p>
+<p><img src="/blog/public/nytimes_crop.png" alt="NYT"></p>
 
 <p>Deep neural networks remained mostly a fringe idea for decades, since they typically didn&#39;t perform very well, due (in retrospect) to the limited computational power and small dataset sizes of the era. But over the past decade these networks have begun to rival human capabilities on highly complicated tasks, making it more plausible that they could really be emulating human brains. We&#39;ve also started to get much better data about how the brain itself operates, so we can start to make some comparisons.</p>
 
 <p>At least for visual images, a consensus started to emerge about what these deep neural networks were actually doing, and how it matched up to the brain. These networks operate as a series of &quot;multiply and zero&quot; filters, which build up more and more complicated descriptions of the image. The first filter looks for lines, the second filter combines the lines into corners and curves, the third filter combines the corners into shapes, etc. If we look in the visual system of the brain, we find a similar layered structure, with the early layers of the brain doing something like the early filters of the neural networks, and later layers of the brain looking like the later filters of the neural networks.</p>
 
-<p><img src="/%7Echrisb/blog/public/layers.png" alt="NN and brain layers">
+<p><img src="/blog/public/layers.png" alt="NN and brain layers">
 Zeiler &amp; Fergus 2014, Güçlü &amp; van Gerven 2015</p>
 
 <p>It seemed like things were mostly making sense, until two recent developments:
@@ -176,13 +176,13 @@ Zeiler &amp; Fergus 2014, Güçlü &amp; van Gerven 2015</p>
 
 <p>Should we just throw up our hands and say that these networks just have way more layers than the brain (they&#39;re &quot;deeper&quot;) and we can&#39;t understand how they work? <a href="http://arxiv.org/abs/1604.03640">Liao and Poggio</a> have a recent preprint that proposes a possible solution to both of these issues: maybe the later layers are all doing the same operation over and over, so that the filter chain looks like this:</p>
 
-<p><img src="/%7Echrisb/blog/public/unrolled.png" alt="Feedforward NN"></p>
+<p><img src="/blog/public/unrolled.png" alt="Feedforward NN"></p>
 
 <p>Why would you want to repeat the same operation many times? Often it is a lot easier to figure out how to make a small step toward your goal and then repeat, instead of going directly to the goal. For example, imagine you want to set a microwave for twelve minutes, but all the buttons are unlabeled and in random positions. Typing 1-2-0-0-GO is going to take a lot of trial and error, and if you mess up in the middle you have to start from scratch. But if you&#39;re able to find the &quot;add 30 seconds&quot; button, you can just hit it 24 times and you&#39;ll be set. This also shows why skipping a step isn&#39;t a big deal - if you hit the button 23 times instead, it shouldn&#39;t cause major issues.</p>
 
 <p>But if the last layers are just the same filter over and over, we can actually just replace them with a single filter in a loop, that takes its output and feeds it back into its input. This will act like a deep network, except that the extra layers are occurring in <em>time</em>:</p>
 
-<p><img src="/%7Echrisb/blog/public/rnn.png" alt="Recurrent NN"></p>
+<p><img src="/blog/public/rnn.png" alt="Recurrent NN"></p>
 
 <p>So Liao and Poggio&#39;s hypothesis is that <strong>very deep neural networks are like a brain that is moderately deep in both space and time.</strong> The true depth of the brain is hidden, since even though it doesn&#39;t have a huge number of regions it gets to run these regions in loops over time. Their paper has some experiments to show that this is plausible, but it will take some careful comparisons with neuroscience data to say if they are correct.</p>
 

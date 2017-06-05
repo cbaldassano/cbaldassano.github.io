@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Rooting for the machines</title>
- <link href="http://www.princeton.edu/~chrisb/blog/atom.xml" rel="self"/>
- <link href="http://www.princeton.edu/~chrisb/blog/"/>
- <updated>2017-06-05T06:46:13-04:00</updated>
- <id>http://www.princeton.edu/~chrisb/blog</id>
+ <link href="http://blog.chrisbaldassano.com//atom.xml" rel="self"/>
+ <link href="http://blog.chrisbaldassano.com//"/>
+ <updated>2017-06-05T07:09:53-04:00</updated>
+ <id>http://blog.chrisbaldassano.com/</id>
  <author>
    <name>Chris Baldassano</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Parenting the last human generation</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2017/06/05/parent/"/>
+   <link href="http://blog.chrisbaldassano.com//2017/06/05/parent/"/>
    <updated>2017-06-05T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2017/06/05/parent</id>
+   <id>http://blog.chrisbaldassano.com//2017/06/05/parent</id>
    <content type="html">&lt;p&gt;For most of human history, parents had a pretty good idea of the kind of world they were preparing their children for. Children would be trained to take over their parents&amp;#39; business, or apprentice in a local trade, or aim for a high-status marriage. Even once children began to have more choice in their futures, it was easy to predict what kind of skills they would need to succeed: reading and handwriting, arithmetic, basic knowledge of science and history.&lt;/p&gt;
 
 &lt;p&gt;As technological progress has accelerated, this predictability is starting to break down. Companies like internet search engines didn&amp;#39;t even exist when most of Google&amp;#39;s 70,000 employees were born, and there is no way their parents could have guessed the kind of work they would eventually be doing. Some of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Skrillex&quot;&gt;best-known musicians in the world&lt;/a&gt; construct songs using software, and don&amp;#39;t play any of the instruments that would have been offered to them in elementary school.&lt;/p&gt;
@@ -33,9 +33,9 @@
  
  <entry>
    <title>Connecting past and present in visual perception</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2016/10/25/twonet/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/10/25/twonet/"/>
    <updated>2016-10-25T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2016/10/25/twonet</id>
+   <id>http://blog.chrisbaldassano.com//2016/10/25/twonet</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 &lt;p&gt;There are two kinds of people in the world—those who divide everything in the world into two kinds of things and those who don’t.
 &lt;p&gt;Kenneth Boulding
@@ -43,14 +43,14 @@
 
 &lt;p&gt;Scientists love dividing the world into categories. Whenever we are trying to study more than 1 or 2 things at a time, our first instinct is to sort them into boxes based on their similarities, whether we&amp;#39;re looking at animals, rocks, stars, or diseases.&lt;/p&gt;
 
-&lt;p&gt;There have been many proposals on how to divide up the human visual system: regions processing coarse vs. fine structure, or small objects vs. big objects, or &lt;a href=&quot;/%7Echrisb/blog/2016/05/20/corner/&quot;&gt;central vs. peripheral&lt;/a&gt; information. In my new paper, &lt;a href=&quot;http://eneuro.org/content/3/5/ENEURO.0178-16.2016&quot;&gt;Two distinct scene processing networks connecting vision and memory&lt;/a&gt;, I argue that regions activated by photographic images can be split into two different networks.
+&lt;p&gt;There have been many proposals on how to divide up the human visual system: regions processing coarse vs. fine structure, or small objects vs. big objects, or &lt;a href=&quot;/blog/2016/05/20/corner/&quot;&gt;central vs. peripheral&lt;/a&gt; information. In my new paper, &lt;a href=&quot;http://eneuro.org/content/3/5/ENEURO.0178-16.2016&quot;&gt;Two distinct scene processing networks connecting vision and memory&lt;/a&gt;, I argue that regions activated by photographic images can be split into two different networks.
 &lt;br/&gt;
 &lt;br/&gt;&lt;/p&gt;
 
 &lt;table&gt;&lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/%7Echrisb/blog/public/visnet.png&quot; alt=&quot;Visual network&quot;&gt;&lt;/th&gt;
-&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/%7Echrisb/blog/public/visnet_ex.png&quot; alt=&quot;Visual network example&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/blog/public/visnet.png&quot; alt=&quot;Visual network&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/blog/public/visnet_ex.png&quot; alt=&quot;Visual network example&quot;&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;&lt;tbody&gt;
 &lt;/tbody&gt;&lt;/table&gt;
@@ -62,8 +62,8 @@
 
 &lt;table&gt;&lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/%7Echrisb/blog/public/memnet.png&quot; alt=&quot;Memory navigation network&quot;&gt;&lt;/th&gt;
-&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/%7Echrisb/blog/public/photosynth_5fps.gif&quot; alt=&quot;Memory network example&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/blog/public/memnet.png&quot; alt=&quot;Memory navigation network&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/blog/public/photosynth_5fps.gif&quot; alt=&quot;Memory network example&quot;&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;&lt;tbody&gt;
 &lt;/tbody&gt;&lt;/table&gt;
@@ -76,18 +76,18 @@
  
  <entry>
    <title>How deep is the brain?</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2016/07/08/deep/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/07/08/deep/"/>
    <updated>2016-07-08T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2016/07/08/deep</id>
+   <id>http://blog.chrisbaldassano.com//2016/07/08/deep</id>
    <content type="html">&lt;p&gt;Recent AI advances in &lt;a href=&quot;https://research.googleblog.com/2015/08/the-neural-networks-behind-google-voice.html&quot;&gt;speech recognition&lt;/a&gt;, &lt;a href=&quot;https://deepmind.com/alpha-go&quot;&gt;game-playing&lt;/a&gt;, &lt;a href=&quot;http://www.nytimes.com/2014/11/18/science/researchers-announce-breakthrough-in-content-recognition-software.html&quot;&gt;image understanding&lt;/a&gt;, and &lt;a href=&quot;https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html&quot;&gt;language translation&lt;/a&gt; have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &amp;quot;multiplying and zeroing&amp;quot; doesn&amp;#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &amp;quot;deep neural networks.&amp;quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &amp;quot;neural&amp;quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &amp;quot;the first device to think as the human brain.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/nytimes_crop.png&quot; alt=&quot;NYT&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/nytimes_crop.png&quot; alt=&quot;NYT&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Deep neural networks remained mostly a fringe idea for decades, since they typically didn&amp;#39;t perform very well, due (in retrospect) to the limited computational power and small dataset sizes of the era. But over the past decade these networks have begun to rival human capabilities on highly complicated tasks, making it more plausible that they could really be emulating human brains. We&amp;#39;ve also started to get much better data about how the brain itself operates, so we can start to make some comparisons.&lt;/p&gt;
 
 &lt;p&gt;At least for visual images, a consensus started to emerge about what these deep neural networks were actually doing, and how it matched up to the brain. These networks operate as a series of &amp;quot;multiply and zero&amp;quot; filters, which build up more and more complicated descriptions of the image. The first filter looks for lines, the second filter combines the lines into corners and curves, the third filter combines the corners into shapes, etc. If we look in the visual system of the brain, we find a similar layered structure, with the early layers of the brain doing something like the early filters of the neural networks, and later layers of the brain looking like the later filters of the neural networks.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/layers.png&quot; alt=&quot;NN and brain layers&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/layers.png&quot; alt=&quot;NN and brain layers&quot;&gt;
 Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
 
 &lt;p&gt;It seemed like things were mostly making sense, until two recent developments:
@@ -96,13 +96,13 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
 
 &lt;p&gt;Should we just throw up our hands and say that these networks just have way more layers than the brain (they&amp;#39;re &amp;quot;deeper&amp;quot;) and we can&amp;#39;t understand how they work? &lt;a href=&quot;http://arxiv.org/abs/1604.03640&quot;&gt;Liao and Poggio&lt;/a&gt; have a recent preprint that proposes a possible solution to both of these issues: maybe the later layers are all doing the same operation over and over, so that the filter chain looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/unrolled.png&quot; alt=&quot;Feedforward NN&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/unrolled.png&quot; alt=&quot;Feedforward NN&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Why would you want to repeat the same operation many times? Often it is a lot easier to figure out how to make a small step toward your goal and then repeat, instead of going directly to the goal. For example, imagine you want to set a microwave for twelve minutes, but all the buttons are unlabeled and in random positions. Typing 1-2-0-0-GO is going to take a lot of trial and error, and if you mess up in the middle you have to start from scratch. But if you&amp;#39;re able to find the &amp;quot;add 30 seconds&amp;quot; button, you can just hit it 24 times and you&amp;#39;ll be set. This also shows why skipping a step isn&amp;#39;t a big deal - if you hit the button 23 times instead, it shouldn&amp;#39;t cause major issues.&lt;/p&gt;
 
 &lt;p&gt;But if the last layers are just the same filter over and over, we can actually just replace them with a single filter in a loop, that takes its output and feeds it back into its input. This will act like a deep network, except that the extra layers are occurring in &lt;em&gt;time&lt;/em&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/rnn.png&quot; alt=&quot;Recurrent NN&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/rnn.png&quot; alt=&quot;Recurrent NN&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;So Liao and Poggio&amp;#39;s hypothesis is that &lt;strong&gt;very deep neural networks are like a brain that is moderately deep in both space and time.&lt;/strong&gt; The true depth of the brain is hidden, since even though it doesn&amp;#39;t have a huge number of regions it gets to run these regions in loops over time. Their paper has some experiments to show that this is plausible, but it will take some careful comparisons with neuroscience data to say if they are correct.&lt;/p&gt;
 
@@ -112,9 +112,9 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
  
  <entry>
    <title>The corner of your eye</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2016/05/20/corner/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/05/20/corner/"/>
    <updated>2016-05-20T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2016/05/20/corner</id>
+   <id>http://blog.chrisbaldassano.com//2016/05/20/corner</id>
    <content type="html">&lt;p&gt;We usually think that our eyes work like a camera, giving us a sharp, colorful picture of the world all the way from left to right and top to bottom. But we actually only get this kind of detail in a tiny window right where our eyes are pointed. If you hold your thumb out at arm&amp;#39;s length, the width of your thumbnail is about the size of your most precise central (also called &amp;quot;foveal&amp;quot;) vision. Outside of that narrow spotlight, both color perception and sharpness drop off rapidly - doing high-precision tasks like reading a word is almost impossible unless you&amp;#39;re looking right at it.&lt;/p&gt;
 
 &lt;p&gt;The rest of your visual field is your &amp;quot;peripheral&amp;quot; vision, which has only imprecise information about shape, location, and color. Out here in the corner of your eye you can&amp;#39;t be sure of much, which is used as a constant source of fear and uncertainty in horror movies and the occult:&lt;/p&gt;
@@ -136,7 +136,7 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
 
 &lt;p&gt;We can make maps that show where foveal information ends up (colored orange/red) and where peripheral information ends up (colored blue/purple). I&amp;#39;m showing this on an &amp;quot;inflated&amp;quot; brain surface where we&amp;#39;ve smoothed out all the wrinkles to make it easier to look at:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/periphery.png&quot; alt=&quot;Foveal and Peripheral regions&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/periphery.png&quot; alt=&quot;Foveal and Peripheral regions&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;This roughly matches what we had previously seen with the simpler experiments: central information heads to regions for recognizing objects, letters, and faces, while peripheral information gets used by areas that process environments and big landmarks. But it also reveals some finer structure we didn&amp;#39;t know about before. Some scene processing regions care more about the &amp;quot;near&amp;quot; periphery just outside the fovea and still have access to relatively high-resolution information, while others draw information from the &amp;quot;far&amp;quot; periphery that only provides coarse information about your current location. There are also detectable foveal vs. peripheral differences in the frontal lobe of the brain, which is pretty surprising, since this part of the brain is supposed to be performing abstract reasoning and planning that shouldn&amp;#39;t be all that related to where the information is coming from.&lt;/p&gt;
 
@@ -146,9 +146,9 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
  
  <entry>
    <title>Cutups and configural processing</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2016/04/13/configural/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/04/13/configural/"/>
    <updated>2016-04-13T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2016/04/13/configural</id>
+   <id>http://blog.chrisbaldassano.com//2016/04/13/configural</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 “The love of complexity without reductionism makes art; the love of complexity with reductionism makes science.” — E.O. Wilson
 &lt;/div&gt;
@@ -171,9 +171,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 
 &lt;p&gt;Today I (along with my PhD advisors, &lt;a href=&quot;http://vision.stanford.edu/feifeili/&quot;&gt;Fei-Fei Li&lt;/a&gt; and &lt;a href=&quot;http://www.psychology.illinois.edu/people/dmbeck&quot;&gt;Diane Beck&lt;/a&gt;) have a new paper out in Cerebral Cortex, titled &lt;a href=&quot;http://cercor.oxfordjournals.org/cgi/reprint/bhw077?ijkey=iUBNzaBCkEO1hN4&amp;amp;keytype=ref&quot;&gt;Human-object interactions are more than the sum of their parts (free-access link)&lt;/a&gt;. This paper looks at how things get combined across space (rather than time) in the visual system. We were looking specifically at images containing either a person, an object, or both, and tried to find brain regions where a &lt;em&gt;meaningful&lt;/em&gt; human-object interaction looked different from just a sum of person plus object.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/sum_of_parts.png&quot; alt=&quot;SumOfParts&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/sum_of_parts.png&quot; alt=&quot;SumOfParts&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;In the full paper we look at a number of different brain regions, but some of the most interesting results come from the superior temporal sulcus (an area right behind the top of your ears). This area couldn&amp;#39;t care less about objects by themselves, and doesn&amp;#39;t even care much about people if they aren&amp;#39;t doing anything. But as soon as we put the person and object together in a meaningful way, it starts paying attention, and we can make a better-than-chance guess about what action the person is performing (in the picture you&amp;#39;re currently looking at) just by reading your brain activity from this region. Our current theory about this region is that it is involved in understanding the actions and intentions of other people, as I described in &lt;a href=&quot;/%7Echrisb/blog/2015/02/24/conchords/&quot;&gt;a previous post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the full paper we look at a number of different brain regions, but some of the most interesting results come from the superior temporal sulcus (an area right behind the top of your ears). This area couldn&amp;#39;t care less about objects by themselves, and doesn&amp;#39;t even care much about people if they aren&amp;#39;t doing anything. But as soon as we put the person and object together in a meaningful way, it starts paying attention, and we can make a better-than-chance guess about what action the person is performing (in the picture you&amp;#39;re currently looking at) just by reading your brain activity from this region. Our current theory about this region is that it is involved in understanding the actions and intentions of other people, as I described in &lt;a href=&quot;/blog/2015/02/24/conchords/&quot;&gt;a previous post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Next month I&amp;#39;ll be presenting at &lt;a href=&quot;http://memory.psych.upenn.edu/CEMS_2016&quot;&gt;CEMS 2016&lt;/a&gt; on some new work I&amp;#39;ve been doing with Uri and Ken Norman, where I&amp;#39;m trying to figure out exactly which pieces of a story end up getting combined together and how these combined representations get stored into memory. Working with real stories (like movies and TV shows) is challenging as a scientist, since usually we like our stimuli to be very tightly controlled, but these kinds of creative, meaningful stimuli can give us a window into the most interesting functions of the brain.&lt;/p&gt;
 
@@ -193,9 +193,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>Just how Amazing is The Amazing Race?</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/12/01/race/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/12/01/race/"/>
    <updated>2015-12-01T00:00:00-05:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/12/01/race</id>
+   <id>http://blog.chrisbaldassano.com//2015/12/01/race</id>
    <content type="html">&lt;h2&gt;The Amazing Race&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Amazing_Race&quot;&gt;Amazing Race&lt;/a&gt; is one of the few reality TV shows that managed to survive the bubble of the early 2000s, with good reason. Rather than just trying to play up interpersonal dramas (though there is some of that too), it is set up like a traditional game show with a series of competitions between teams of two, who travel to different cities throughout the world over the course of the show. Eleven teams start out the race, and typically the last team to finish each day&amp;#39;s challenges gets booted from the show until only three teams are left. These three teams then have a final day of competition, with the winner being awarded $1 million.&lt;/p&gt;
@@ -208,7 +208,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 
 &lt;p&gt;We can measure how effective the Race was at picking a winner, by seeing what true skill rank the winning team had. So if the team with the highest skill (number 1) wins, that means the race did a good job. If a team with a low skill rank (like 10) wins, then the race did a very bad job of picking the million-dollar winner. This plot shows the rank of the winning team, compared to chance ((1+11)/2=6).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/race/elim_rank.png&quot; alt=&quot;Winning rank using loser-elimination&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/race/elim_rank.png&quot; alt=&quot;Winning rank using loser-elimination&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;This actually looks surprisingly good! Even at with lots of leg randomness (more than the actual skill difference between the teams) a team with a relatively high rank tends to win. Once the randomness gets to be an order of magnitude bigger than the differences between teams, the winner starts getting close to random.&lt;/p&gt;
 
@@ -216,17 +216,17 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 
 &lt;p&gt;But how good is this relative to a simpler kind of competition, where the winner is the team with the most first-place wins? Rather than eliminating teams, all teams race all 9 legs, and the team coming in first the most wins the prize (ties are broken based on which team won most recently). Would this do better or worse?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/race/elim_first_rank.png&quot; alt=&quot;Winning rank using loser-elimination or first place wins&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/race/elim_first_rank.png&quot; alt=&quot;Winning rank using loser-elimination or first place wins&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Turns out this is a little bit better! In general the rank of the winning team tends to be higher, meaning that a &amp;quot;more deserving&amp;quot; team won the money. But the size of the gap depends on how much randomness there is in each leg of the race. Which point along these curves corresponds to the actual TV show?&lt;/p&gt;
 
 &lt;p&gt;To answer this, I took the per-leg rankings from the &lt;a href=&quot;http://amazingrace.wikia.com/wiki/Main_Page&quot;&gt;Amazing Race Wikia&lt;/a&gt; from the past 10 seasons. Yes, there are people way more obsessed with this show than me, who have been together databases of stats from each season. I measured how consistent the rankings were from each leg of the race. If there wasn&amp;#39;t any randomness, we&amp;#39;d expect these to have a perfect (Kendall) correlation, while if each leg is just craziness for all teams then the correlation should be near zero. I found that this correlation varied a bit across seasons, but had a mean of 0.0992. Comparing this to the same calculation from the model, this corresponds to a noise level of about sigma=2.2.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/race/tau_rank.png&quot; alt=&quot;Leg ranking correlations for each noise level&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/race/tau_rank.png&quot; alt=&quot;Leg ranking correlations for each noise level&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;At this level of randomness, there is about a 10% advantage for counting-first-places competition: 37.4% of the time it picks a better team to win the money, while 28.5% of the time the current elimination setup picks a better team (they pick the same team 34.1% of the time).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/race/frac_compare.png&quot; alt=&quot;Comparison of methods at sigma=2.2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/race/frac_compare.png&quot; alt=&quot;Comparison of methods at sigma=2.2&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Of course there are some disadvantages to counting first place wins: the requires all teams to run all legs (which is logistically difficult and means we get to know each team less) and the winner might be locked-in before the final leg (ruining the suspense of the grand finale they usually have set up for the final tasks). This is likely a general tradeoff in games like this, between being fair (making the right team more likely to win) and being exciting (keeping the winner more uncertain until the end). As a game show, The Amazing Race probably makes the right choice (entertainment over fairness) but for more serious matters (political debate performance?) maybe we should pay attention to the winner of each round rather than the loser.&lt;/p&gt;
 
@@ -236,10 +236,10 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>The Big Data bust of the 1500s&#58; lessons from the first scientific data miner</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/05/11/bigdata/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/05/11/bigdata/"/>
    <updated>2015-05-11T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/05/11/bigdata</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/geocentric.png&quot; alt=&quot;Geoheliocentric Model&quot;&gt;&lt;/p&gt;
+   <id>http://blog.chrisbaldassano.com//2015/05/11/bigdata</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/geocentric.png&quot; alt=&quot;Geoheliocentric Model&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The Big Data craze is in full swing within many scientific fields, especially neuroscience. Since we can&amp;#39;t hope to understand the tangled web of the brain by looking at only one tiny piece, groups have started to amass huge datasets describing brain &lt;a href=&quot;http://neurosynth.org/&quot;&gt;function&lt;/a&gt; and &lt;a href=&quot;http://www.nytimes.com/2015/01/11/magazine/sebastian-seungs-quest-to-map-the-human-brain.html&quot;&gt;connections&lt;/a&gt;. The idea is that, if we can get enough careful measurements all together, then we can have computers search for patterns that explain as much of the data as possible.&lt;/p&gt;
 
@@ -265,14 +265,14 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>Seven things I learned as a PhD student</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/03/31/phdadvice/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/03/31/phdadvice/"/>
    <updated>2015-03-31T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/03/31/phdadvice</id>
+   <id>http://blog.chrisbaldassano.com//2015/03/31/phdadvice</id>
    <content type="html">&lt;p&gt;Doing great research is tough. There are so many factors outside of your control: experiments not panning out, unfair reviewers, competing labs, limited funding sources. I&amp;#39;ve tried to distill down some of the strategies that worked well for me and my labmates (these are most relevant to my background in science/engineering, but some might apply to other fields as well):&lt;/p&gt;
 
 &lt;h2&gt;Get your hands dirty&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/frizzle.jpg&quot; alt=&quot;Magic School Bus&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/frizzle.jpg&quot; alt=&quot;Magic School Bus&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Some early grad students get stuck in a loop of doing a lot of general talking about the kind of things they want to work on, but never really get started. Taking time to learn and plan your experiments is great, but there are a lot of things you can&amp;#39;t learn without diving into real data. You&amp;#39;re almost certainly going to mess things up the first one or two (or twenty) times, so start making mistakes as soon as possible. Having a deeper understanding of the data you&amp;#39;re dealing with will be invaluable in driving the kinds of questions you&amp;#39;ll ask and the design of your experiments.&lt;/p&gt;
 
@@ -304,18 +304,18 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>A simple model for growing a brain</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/03/23/networkmodel/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/03/23/networkmodel/"/>
    <updated>2015-03-23T00:00:00-04:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/03/23/networkmodel</id>
+   <id>http://blog.chrisbaldassano.com//2015/03/23/networkmodel</id>
    <content type="html">&lt;p&gt;Today I had a chance to read &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/25368200&quot;&gt;a paper by Song, Kennedy, and Wang&lt;/a&gt; about their model for explaining how brains are wired up at a high level (explaining how areas are connected, not the detailed wiring of neural circuits). It&amp;#39;s very simple, but manages to capture some complicated aspects of brain structure.&lt;/p&gt;
 
 &lt;p&gt;The goal of the model is to offer some explanation for area-to-area connection patterns across species (humans, monkeys, mice). For example, the human connection matrix looks like this (from their supplementary material):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/connmat.png&quot; alt=&quot;Connection Matrix&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/connmat.png&quot; alt=&quot;Connection Matrix&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Gray squares show pairs of regions that (we think) are connected to each other. This looks complicated, and it is - every region has a different connection pattern, some are similar to each other (neighboring rows), some are very dissimilar, some regions (rows) have lots of connections and others have few, etc. The Song et al. paper starts by discussing the features of these matrices that seem predictable and similar across species, but the part I found more exciting was their proposed model for how you would grow a brain with these properties.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/connmodel.jpg&quot; alt=&quot;Connection Model&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/connmodel.jpg&quot; alt=&quot;Connection Model&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;This figure from their paper shows the setup. You first randomly choose a bunch of points as the centers of brain regions and randomly create a bunch of neurons, assigning each neuron to belong to the closest region center (A-C). Then, to grow a connection out from a neuron, you pick a direction as a weighted average of the directions to all region centers (with closer regions weighted more heavily), and then grow in that direction a random amount (with short connections more likely than long connections) (D-G). That&amp;#39;s it! Every neuron grows without talking to any other neuron, and they are not even really aiming anywhere in particular.&lt;/p&gt;
 
@@ -327,9 +327,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>The Hero's Powerpoint</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/03/01/herostalk/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/03/01/herostalk/"/>
    <updated>2015-03-01T00:00:00-05:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/03/01/herostalk</id>
+   <id>http://blog.chrisbaldassano.com//2015/03/01/herostalk</id>
    <content type="html">&lt;p&gt;What makes a good story? It turns out that, even among stories about very different things (romance, aliens, animated fluffy critters saving the world) there are some elements that are often the same. This topic is fascinating in its own right, but I find that it is also of great help for preparing academic talks. The goals of a talk (to keep the listener engaged and excited) are the same as those of a storyteller, and so it can be helpful to borrow some tips from the successful stories of the past few thousand years.&lt;/p&gt;
 
 &lt;p&gt;The idea of a repeated story structure that has existed since antiquity (the &amp;quot;hero&amp;#39;s journey&amp;quot;) was first popularized by &lt;a href=&quot;http://en.wikipedia.org/wiki/Joseph_Campbell&quot;&gt;Joseph Campbell&lt;/a&gt;, and then later championed by &lt;a href=&quot;http://www.skepticfiles.org/atheist2/hero.htm&quot;&gt;Chris Vogler&lt;/a&gt;. What follows is my personal summary of the major parts of this framework, as an amateur cinephile. I&amp;#39;ve illustrated each part with images from Frozen, Iron Man, and The Matrix, which all stick closely to this formula.&lt;/p&gt;
@@ -338,42 +338,42 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 
 &lt;h3&gt;The ordinary world&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/setting.png&quot; alt=&quot;The ordinary world&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/setting.png&quot; alt=&quot;The ordinary world&quot;&gt;
 We&amp;#39;re introduced to the protagonist&amp;#39;s typical life. Things have been going the same way for some time, and the world is familiar. However, there are some questions or tensions lurking beneath the surface.&lt;/p&gt;
 
 &lt;h3&gt;The breaking point&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/breaking.png&quot; alt=&quot;The breaking point&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/breaking.png&quot; alt=&quot;The breaking point&quot;&gt;
 The minor or unseen issues in the world burst to the forefront, disrupting the protagonist&amp;#39;s world in a catastrophic way. Life can no longer continue as it has in the past.&lt;/p&gt;
 
 &lt;h3&gt;Into the wild&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/wild.png&quot; alt=&quot;Into the wild&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/wild.png&quot; alt=&quot;Into the wild&quot;&gt;
 As a result, the hero is forced out into an unfamiliar world (physically or metaphorically). Their previous expertise and relationships are useless here, and they have no clear plan of action.&lt;/p&gt;
 
 &lt;h3&gt;The mentor&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/mentor.png&quot; alt=&quot;The mentor&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/mentor.png&quot; alt=&quot;The mentor&quot;&gt;
 The protagonist meets someone in the wild who begins to guide their path. This is someone that they never would have met in their ordinary world, and whose advice they might have previously dismissed. They begin to gain insight about themselves and their new environment.&lt;/p&gt;
 
 &lt;h3&gt;Formulating the plan&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/plan.png&quot; alt=&quot;Formulating the plan&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/plan.png&quot; alt=&quot;Formulating the plan&quot;&gt;
 With the mentor&amp;#39;s help, the protagonist understands their final goal and formulates a plan to achieve it. They often embark on this quest alone, without the mentor&amp;#39;s help, but with new knowledge gained from their time in the wild.&lt;/p&gt;
 
 &lt;h3&gt;The failure of the plan&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/failure.png&quot; alt=&quot;The failure of the plan&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/failure.png&quot; alt=&quot;The failure of the plan&quot;&gt;
 Despite their careful planning, the plan fails. The hero was missing critical information, about their own abilities or the loyalties of their supposed allies. All appears lost, the hero is dead or near death, and the final goal appears impossible to recover.&lt;/p&gt;
 
 &lt;h3&gt;Seizing the sword&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/seize.png&quot; alt=&quot;Seizing the sword&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/seize.png&quot; alt=&quot;Seizing the sword&quot;&gt;
 Miraculously, the hero is able to recover and continues the fight. A new plan is put into action, and the protagonist discovers new sources of strength. The enemy is defeated and goal achieved, albeit at great cost.&lt;/p&gt;
 
 &lt;h3&gt;The return&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/hero/ending.png&quot; alt=&quot;The return&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/public/hero/ending.png&quot; alt=&quot;The return&quot;&gt;
 The hero returns to their ordinary world reborn, and we see the consequences of their quest. The old stability is replaced with a new one, and the hero sees old relationships in a new light.&lt;/p&gt;
 
 &lt;h2&gt;Why we love the journey&lt;/h2&gt;
@@ -406,10 +406,10 @@ The hero returns to their ordinary world reborn, and we see the consequences of 
  
  <entry>
    <title>Are you thinking what I'm thinking?</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/02/24/conchords/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/02/24/conchords/"/>
    <updated>2015-02-24T00:00:00-05:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/02/24/conchords</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/fotc.jpg&quot; alt=&quot;Jemaine and Bret&quot;&gt;&lt;/p&gt;
+   <id>http://blog.chrisbaldassano.com//2015/02/24/conchords</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/fotc.jpg&quot; alt=&quot;Jemaine and Bret&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Flight of the Conchords has been one of my favorite comedy bands for years, mixing general silliness with some insightful satire on life and relationships. They have a whole catalog of great songs (&lt;a href=&quot;https://www.youtube.com/watch?v=BNC61-OOPdA&quot;&gt;one of which&lt;/a&gt; is highly relevant to the title of this blog), but one of my favorite exchanges is at 1:00 into their song &amp;quot;We&amp;#39;re Both in Love with a Sexy Lady&amp;quot;:&lt;/p&gt;
 
@@ -462,10 +462,10 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  
  <entry>
    <title>Jerry Kaplan&#58; The Law of Artificial Intelligence</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/02/19/kaplan/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/02/19/kaplan/"/>
    <updated>2015-02-19T00:00:00-05:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/02/19/kaplan</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/kaplan.jpg&quot; alt=&quot;Kaplan&quot;&gt;&lt;/p&gt;
+   <id>http://blog.chrisbaldassano.com//2015/02/19/kaplan</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/kaplan.jpg&quot; alt=&quot;Kaplan&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Jerry Kaplan has been an interesting force in the Stanford AI community over the past couple years. He&amp;#39;s been a major player in Silicon Valley since the 80s, was one of the early pioneers of touch-sensitive tablets and online auctions, and wrote a book about his &lt;a href=&quot;http://www.amazon.com/Startup-A-Silicon-Valley-Adventure/dp/0140257314&quot;&gt;1987 pen-based operating system company&lt;/a&gt; (which was ahead of its time, unfortunately for the company). Recently, however, he seems to have a new mission of fostering a broader discussion of the history and philosophy of AI, especially on the Stanford campus. He has been giving a number of talks on these topics, and &lt;a href=&quot;http://web.stanford.edu/class/cs22/&quot;&gt;taught a class&lt;/a&gt; that brought in other AI speakers. &lt;/p&gt;
 
@@ -481,10 +481,10 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  
  <entry>
    <title>Michael Gazzaniga&#58; Tales from Both Sides of the Brain</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/02/13/gazzaniga/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/02/13/gazzaniga/"/>
    <updated>2015-02-13T00:00:00-05:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/02/13/gazzaniga</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/gazzaniga.jpg&quot; alt=&quot;Gazzaniga&quot;&gt;&lt;/p&gt;
+   <id>http://blog.chrisbaldassano.com//2015/02/13/gazzaniga</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/gazzaniga.jpg&quot; alt=&quot;Gazzaniga&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Michael Gazzaniga&amp;#39;s new book is &lt;a href=&quot;http://www.amazon.com/Tales-Both-Sides-Brain-Neuroscience/dp/0062228803&quot;&gt;Tales from Both Sides of the Brain: A Life in Neuroscience&lt;/a&gt;, which is a memoir about his scientific study of split-brain patients. If you&amp;#39;re unfamiliar with this work, people who have had their two brain hemispheres surgically separated (for medical reasons) show some &lt;a href=&quot;http://www.nature.com/news/the-split-brain-a-tale-of-two-halves-1.10213&quot;&gt;amazingly interesting behaviors&lt;/a&gt;, which raise deep questions about consciousness and free will. Gazzaniga set out to simply write a standard popular science book about his research, but ended up publishing a much more autobiographical book that discusses the actual process of scientific discovery. As he writes in the preface:&lt;/p&gt;
 
@@ -511,10 +511,10 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  
  <entry>
    <title>Hello World</title>
-   <link href="http://www.princeton.edu/~chrisb/blog/2015/01/27/helloworld/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/01/27/helloworld/"/>
    <updated>2015-01-27T00:00:00-05:00</updated>
-   <id>http://www.princeton.edu/~chrisb/blog/2015/01/27/helloworld</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/%7Echrisb/blog/public/NG2-flare.jpg&quot; alt=&quot;Greg Dunn Glial Flare&quot;&gt;&lt;/p&gt;
+   <id>http://blog.chrisbaldassano.com//2015/01/27/helloworld</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/NG2-flare.jpg&quot; alt=&quot;Greg Dunn Glial Flare&quot;&gt;&lt;/p&gt;
 
 &lt;div class=&quot;message&quot;&gt;
   I visualize a time when we will be to robots what dogs are to humans. And I am rooting for the machines. -Claude Shannon, Omni Magazine (1987)
