@@ -1,0 +1,1 @@
+To get rid of transform error, comment out lines 84,86,87,88 of jekyll-auto-image

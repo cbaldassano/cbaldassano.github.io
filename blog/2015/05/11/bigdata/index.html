@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      The Big Data bust of the 1500s&#58; lessons from the first scientific data miner &middot; Rooting for the machines
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/~chrisb/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/~chrisb/blog/public/css/syntax.css">
+  <link rel="stylesheet" href="/~chrisb/blog/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Blog feed" href="/atom.xml">
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15871783-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ChrisBaldassano">
+  <meta name="twitter:creator" content="@ChrisBaldassano">
+  
+    <meta name="twitter:title" content="The Big Data bust of the 1500s&#58; lessons from the first scientific data miner">
+  
+  
+    <meta name="twitter:url" content="http://www.princeton.edu/~chrisb/blog/2015/05/11/bigdata/">
+  
+  
+    <meta name="twitter:description" content="
+
+The Big Data craze is in full swing within many scientific fields, especially neuroscience. Since we can&#39;t hope to understand the tangled web of the brain by looking at only one tiny piece, groups have started to amass huge datasets describing brain function and connections. The idea is that, if we can get enough careful measurements all together, then we can have computers search for patterns that explain as much of the data as possible.
+
+This approach would have made perfect sense to Tycho Brahe, a Danish astronomer born in 1546. Although people have been studying the skies since the dawn of civilization, Brahe was the first to make a detailed catalog of stellar and planetary positions.
+
+Scientific American&#39;s description of his research program makes it clear that this was one of the first Big Data science projects:
+
+
+Brahe was a towering figure. He ran a huge research program with a castlelike observatory, a NASA-like budget, and the finest instruments and best assistants money could buy. [...] Harvard University historian Owen Gingerich often illustrates Brahe’s importance with a mid-17th-century compilation by Albert Curtius of all astronomical data gathered since antiquity: the great bulk of two millennia’s worth of data came from Brahe.
+
+
+Brahe then announced a model of planetary motion that fit his vast dataset exactly. You could use it to predict precisely where the stars and planets would be in the sky tomorrow. It relied on a fancy prosthaphaeresis algorithm that allowed for the computation of a massive number of multiplications. The only problem was that it was deeply, fundamentally wrong.
+
+It was called the Geoheliocentric Model, since it proposed that the sun orbited the stationary Earth and the other planets orbited the sun. It was attractive on philosophical, scientific, and intuitive grounds (of course the Earth isn&#39;t moving, what could possibly power such a fast motion of such a heavy object?). And it illustrates a critical problem with the data-mining approach to science: just because you have a model that predicts a pattern doesn&#39;t mean that the model corresponds to reality.
+
+What might be needed is not just more data, or more precise data, but new hypotheses that drive the collection of entirely different types of data. It doesn&#39;t mean that Big Data isn&#39;t going to be part of the solution (most neuroimaging datasets have been laughably small so far), but simply performing pattern recognition on larger and larger datasets doesn&#39;t guarantee that we&#39;re getting closer to the truth. The geoheliocentric model was eventually brought down not with bigger datasets, but by a targeted experiment looking at small annual patterns of stellar motion.
+
+Interestingly, there is a clear counterexample to my argument in the work of Dan Yamins, a postdoc with Jim DiCarlo. Dan has shown that a neural network model that learns to label objects in a large set of images ends up looking a lot like the visual processing regions of the brain (in terms of its functional properties). This is surprising, since you could imagine that there might be lots of other ways to understand images.
+
+I wonder if this works because the brain is itself a Big Data mining machine, trained up through childhood to build models of our experiences. Then finding the strongest patterns in big datasets of experiences (images, videos, audio) might come up with the same solution as the brain. Or maybe our neural network models are starting to approximate the broad functional properties of the brain, which makes them a good hypothesis-driven model for finding patterns (rather than just blind data mining). As John Wixted stressed at the CEMS conference last week, hypothesis-free data anlysis has a seductive purity, but the true value of datasets (regardless of their size) comes only through the lens of carefully constructred ideas.
+">
+  
+
+
+  
+  <meta name="twitter:image:src" content="http://www.princeton.edu/~chrisb/blog/public/geocentric.png">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A blog about real minds, artificial minds, using artificial minds to understand real minds, and using real minds to inspire artificial minds</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://www.chrisbaldassano.com">Main</a>
+    <a class="sidebar-nav-item" href="/~chrisb/blog/">Blog</a>
+
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/~chrisb/blog/archive/">Blog Archive</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <a class="sidebar-nav-item" href="/~chrisb/blog/atom.xml">Atom feed</a>
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/~chrisb/blog" title="Home">Rooting for the machines</a>
+            <small>A Blog by Chris Baldassano</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">The Big Data bust of the 1500s&#58; lessons from the first scientific data miner</h1>
+  <span class="post-date">11 May 2015</span>
+  <p><img src="/%7Echrisb/blog/public/geocentric.png" alt="Geoheliocentric Model"></p>
+
+<p>The Big Data craze is in full swing within many scientific fields, especially neuroscience. Since we can&#39;t hope to understand the tangled web of the brain by looking at only one tiny piece, groups have started to amass huge datasets describing brain <a href="http://neurosynth.org/">function</a> and <a href="http://www.nytimes.com/2015/01/11/magazine/sebastian-seungs-quest-to-map-the-human-brain.html">connections</a>. The idea is that, if we can get enough careful measurements all together, then we can have computers search for patterns that explain as much of the data as possible.</p>
+
+<p>This approach would have made perfect sense to <a href="http://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe</a>, a Danish astronomer born in 1546. Although people have been studying the skies since the dawn of civilization, Brahe was the first to make a detailed catalog of stellar and planetary positions.</p>
+
+<p><a href="http://www.fis.cinvestav.mx/%7Elmontano/sciam/scientificamerican0114-72.pdf">Scientific American&#39;s description</a> of his research program makes it clear that this was one of the first Big Data science projects:</p>
+
+<blockquote>
+<p>Brahe was a towering figure. He ran a huge research program with a castlelike observatory, a NASA-like budget, and the finest instruments and best assistants money could buy. [...] Harvard University historian Owen Gingerich often illustrates Brahe’s importance with a mid-17th-century compilation by Albert Curtius of all astronomical data gathered since antiquity: the great bulk of two millennia’s worth of data came from Brahe.</p>
+</blockquote>
+
+<p>Brahe then announced a model of planetary motion that fit his vast dataset exactly. You could use it to predict precisely where the stars and planets would be in the sky tomorrow. It relied on a fancy <a href="http://mathworld.wolfram.com/ProsthaphaeresisFormulas.html">prosthaphaeresis</a> algorithm that allowed for the computation of a massive number of multiplications. The only problem was that it was deeply, fundamentally wrong.</p>
+
+<p>It was called the Geoheliocentric Model, since it proposed that the sun orbited the stationary Earth and the other planets orbited the sun. It was attractive on philosophical, scientific, and intuitive grounds (of course the Earth isn&#39;t moving, what could possibly power such a fast motion of such a heavy object?). And it illustrates a critical problem with the data-mining approach to science: just because you have a model that predicts a pattern doesn&#39;t mean that the model corresponds to reality.</p>
+
+<p>What might be needed is not just more data, or more precise data, but new hypotheses that drive the collection of entirely different types of data. It doesn&#39;t mean that Big Data isn&#39;t going to be part of the solution (most neuroimaging datasets have been laughably small so far), but simply performing pattern recognition on larger and larger datasets doesn&#39;t guarantee that we&#39;re getting closer to the truth. The geoheliocentric model was eventually brought down not with bigger datasets, but by a targeted experiment looking at small annual <a href="http://en.wikipedia.org/wiki/Aberration_of_light">patterns of stellar motion</a>.</p>
+
+<p>Interestingly, there is a clear counterexample to my argument in the work of <a href="http://web.mit.edu/yamins/www/">Dan Yamins</a>, a postdoc with <a href="http://dicarlolab.mit.edu/">Jim DiCarlo</a>. Dan has shown that a neural network model that learns to label objects in a large set of images ends up looking a lot like the visual processing regions of the brain (in terms of its functional properties). This is surprising, since you could imagine that there might be lots of other ways to understand images.</p>
+
+<p>I wonder if this works because the brain is itself a Big Data mining machine, trained up through childhood to build models of our experiences. Then finding the strongest patterns in big datasets of experiences (images, videos, audio) might come up with the same solution as the brain. Or maybe our neural network models are starting to approximate the broad functional properties of the brain, which makes them a good hypothesis-driven model for finding patterns (rather than just blind data mining). As <a href="http://www.psychology.ucsd.edu/people/profiles/jwixted.html">John Wixted</a> stressed at the <a href="http://memory.psych.upenn.edu/CEMS_2015">CEMS</a> conference last week, hypothesis-free data anlysis has a seductive purity, but the true value of datasets (regardless of their size) comes only through the lens of carefully constructred ideas.</p>
+
+
+Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+</div>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

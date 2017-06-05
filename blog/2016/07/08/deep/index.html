@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      How deep is the brain? &middot; Rooting for the machines
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/~chrisb/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/~chrisb/blog/public/css/syntax.css">
+  <link rel="stylesheet" href="/~chrisb/blog/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Blog feed" href="/atom.xml">
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15871783-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ChrisBaldassano">
+  <meta name="twitter:creator" content="@ChrisBaldassano">
+  
+    <meta name="twitter:title" content="How deep is the brain?">
+  
+  
+    <meta name="twitter:url" content="http://www.princeton.edu/~chrisb/blog/2016/07/08/deep/">
+  
+  
+    <meta name="twitter:description" content="Recent AI advances in speech recognition, game-playing, image understanding, and language translation have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &quot;multiplying and zeroing&quot; doesn&#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &quot;deep neural networks.&quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &quot;neural&quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &quot;the first device to think as the human brain.&quot;
+
+
+
+Deep neural networks remained mostly a fringe idea for decades, since they typically didn&#39;t perform very well, due (in retrospect) to the limited computational power and small dataset sizes of the era. But over the past decade these networks have begun to rival human capabilities on highly complicated tasks, making it more plausible that they could really be emulating human brains. We&#39;ve also started to get much better data about how the brain itself operates, so we can start to make some comparisons.
+
+At least for visual images, a consensus started to emerge about what these deep neural networks were actually doing, and how it matched up to the brain. These networks operate as a series of &quot;multiply and zero&quot; filters, which build up more and more complicated descriptions of the image. The first filter looks for lines, the second filter combines the lines into corners and curves, the third filter combines the corners into shapes, etc. If we look in the visual system of the brain, we find a similar layered structure, with the early layers of the brain doing something like the early filters of the neural networks, and later layers of the brain looking like the later filters of the neural networks.
+
+
+Zeiler &amp; Fergus 2014, Güçlü &amp; van Gerven 2015
+
+It seemed like things were mostly making sense, until two recent developments:
+1. The best-performing networks started requiring a lot of filters. For example, one of the current state-of-the-art networks uses 1,001 layers. Although we don&#39;t know exactly how many layers the brain&#39;s visual system has, it is almost certainly less than 100.
+2. These networks actually don&#39;t get that much worse if you randomly remove layers from the middle of the chain. This makes very little sense if you think that each filter is combining shapes from the previous filter - it&#39;s like saying that you can skip one step of a recipe and things will still work out fine.
+
+Should we just throw up our hands and say that these networks just have way more layers than the brain (they&#39;re &quot;deeper&quot;) and we can&#39;t understand how they work? Liao and Poggio have a recent preprint that proposes a possible solution to both of these issues: maybe the later layers are all doing the same operation over and over, so that the filter chain looks like this:
+
+
+
+Why would you want to repeat the same operation many times? Often it is a lot easier to figure out how to make a small step toward your goal and then repeat, instead of going directly to the goal. For example, imagine you want to set a microwave for twelve minutes, but all the buttons are unlabeled and in random positions. Typing 1-2-0-0-GO is going to take a lot of trial and error, and if you mess up in the middle you have to start from scratch. But if you&#39;re able to find the &quot;add 30 seconds&quot; button, you can just hit it 24 times and you&#39;ll be set. This also shows why skipping a step isn&#39;t a big deal - if you hit the button 23 times instead, it shouldn&#39;t cause major issues.
+
+But if the last layers are just the same filter over and over, we can actually just replace them with a single filter in a loop, that takes its output and feeds it back into its input. This will act like a deep network, except that the extra layers are occurring in time:
+
+
+
+So Liao and Poggio&#39;s hypothesis is that very deep neural networks are like a brain that is moderately deep in both space and time. The true depth of the brain is hidden, since even though it doesn&#39;t have a huge number of regions it gets to run these regions in loops over time. Their paper has some experiments to show that this is plausible, but it will take some careful comparisons with neuroscience data to say if they are correct.
+
+Of course, it seems inevitable that at some point in the near future we will in fact start building neural networks that are &quot;deeper&quot; than the brain, in one way or another. Even if we don&#39;t discover new models that can learn better than a brain can, computers have lots of unfair advantages - they&#39;re not limited to a 1500 cm3 skull, they have direct access to the internet, they can instantly teach each other things they&#39;ve learned, and they never get bored. Once we have a neural network that is similar in complexity to the human brain but can run on computer hardware, its capabilities might be advanced enough to design an even more intelligent machine on its own, and so on: maybe the &quot;first ultraintelligent machine is the last invention that man need ever make.&quot; (Vernor Vinge) 
+">
+  
+
+
+  
+  <meta name="twitter:image:src" content="http://www.princeton.edu/~chrisb/blog/public/nytimes_crop.png">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A blog about real minds, artificial minds, using artificial minds to understand real minds, and using real minds to inspire artificial minds</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://www.chrisbaldassano.com">Main</a>
+    <a class="sidebar-nav-item" href="/~chrisb/blog/">Blog</a>
+
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/~chrisb/blog/archive/">Blog Archive</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <a class="sidebar-nav-item" href="/~chrisb/blog/atom.xml">Atom feed</a>
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/~chrisb/blog" title="Home">Rooting for the machines</a>
+            <small>A Blog by Chris Baldassano</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">How deep is the brain?</h1>
+  <span class="post-date">08 Jul 2016</span>
+  <p>Recent AI advances in <a href="https://research.googleblog.com/2015/08/the-neural-networks-behind-google-voice.html">speech recognition</a>, <a href="https://deepmind.com/alpha-go">game-playing</a>, <a href="http://www.nytimes.com/2014/11/18/science/researchers-announce-breakthrough-in-content-recognition-software.html">image understanding</a>, and <a href="https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html">language translation</a> have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &quot;multiplying and zeroing&quot; doesn&#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &quot;deep neural networks.&quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &quot;neural&quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &quot;the first device to think as the human brain.&quot;</p>
+
+<p><img src="/%7Echrisb/blog/public/nytimes_crop.png" alt="NYT"></p>
+
+<p>Deep neural networks remained mostly a fringe idea for decades, since they typically didn&#39;t perform very well, due (in retrospect) to the limited computational power and small dataset sizes of the era. But over the past decade these networks have begun to rival human capabilities on highly complicated tasks, making it more plausible that they could really be emulating human brains. We&#39;ve also started to get much better data about how the brain itself operates, so we can start to make some comparisons.</p>
+
+<p>At least for visual images, a consensus started to emerge about what these deep neural networks were actually doing, and how it matched up to the brain. These networks operate as a series of &quot;multiply and zero&quot; filters, which build up more and more complicated descriptions of the image. The first filter looks for lines, the second filter combines the lines into corners and curves, the third filter combines the corners into shapes, etc. If we look in the visual system of the brain, we find a similar layered structure, with the early layers of the brain doing something like the early filters of the neural networks, and later layers of the brain looking like the later filters of the neural networks.</p>
+
+<p><img src="/%7Echrisb/blog/public/layers.png" alt="NN and brain layers">
+Zeiler &amp; Fergus 2014, Güçlü &amp; van Gerven 2015</p>
+
+<p>It seemed like things were mostly making sense, until two recent developments:
+1. The best-performing networks started requiring a <em>lot</em> of filters. For example, one of the <a href="http://arxiv.org/abs/1603.05027">current state-of-the-art networks</a> uses 1,001 layers. Although we don&#39;t know exactly how many layers the brain&#39;s visual system has, it is almost certainly less than 100.<br>
+2. These networks actually don&#39;t get that much worse if you randomly remove layers from the <em>middle</em> of the chain. This makes very little sense if you think that each filter is combining shapes from the previous filter - it&#39;s like saying that you can skip one step of a recipe and things will still work out fine.</p>
+
+<p>Should we just throw up our hands and say that these networks just have way more layers than the brain (they&#39;re &quot;deeper&quot;) and we can&#39;t understand how they work? <a href="http://arxiv.org/abs/1604.03640">Liao and Poggio</a> have a recent preprint that proposes a possible solution to both of these issues: maybe the later layers are all doing the same operation over and over, so that the filter chain looks like this:</p>
+
+<p><img src="/%7Echrisb/blog/public/unrolled.png" alt="Feedforward NN"></p>
+
+<p>Why would you want to repeat the same operation many times? Often it is a lot easier to figure out how to make a small step toward your goal and then repeat, instead of going directly to the goal. For example, imagine you want to set a microwave for twelve minutes, but all the buttons are unlabeled and in random positions. Typing 1-2-0-0-GO is going to take a lot of trial and error, and if you mess up in the middle you have to start from scratch. But if you&#39;re able to find the &quot;add 30 seconds&quot; button, you can just hit it 24 times and you&#39;ll be set. This also shows why skipping a step isn&#39;t a big deal - if you hit the button 23 times instead, it shouldn&#39;t cause major issues.</p>
+
+<p>But if the last layers are just the same filter over and over, we can actually just replace them with a single filter in a loop, that takes its output and feeds it back into its input. This will act like a deep network, except that the extra layers are occurring in <em>time</em>:</p>
+
+<p><img src="/%7Echrisb/blog/public/rnn.png" alt="Recurrent NN"></p>
+
+<p>So Liao and Poggio&#39;s hypothesis is that <strong>very deep neural networks are like a brain that is moderately deep in both space and time.</strong> The true depth of the brain is hidden, since even though it doesn&#39;t have a huge number of regions it gets to run these regions in loops over time. Their paper has some experiments to show that this is plausible, but it will take some careful comparisons with neuroscience data to say if they are correct.</p>
+
+<p>Of course, it seems inevitable that at some point in the near future we will in fact start building neural networks that are &quot;deeper&quot; than the brain, in one way or another. Even if we don&#39;t discover new models that can learn better than a brain can, computers have lots of unfair advantages - they&#39;re not limited to a 1500 cm<sup>3</sup> skull, they have direct access to the internet, they can instantly teach each other things they&#39;ve learned, and they never get bored. Once we have a neural network that is similar in complexity to the human brain but can run on computer hardware, its capabilities might be advanced enough to design an even more intelligent machine on its own, and so on: maybe the &quot;first ultraintelligent machine is the <em>last</em> invention that man need ever make.&quot; <a href="http://mindstalk.net/vinge/vinge-sing.html">(Vernor Vinge)</a> </p>
+
+
+Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+</div>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
