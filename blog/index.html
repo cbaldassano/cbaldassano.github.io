@@ -132,6 +132,43 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2017/08/02/chunking/">
+        Reality, now in extra chunky
+      </a>
+    </h1>
+
+    <span class="post-date">02 Aug 2017</span>
+
+    <p>Our brains receive a constant stream of information about the world through our senses. Often sci-fi depictions of mind-reading or memory implants depict our experiences and memories as being like a continuous, unbroken filmstrip.</p>
+
+<p><img src="/blog/public/finalcut.gif" alt="Final Cut">
+<em>From <a href="https://en.wikipedia.org/wiki/The_Final_Cut_(2004_film)">The Final Cut, 2004</a></em></p>
+
+<p>But if I ask you to describe what has happened to you today, you will usually think in terms of <em>events</em> - snippets of experience that make sense as a single unit. Maybe you ate breakfast, and then brushed your teeth, and then got a phone call. You divide your life into these separate pieces, like how separate memory orbs get created in the movie Inside Out.</p>
+
+<p><img src="/blog/public/insideout.gif" alt="Inside Out">
+<em>From <a href="https://en.wikipedia.org/wiki/Inside_Out_(2015_film)">Inside Out, 2015</a></em></p>
+
+<p>This grouping into events is an example of <em>chunking</em>, a common concept in cognitive psychology. It is much easier to put together <a href="/blog/2016/04/13/configural/">parts into wholes</a> and then think about only the wholes (like objects or events), rather than trying to keep track of all the parts separately. The idea that people automatically perform this kind of event chunking has been relatively well studied, but their are lots of things we don&#39;t understand about how this happens in the brain. Do we directly create event-level chunks (spanning multiple minutes) or do we build up longer and longer chunks in different brain regions? Does this chunking happen within our perceptual systems, or are events constructed afterwards by some separate process? Are the chunks created during perception the same chunks that get stored into long-term memory?</p>
+
+<p>I have a <a href="https://authors.elsevier.com/a/1VUOe3BtfGld9H">new paper</a> out today that takes a first stab at these questions, thanks to the help of an all-star team of collaborators: <a href="http://jchenlab.johnshopkins.edu/">Janice Chen</a>, Asieh Zadbood (who also has <a href="http://www.biorxiv.org/content/early/2017/01/30/081208">a very cool and related preprint</a>), <a href="http://pillowlab.princeton.edu/">Jonathan Pillow</a>, <a href="http://www.hassonlab.com/">Uri Hasson</a>, and <a href="https://compmem.princeton.edu/">Ken Norman</a>.</p>
+
+<p>The basic idea is simple: if a brain region represents event chunks, then its activity should go through periods of stability (within events) punctuated by sudden shifts (at boundaries between events). I developed an analysis tool that is able to find this kind of structure in fMRI data, determining how many of these shifts happen and when then happen.</p>
+
+<p>The first main result is that we see event chunking in lots of brain regions, and the length of the events seems to build up from short events (seconds or less) in early sensory regions to long events (minutes) in higher-level regions. This suggests that events are an instrinsic part of how we experience the world, and that events are constructed through multiple stages of a hierarchy.</p>
+
+<p><img src="/blog/public/Timescales_nocallout.png" alt="Timescales"></p>
+
+<p>The second main result is that right at the end of these high-level events, we see lots of activity in brain regions the store long-term memories, like the hippocampus. Based on some additional analyses, we argue that these activity spikes are related to storing these chunks so that we can remember them later. If this is true, then our memory system is less like a DVR that constantly records our life, and more like a library of individually-wrapped events.</p>
+
+<p>There are many (<em>many</em>) other analyses in the paper, which explains why it took us about two years to put together in its entirety. One fun result at the end of the paper is that people who already know a story actually start their events a little earlier than people hearing a story for the first time. This means that if I read you a story in the scanner, I can actually make a guess about whether or not you&#39;ve heard this story before by looking at your brain activity. This guessing will not be very accurate for an individual person, so I&#39;m not ready to go into business with <a href="http://www.noliemri.com/">No Lie MRI</a> just yet, but maybe in the near future we could have a scientific way to detect <a href="https://media.netflix.com/en/press-releases/netflix-cheating-is-on-the-rise-globally-and-shows-no-signs-of-stopping">Netflix cheaters</a>.</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2017/06/05/parent/">
         Parenting the last human generation
       </a>
@@ -281,59 +318,6 @@ Zeiler &amp; Fergus 2014, Güçlü &amp; van Gerven 2015</p>
 <p>This roughly matches what we had previously seen with the simpler experiments: central information heads to regions for recognizing objects, letters, and faces, while peripheral information gets used by areas that process environments and big landmarks. But it also reveals some finer structure we didn&#39;t know about before. Some scene processing regions care more about the &quot;near&quot; periphery just outside the fovea and still have access to relatively high-resolution information, while others draw information from the &quot;far&quot; periphery that only provides coarse information about your current location. There are also detectable foveal vs. peripheral differences in the frontal lobe of the brain, which is pretty surprising, since this part of the brain is supposed to be performing abstract reasoning and planning that shouldn&#39;t be all that related to where the information is coming from.</p>
 
 <p>This paper was my first foray into the fun world of movie-watching data, which I&#39;ve become obsessed with during my postdoc. Contrary to the what everyone&#39;s parents told them, watching TV doesn&#39;t turn off your brain - you use almost every part of your brain to understand and follow along with the story, and answering questions about videos is such a challenging problem that even the latest computer AIs are pretty terrible at it (though some of <a href="http://vision.stanford.edu/publications.html">my former labmates</a> have started making them better). We&#39;re finding that movies drive much stronger and more complex activity patterns compared to the usual paradigm of flashing individual images, and we&#39;re starting to answer questions raised by cognitive scientists in the 1970s about how complicated situations are understood and remembered - stay tuned!</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2016/04/13/configural/">
-        Cutups and configural processing
-      </a>
-    </h1>
-
-    <span class="post-date">13 Apr 2016</span>
-
-    <div class="message">
-“The love of complexity without reductionism makes art; the love of complexity with reductionism makes science.” — E.O. Wilson
-</div>
-
-<p>In the 1950s William S. Burroughs popularized an art form called the &quot;cut-up technique.&quot; The idea was to take existing stories (in text, audio, or video) and cut them up into pieces, and then recombine them into something new. His creations are a juxaposition of (often disturbing) imagery, chosen to fit together despite coming from different sources. Here&#39;s a sample from <em>The Soft Machine</em>:</p>
-
-<div class="message">
-Police files of the world spurt out in a blast of bone meal, garden tools and barbecue sets whistle through the air, skewer the spectators - crumpled cloth bodies through dead nitrous streets of an old film set - grey luminous flakes falling softly on Ewyork, Onolulu, Aris, Ome, Osteon - From siren towers the twanging notes of fear - Pan God of Panic piping blue notes through empty streets as the berserk time machine twisted a tornado of years and centuries-
-</div>
-
-<p>The cut-ups aren&#39;t always coherent in the sense of having an understandable plot - sometimes Burroughs was just aiming to convey an emotion. He attributed an almost mystical quality to cut-ups, saying they could help reveal the hidden meanings in text or even serve as prophecy, since &quot;when you cut into the present the future leaks out.&quot; His experimental film <em>The Cut-Ups</em> was predictably polarizing, with some people finding it mesmerizing and others demanding their money back.</p>
-
-<iframe  title="The Cut-Ups" width="480" height="390" src="http://www.youtube.com/embed/Uq_hztHJCM4" frameborder="0"></iframe>
-
-<p>If you jump through the video a bit you&#39;ll see that it isn&#39;t quite as repetitive as it seems during the first minute. (I also think Burroughs would heartily approve of jumping through the movie rather than watching it from beginning to end.)</p>
-
-<p>This idea of combining parts to create something new is alive and well on the internet, especially now that we are starting to amass a huge library of video and audio clips. It&#39;s painstaking work, but there is a whole genre of videos in which clips from public figures are put together to <a href="https://www.youtube.com/watch?v=7CYJ73pVpVc">recreate</a> or <a href="https://www.youtube.com/watch?v=A7vTkbnjJcQ">parody</a> existing songs, or to create <a href="https://www.youtube.com/watch?v=Gg5SwyTvAHw">totally original</a> compositions.</p>
-
-<p>Since the whole can have a meaning that is more than the sum of its parts, our brains must be somehow putting these parts together. This process is referred to as &quot;configural processing,&quot; since understanding what we&#39;re hearing or seeing requires looking not just at the parts but at their configuration. Work from <a href="http://media.wix.com/ugd/b75639_179a3f18a5774393b1bf37e9c1d1cb11.pdf">Uri Hasson&#39;s lab</a> (before I joined as a postdoc) has looked at how meaning gets pieced together throughout a story, and found a network of brain regions that help join sentences together to understand a narrative. They used stimuli very similar to the cut-ups, in which sentences were cut out and then put back together in a random order, and showed that these brain regions stopped responding consistently when the overall meaning was taken away (even though the parts were the same).</p>
-
-<p>Today I (along with my PhD advisors, <a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a> and <a href="http://www.psychology.illinois.edu/people/dmbeck">Diane Beck</a>) have a new paper out in Cerebral Cortex, titled <a href="http://cercor.oxfordjournals.org/cgi/reprint/bhw077?ijkey=iUBNzaBCkEO1hN4&amp;keytype=ref">Human-object interactions are more than the sum of their parts (free-access link)</a>. This paper looks at how things get combined across space (rather than time) in the visual system. We were looking specifically at images containing either a person, an object, or both, and tried to find brain regions where a <em>meaningful</em> human-object interaction looked different from just a sum of person plus object.</p>
-
-<p><img src="/blog/public/sum_of_parts.png" alt="SumOfParts"></p>
-
-<p>In the full paper we look at a number of different brain regions, but some of the most interesting results come from the superior temporal sulcus (an area right behind the top of your ears). This area couldn&#39;t care less about objects by themselves, and doesn&#39;t even care much about people if they aren&#39;t doing anything. But as soon as we put the person and object together in a meaningful way, it starts paying attention, and we can make a better-than-chance guess about what action the person is performing (in the picture you&#39;re currently looking at) just by reading your brain activity from this region. Our current theory about this region is that it is involved in understanding the actions and intentions of other people, as I described in <a href="/blog/2015/02/24/conchords/">a previous post</a>.</p>
-
-<p>Next month I&#39;ll be presenting at <a href="http://memory.psych.upenn.edu/CEMS_2016">CEMS 2016</a> on some new work I&#39;ve been doing with Uri and Ken Norman, where I&#39;m trying to figure out exactly which pieces of a story end up getting combined together and how these combined representations get stored into memory. Working with real stories (like movies and TV shows) is challenging as a scientist, since usually we like our stimuli to be very tightly controlled, but these kinds of creative, meaningful stimuli can give us a window into the most interesting functions of the brain.</p>
-
-<div class="message">
-<p>Interviewer:  In view of all this, what will happen to fiction in the next twenty-five years?
-
-<p>Burroughs: In the first place, I think there's going to be more and more merging of art and science. Scientists are already studying the creative process, and I think the whole line between art and science will break down and that scientists, I hope, will become more creative and writers more scientific. [...] Science will also discover for us how association blocks actually form.
-
-<p>Interviewer: Do you think this will destroy the magic? 
-
-<p>Burroughs: Not at all. I would say it would enhance it.
-
-<p><a href="http://www.theparisreview.org/interviews/4424/the-art-of-fiction-no-36-william-s-burroughs">William S. Burroughs, The Art of Fiction No. 36</a>
-</div>
 
 
     Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
