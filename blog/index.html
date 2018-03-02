@@ -102,6 +102,10 @@
         
       
     
+      
+        
+      
+    
 
     <a class="sidebar-nav-item" href="/blog/atom.xml">Atom feed</a>
     
@@ -129,6 +133,125 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blog/2018/03/02/reproducible/">
+        The three ingredients of reproducible research
+      </a>
+    </h1>
+
+    <span class="post-date">02 Mar 2018</span>
+
+    <p>Much of the conversation about research methods in science has focused on the <a href="https://digest.bps.org.uk/2015/08/27/this-is-what-happened-when-psychologists-tried-to-replicate-100-previously-published-findings/">&quot;replication crisis&quot;</a> - the fact that many classic studies (especially in psychology) are often not showing the same results when performed carefully by independent research groups. Although there are some debates about <a href="https://news.harvard.edu/gazette/story/2016/03/study-that-undercut-psych-research-got-it-wrong/">exactly how bad</a> the problem is, a consensus is emerging about how to improve the ways we conduct experiments and analyses: <a href="https://www.theguardian.com/science/head-quarters/2014/may/20/psychology-registration-revolution">pre-registering</a> study hypotheses before seeing the data, using <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2205186">larger sample sizes</a>, being more willing to <a href="https://www.psychologicalscience.org/publications/replication">publish (informative) null results</a>, and maybe being <a href="https://imai.princeton.edu/research/files/significance.pdf">more conservative</a> about what evidence counts as &quot;proof.&quot;</p>
+
+<p>But there is actually an even simpler problem we haven&#39;t fully tackled, which is not &quot;replicability&quot; (being able to get the same result in new data from a new experiment) but &quot;reproducibility&quot; - the ability to demonstrate how we got the result from the original data in the first place. Being able trace and record the exact path from data to results is important for documenting precisely how the analysis works, and allows other researchers to examine the details for themselves if they are skeptical. It also makes it much easier for future work (either by the same authors or others) to keep analyses comparable across different experiments.</p>
+
+<p>Describing how data was analyzed is of course supposed to be one of the main points of a published paper, but in practice it is almost impossible to recreate the exact processing pipeline of a study just from reading the paper. Here are some real examples that I have experienced firsthand in my research:</p>
+
+<ul>
+<li>Trying to replicate a results from papers that used a randomization procedure called phase scrambling, I realized that there are actually at least two ways of doing this scrambling and papers usually don&#39;t specify which one they use</li>
+<li>Confusion over exactly what probability measure was calculated in a published study set off a minor panic when the study authors started to think their code was wrong, before realizing that their analysis was actually working as intended</li>
+<li>Putting the same brain data into different versions of AFNI (a neuroimaging software package) can produce different statistical maps, due to a change in the way the False Discovery Rate is calculated</li>
+<li>A collaborator was failing to reproduce one of my results even with my code - turned out that the code worked in MATLAB versions 2015b and 2017b but not 2017a (for reasons that are still unclear)</li>
+</ul>
+
+<p>These issues show that reproducible research actually requires three pieces:</p>
+
+<ol>
+<li>Publicly available data</li>
+<li>Open-source code</li>
+<li>A well-defined computing environment</li>
+</ol>
+
+<p>The first two things we know basically how to do, at least in theory - data can be uploaded to a number of services that are typically free to researchers (and standards are starting to emerge for complex data formats like <a href="http://bids.neuroimaging.io/">neuroimaging data</a>), and code can be shared (and version-controlled) through platforms like GitHub. But the last piece has been mostly overlooked - how can we take a &quot;snapshot&quot; of all the behind-the-scene infrastructure, like the programming language version and all the libraries the code depends on? This is honestly often the biggest barrier to reproducing results - downloading data and code is easy, but actually getting the code to run (and run exactly as it did for the original analysis) can be a descent into madness, especially on a highly-configurable linux machine.</p>
+
+<p>For my <a href="https://www.biorxiv.org/content/early/2018/01/24/252718">recent preprint</a>, I tried out a possible solution to this problem: an online service called CodeOcean. This platform allow you to create an isolated &quot;capsule&quot; that contains your data, your code, and a description of the programming environment (set up with a simple GUI). You can then execute your code (on their servers), creating a verified set of results - the whole thing is then labeled with a DOI, and <a href="https://doi.org/10.24433/CO.a27d1d90-d227-4600-b876-051a801c7c20">is publicly viewable</a> with just a browser. Interestingly the public capsule is still <em>live</em>, meaning that anyone can edit the code and click Run to see how the results change (any changes they make affect only their own view of the capsule). Note that I wouldn&#39;t recommend blindly clicking Run on my capsule since the analysis takes multiple hours, but if you&#39;re interested in messing with it you can edit the run.sh file to only conduct a manageable subset of the analyses (e.g. only on a single region of interest). CodeOcean is still under development, and there are a number of features I haven&#39;t tried yet (including the ability to run live Jupyter Notebooks, and a way to create a simple GUI for exposing parameters in your code).</p>
+
+<p>For now this is set up as a post-publication (or post-preprint) service and isn&#39;t intended for actually working on the analyses (the computing power you have access to is limited and has a quota), but as cloud computing continues to become more convenient and affordable I could eventually see entire scientific workflows moving online.</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blog/2017/11/16/sfn/">
+        Live-blogging SfN 2017
+      </a>
+    </h1>
+
+    <span class="post-date">16 Nov 2017</span>
+
+    <p>[I wrote these posts during the Society for Neuroscience 2017 meeting, as one of the Official Annual Meeting Bloggers. These blog posts originally appeared on SfN&#39;s Neuronline platform.]</p>
+
+<h2>SuperEEG: ECoG data breaks free from electrodes</h2>
+
+<p>The &quot;gold standard&quot; for measuring neural activity in human brains is ECoG (electrocorticography), using electrodes implanted directly onto the surface of the brain. Unlike methods that measure blood oxygenation (which have poor temporal resolution) or that measure signals on the scalp (which have poor spatial resolution), ECoG data has both high spatial and temporal precision. Most of the ECoG data that has been collected comes from patients who are being treated for epileptic seizures and have had electrodes implanted in order to determine where the seizures are starting.</p>
+
+<p>The big problem with ECoG data, however, is that each patient typically only has about 150 implanted electrodes, meaning that we can only measure brain activity in 150 spots (compared to about 100,000 spots for functional MRI). It would seem like there is no way around this - if you don’t measure activity from some part of the brain, then you can’t know anything about what is happening there, right?</p>
+
+<p>Actually, you can, or at least you can guess! <a href="http://www.context-lab.com/">Lucy Owen, Andrew Heusser, and Jeremy Manning</a> have developed a new analysis tool called SuperEEG, based on the idea that measuring from one region of the brain can actually tell you a lot about another unmeasured region, if the two regions are highly correlated (or anti-correlated). By using many ECoG subjects to learn the correlation structure of the brain, we can extrapolate from measurements in a small set of electrodes to estimate neural activity across the whole brain.</p>
+
+<p><img src="/blog/public/SuperEEG.png" alt="Super EEG">
+Figure from <a href="https://app.box.com/s/j1w3985f3gc4t7pkb60rd9y5w7la210t">their SfN poster</a></p>
+
+<p>This breaks ECoG data free from little islands of electrodes and allows us to carry out analyses across the brain. Not all brain regions can be well-estimated using this method (due to the typical placement locations of the electrodes and the correlation structure of brain activity), but it works surprisingly well for most of the cortex:</p>
+
+<p><img src="/blog/public/SuperEEG2.jpg" alt="Super EEG2"></p>
+
+<p>This could also help with the original medical purpose of implanting these electrodes, by allowing doctors to track seizure activity in 3D as it spreads through the brain. It could even be used to help surgeons choose the locations where electrodes should be placed in new patients, to make sure that seizures can be tracked as broadly and accurately as possible.</p>
+
+<h2>Hippocampal subregions growing old together</h2>
+
+<p>To understand and remember our experiences, we need to think both big and small. We need to keep track of our spatial location at broad levels (&quot;what town am I in?&quot;) all the way down to precise levels (&quot;what part of the room am I in?&quot;). We need to keep track of time on scales from years to fractions of a second. We need to access our memories at both a coarse grain (&quot;what do I usually bring to the beach?&quot;) and a fine grain (&quot;remember that time I forgot the sunscreen?&quot;).</p>
+
+<p>Data from both rodents and humans has suggested that different parts of the hippocampus keep track of different levels of granularity, with posterior hippocampus focusing on the fine details and anterior hippocampus seeing the bigger picture. Iva Brunec and her co-authors recently <a href="https://www.biorxiv.org/content/early/2017/08/24/179655">posted a preprint</a> showing that temporal and spatial correlations change along the long axis of the hippocampus - in anterior hippocampus all the voxels are similar to each other and change slowly over time, while in posterior hippocampus the voxels are more distinct from each other and change more quickly over time.</p>
+
+<p>In their latest work, they look at how these functional properties of the hippocampus change over the course of our lives. Surprisingly, this anterior-posterior distinction actually increases with age, becoming the most dramatic in the oldest subjects in their sample.</p>
+
+<p><img src="/blog/public/Iva1.png" alt="Iva1">
+The interaction between the two halves of the hippocampus also changes - while in young adults activity timecourses in the posterior and anterior hippocampus are uncorrelated, they start to become anti-correlated in older adults, perhaps suggesting that the complementary relationship between the two regions has started to break down. Also, their functional connectivity with the rest of the brain shifts over time, with posterior hippocampus decoupling from posterior medial regions and anterior hippocampus increasing its coupling to medial prefrontal regions.</p>
+
+<p><img src="/blog/public/Iva2.png" alt="Iva2">
+These results raise a number of intriguing questions about the cause of these shifts, and their impacts on cognition and memory throughout the lifespan. Is this shift toward greater coupling with regions that represent coarse-grained schematic information compensating for degeneration in regions that represent details? What is the “best” balance between coarse- and fine-timescale information for processing complex stimuli like movies and narratives, and at what age is it achieved? How do these regions mature before age 18, and how do their developmental trajectories vary across people? By following the analysis approach of Iva and her colleagues on new datasets, we should hopefully be able to answer many of these questions in future studies.</p>
+
+<h2>The Science of Scientific Bias</h2>
+
+<p>This year’s David Kopf lecture on Neuroethics was given by Dr. Jo Handelsman, entitled <a href="http://www.abstractsonline.com/pp8/#!/4376/presentation/1298">“The Fallacy of Fairness: Diversity in Academic Science”</a>. Dr. Handelsman is a microbiologist who recently spent three years as the Associate Director for Science at the White House Office of Science and Technology Policy, and has also led some of the most well-known <a href="http://www.pnas.org/content/109/41/16474.abstract">studies of gender bias in science</a>.</p>
+
+<p><img src="/blog/public/IMG_1255.JPG" alt="IMG_1255.JPG"></p>
+
+<p>She began her talk by pointing out that increasing diversity in science is not only a moral obligation, but also has major potential benefits for scientific discovery. Diverse groups have been shown to produce more effective, innovative, and well-reasoned solutions to complex problems. I think this is especially true in psychology - if we are trying to create theories of how all humans think and act, we shouldn’t be building teams composed of a thin slice of humanity.</p>
+
+<p>Almost all scientists agree in principle that we should not be discriminating based on race or gender. However, the process of recruiting, mentoring, hiring, and promotion relies heavily on “gut feelings” and subtle social cues, which are highly susceptible to implicit bias. Dr. Handelsman covered a wide array of studies over the past several decades, ranging from observational analyses to randomized controlled trials of scientists making hiring decisions. I’ll just mention two of the studies she described which I found the most interesting:</p>
+
+<ul>
+<li><p>How it is possible that people can be making biased decisions, but still think they were objective when they reflect on those decisions? A fascinating study by <a href="http://journals.sagepub.com/doi/abs/10.1111/j.0956-7976.2005.01559.x">Uhlmann &amp; Cohen</a> showed that subjects rationalized biased hiring decisions after the fact by redefining their evaluation criteria. For example, when choosing whether to hire a male candidate or a female candidate, who both had (randomized) positive and negative aspects to their resumes, the subjects would decide that the positive aspects of the male candidate were the most important for the job and that he therefore deserved the position. This is interestingly similar to the way that <a href="https://fivethirtyeight.com/features/science-isnt-broken/">p-hacking</a> distorts scientific results, and the solution to the problem may be the same. Just as <a href="https://cos.io/prereg/">pre-registration</a> forces scientists to define their analyses ahead of time, Uhlmann &amp; Cohen showed that forcing subjects to commit to their importance criteria before seeing the applications eliminated the hiring bias.</p></li>
+<li><p>Even relatively simple training exercises can be effective in making people more aware of implicit bias. Dr. Handelsman and her colleagues created a set of short videos called <a href="https://academics.skidmore.edu/blogs/vids/">VIDS (Video Interventions for Diversity in STEM)</a>, consisting of narrative films illustrating issues that have been studied in the implicit bias literature, along with expert videos describing the findings of these studies. They then ran <a href="https://academics.skidmore.edu/blogs/vids/files/2017/02/Pietrietal_2017.pdf">multiple experiments</a> showing that these videos were effective at educating viewers, and made them more likely to notice biased behavior. I plan on making these videos required viewing in my lab, and would encourage everyone working in STEM to watch them as well (the narrative videos are only 30 minutes total).</p></li>
+</ul>
+
+<p><img src="/blog/public/IMG_1261.JPG" alt="IMG_1261.JPG"></p>
+
+<h2>Drawing out visual memories</h2>
+
+<p>If you close your eyes and try to remember something you saw earlier today, what exactly do you see? Can you visualize the right things in the right places? Are there certain key objects that stand out the most? Are you misremembering things that weren’t really there?</p>
+
+<p>Visual memory for natural images has <a href="http://jov.arvojournals.org/article.aspx?articleid=2191865">typically been studied</a> with recognition experiments, in which subjects have to recognize whether an image is one they have seen before or not. But recognition is quite different from freely recalling a memory (without being shown it again), and can involve different neural mechanisms. How can we study visual recall, testing whether the mental images people are recalling are correct?</p>
+
+<p>One way option is to have subjects give verbal descriptions of what they remember, but this might not capture all the details of their mental representation, such as the precise relationships between the objects or whether their imagined viewpoint of the scene is correct. Instead, NIMH researchers Elizabeth Hall, Wilma Bainbridge, and Chris Baker had subjects draw photographs from memory, and then analyzed the contents of those drawings.</p>
+
+<p><img src="/blog/public/drawing.JPG" alt="drawing.JPG"></p>
+
+<p>This is a creative but challenging approach, since it requires quantitatively characterizing how well the drawings (all 1,728!) match the original photographs. They crowdsource this task using Amazon Mechanical Turk, getting high-quality ratings that include: how well can the original photograph be identified based on the drawing, what objects were correctly drawn, what objects were falsely remembered as being in the image, and how close the objects were to their correct locations. There are also “control” drawings made by subjects with full information (that get to look at the image while they draw) or minimal information (just a category label) that were rated for comparison.</p>
+
+<p>The punchline is that subjects can remember many of the images, and produce surprisingly detailed drawings that are quite similar to those drawn by the control group that could look at the pictures. They reproduce the majority of the objects, place them in roughly the correct locations, and draw very few incorrect objects, making it very easy to match the drawings with the original photographs. The only systematic distortion is that the drawings depicted the scenes as being slightly farther away than they actually were, which nicely replicates previous results on <a href="http://www.scholarpedia.org/article/Boundary_extension">boundary extension</a>.</p>
+
+<p>This is a neat task that subjects are remarkably good at (which is not always the case in memory experiments!), and could be a great tool for investigating the neural mechanisms of naturalistic perception and memory. Another <a href="http://www.abstractsonline.com/pp8/#!/4376/presentation/26803">intriguing SfN presentation</a> showed that is possible to have subjects draw while in an fMRI scanner, allowing this paradigm to be used in neuroimaging experiments. I wonder if this approach could also be extended into drawing comic strips of remembered events that unfold over time, or to illustrate mental images based on stories told through audio or text.</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -236,88 +359,6 @@
 <p>The second group (a bit farther forward) uses the information from the first group to build up a stable model of the world and your place in it. They care less about exactly where your eyes are pointed and more about where you are in the world, creating a 3D model of the room or landscape around you and placing you on a map of what other places are nearby. These regions are strongly linked to your long-term memory system, and show the highest activity in familiar environments.</p>
 
 <p>I am very interested in this second group of regions that integrate information over time - what exactly are they keeping track of, and how do they get information in and out of long-term memory? I have a new manuscript with my collaborators at Princeton (currently working its way through the publication gaunlet) showing that these regions build <a href="http://biorxiv.org/content/early/2016/10/14/081018">abstract representations of events in movies and audio narration</a>, and am  running a new experiment looking at how event templates we learn over our lifetimes are used to help build these event representations.</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2016/07/08/deep/">
-        How deep is the brain?
-      </a>
-    </h1>
-
-    <span class="post-date">08 Jul 2016</span>
-
-    <p>Recent AI advances in <a href="https://research.googleblog.com/2015/08/the-neural-networks-behind-google-voice.html">speech recognition</a>, <a href="https://deepmind.com/alpha-go">game-playing</a>, <a href="http://www.nytimes.com/2014/11/18/science/researchers-announce-breakthrough-in-content-recognition-software.html">image understanding</a>, and <a href="https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html">language translation</a> have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &quot;multiplying and zeroing&quot; doesn&#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &quot;deep neural networks.&quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &quot;neural&quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &quot;the first device to think as the human brain.&quot;</p>
-
-<p><img src="/blog/public/nytimes_crop.png" alt="NYT"></p>
-
-<p>Deep neural networks remained mostly a fringe idea for decades, since they typically didn&#39;t perform very well, due (in retrospect) to the limited computational power and small dataset sizes of the era. But over the past decade these networks have begun to rival human capabilities on highly complicated tasks, making it more plausible that they could really be emulating human brains. We&#39;ve also started to get much better data about how the brain itself operates, so we can start to make some comparisons.</p>
-
-<p>At least for visual images, a consensus started to emerge about what these deep neural networks were actually doing, and how it matched up to the brain. These networks operate as a series of &quot;multiply and zero&quot; filters, which build up more and more complicated descriptions of the image. The first filter looks for lines, the second filter combines the lines into corners and curves, the third filter combines the corners into shapes, etc. If we look in the visual system of the brain, we find a similar layered structure, with the early layers of the brain doing something like the early filters of the neural networks, and later layers of the brain looking like the later filters of the neural networks.</p>
-
-<p><img src="/blog/public/layers.png" alt="NN and brain layers">
-Zeiler &amp; Fergus 2014, Güçlü &amp; van Gerven 2015</p>
-
-<p>It seemed like things were mostly making sense, until two recent developments:
-1. The best-performing networks started requiring a <em>lot</em> of filters. For example, one of the <a href="http://arxiv.org/abs/1603.05027">current state-of-the-art networks</a> uses 1,001 layers. Although we don&#39;t know exactly how many layers the brain&#39;s visual system has, it is almost certainly less than 100.<br>
-2. These networks actually don&#39;t get that much worse if you randomly remove layers from the <em>middle</em> of the chain. This makes very little sense if you think that each filter is combining shapes from the previous filter - it&#39;s like saying that you can skip one step of a recipe and things will still work out fine.</p>
-
-<p>Should we just throw up our hands and say that these networks just have way more layers than the brain (they&#39;re &quot;deeper&quot;) and we can&#39;t understand how they work? <a href="http://arxiv.org/abs/1604.03640">Liao and Poggio</a> have a recent preprint that proposes a possible solution to both of these issues: maybe the later layers are all doing the same operation over and over, so that the filter chain looks like this:</p>
-
-<p><img src="/blog/public/unrolled.png" alt="Feedforward NN"></p>
-
-<p>Why would you want to repeat the same operation many times? Often it is a lot easier to figure out how to make a small step toward your goal and then repeat, instead of going directly to the goal. For example, imagine you want to set a microwave for twelve minutes, but all the buttons are unlabeled and in random positions. Typing 1-2-0-0-GO is going to take a lot of trial and error, and if you mess up in the middle you have to start from scratch. But if you&#39;re able to find the &quot;add 30 seconds&quot; button, you can just hit it 24 times and you&#39;ll be set. This also shows why skipping a step isn&#39;t a big deal - if you hit the button 23 times instead, it shouldn&#39;t cause major issues.</p>
-
-<p>But if the last layers are just the same filter over and over, we can actually just replace them with a single filter in a loop, that takes its output and feeds it back into its input. This will act like a deep network, except that the extra layers are occurring in <em>time</em>:</p>
-
-<p><img src="/blog/public/rnn.png" alt="Recurrent NN"></p>
-
-<p>So Liao and Poggio&#39;s hypothesis is that <strong>very deep neural networks are like a brain that is moderately deep in both space and time.</strong> The true depth of the brain is hidden, since even though it doesn&#39;t have a huge number of regions it gets to run these regions in loops over time. Their paper has some experiments to show that this is plausible, but it will take some careful comparisons with neuroscience data to say if they are correct.</p>
-
-<p>Of course, it seems inevitable that at some point in the near future we will in fact start building neural networks that are &quot;deeper&quot; than the brain, in one way or another. Even if we don&#39;t discover new models that can learn better than a brain can, computers have lots of unfair advantages - they&#39;re not limited to a 1500 cm<sup>3</sup> skull, they have direct access to the internet, they can instantly teach each other things they&#39;ve learned, and they never get bored. Once we have a neural network that is similar in complexity to the human brain but can run on computer hardware, its capabilities might be advanced enough to design an even more intelligent machine on its own, and so on: maybe the &quot;first ultraintelligent machine is the <em>last</em> invention that man need ever make.&quot; <a href="http://mindstalk.net/vinge/vinge-sing.html">(Vernor Vinge)</a> </p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2016/05/20/corner/">
-        The corner of your eye
-      </a>
-    </h1>
-
-    <span class="post-date">20 May 2016</span>
-
-    <p>We usually think that our eyes work like a camera, giving us a sharp, colorful picture of the world all the way from left to right and top to bottom. But we actually only get this kind of detail in a tiny window right where our eyes are pointed. If you hold your thumb out at arm&#39;s length, the width of your thumbnail is about the size of your most precise central (also called &quot;foveal&quot;) vision. Outside of that narrow spotlight, both color perception and sharpness drop off rapidly - doing high-precision tasks like reading a word is almost impossible unless you&#39;re looking right at it.</p>
-
-<p>The rest of your visual field is your &quot;peripheral&quot; vision, which has only imprecise information about shape, location, and color. Out here in the corner of your eye you can&#39;t be sure of much, which is used as a constant source of fear and uncertainty in horror movies and the occult:</p>
-
-<div class="message">
-<p>What's that in the mirror, or the corner of your eye?
-
-<p>What's that footstep following, but never passing by?
-
-<p>Perhaps they're all just waiting, perhaps when we're all dead,
-
-<p>Out they'll come a-slithering from underneath the bed.... 
-<p><a href="https://www.youtube.com/watch?v=vJiJZiOaJFQ">Doctor Who "Listen"</a>
-</div>
-
-<p>What does this peripheral information get used for during visual processing? It was shown over a decade ago (by one of my current mentors, <a href="http://www.weizmann.ac.il/neurobiology/labs/malach/sites/neurobiology.labs.malach/files/2002_04_Hasson_neuron.pdf">Uri Hasson</a>) that flashing pictures in your central and peripheral vision activate different brain regions. The hypothesis is that peripheral information gets used for tasks like determining where you are, learning the layout of the room around you, and planning where to look next. But this experimental setup is pretty unrealistic. In real life we have related information coming into both central and peripheral vision at the same time, which is constantly changing and depends on where we decide to look. Can we track how visual information flows through the brain during natural viewing?</p>
-
-<p>Today a new paper from me and my PhD advisors (<a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a> and <a href="http://www.psychology.illinois.edu/people/dmbeck">Diane Beck</a>) is out in the Journal of Vision: <a href="http://jov.arvojournals.org/article.aspx?articleid=2524115">Pinpointing the peripheral bias in neural scene-processing networks during natural viewing (open access)</a>. I looked at fMRI data (collected and shared generously by Mike Arcaro,Sabine Kastner, Janice Chen, and Asieh Zadbood) while people were watching clips from movies and TV shows. They were free to move their eyes around and watch as you normally would, except that they were inside a huge superconducting magnet rather than on the couch (and had less popcorn). We can disentangle central and peripheral information by tracking how these streams flow out of their initial processing centers in visual cortex to regions performing more complicated functions like object recognition and navigation.</p>
-
-<p>We can make maps that show where foveal information ends up (colored orange/red) and where peripheral information ends up (colored blue/purple). I&#39;m showing this on an &quot;inflated&quot; brain surface where we&#39;ve smoothed out all the wrinkles to make it easier to look at:</p>
-
-<p><img src="/blog/public/periphery.png" alt="Foveal and Peripheral regions"></p>
-
-<p>This roughly matches what we had previously seen with the simpler experiments: central information heads to regions for recognizing objects, letters, and faces, while peripheral information gets used by areas that process environments and big landmarks. But it also reveals some finer structure we didn&#39;t know about before. Some scene processing regions care more about the &quot;near&quot; periphery just outside the fovea and still have access to relatively high-resolution information, while others draw information from the &quot;far&quot; periphery that only provides coarse information about your current location. There are also detectable foveal vs. peripheral differences in the frontal lobe of the brain, which is pretty surprising, since this part of the brain is supposed to be performing abstract reasoning and planning that shouldn&#39;t be all that related to where the information is coming from.</p>
-
-<p>This paper was my first foray into the fun world of movie-watching data, which I&#39;ve become obsessed with during my postdoc. Contrary to the what everyone&#39;s parents told them, watching TV doesn&#39;t turn off your brain - you use almost every part of your brain to understand and follow along with the story, and answering questions about videos is such a challenging problem that even the latest computer AIs are pretty terrible at it (though some of <a href="http://vision.stanford.edu/publications.html">my former labmates</a> have started making them better). We&#39;re finding that movies drive much stronger and more complex activity patterns compared to the usual paradigm of flashing individual images, and we&#39;re starting to answer questions raised by cognitive scientists in the 1970s about how complicated situations are understood and remembered - stay tuned!</p>
 
 
     Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>

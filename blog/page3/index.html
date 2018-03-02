@@ -99,6 +99,10 @@
         
       
     
+      
+        
+      
+    
 
     <a class="sidebar-nav-item" href="/blog/atom.xml">Atom feed</a>
     
@@ -126,6 +130,80 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blog/2015/03/31/phdadvice/">
+        Seven things I learned as a PhD student
+      </a>
+    </h1>
+
+    <span class="post-date">31 Mar 2015</span>
+
+    <p>Doing great research is tough. There are so many factors outside of your control: experiments not panning out, unfair reviewers, competing labs, limited funding sources. I&#39;ve tried to distill down some of the strategies that worked well for me and my labmates (these are most relevant to my background in science/engineering, but some might apply to other fields as well):</p>
+
+<h2>Get your hands dirty</h2>
+
+<p><img src="/blog/public/frizzle.jpg" alt="Magic School Bus"></p>
+
+<p>Some early grad students get stuck in a loop of doing a lot of general talking about the kind of things they want to work on, but never really get started. Taking time to learn and plan your experiments is great, but there are a lot of things you can&#39;t learn without diving into real data. You&#39;re almost certainly going to mess things up the first one or two (or twenty) times, so start making mistakes as soon as possible. Having a deeper understanding of the data you&#39;re dealing with will be invaluable in driving the kinds of questions you&#39;ll ask and the design of your experiments.</p>
+
+<h2>Investigate things that don&#39;t make sense</h2>
+
+<p>When you&#39;re looking at the results of an analysis, often there will be something that just doesn&#39;t quite line up: there&#39;s one value of 1.01 when the maximum measurement should be 1, two data points are exactly on top of one another, 1% of the data points are giving &quot;NaN&quot;s. It&#39;s easy to just brush these under the rug (&quot;it&#39;s just a couple datapoints&quot;), but getting to the bottom of these is critical. Often they will reveal some flaw in your analysis that might mean all your results are invalid, or (if you&#39;re lucky!) they might point to some new science hiding being an unexpected pattern in the data.</p>
+
+<h2>Explore, then replicate</h2>
+
+<p>The best way to approach an unfamiliar problem is to first collect (or extract from your full data) a pilot dataset, and start looking for patterns. You don&#39;t need to be rigorous about statistics, multiple comparisons, or model complexity - what are the strongest signals you can find? Are there ways of transforming the data that make it more amenable to your models? Then, once you&#39;ve optimized your analysis, you apply it to new (or held-out) data, and meticulously measure how well it performs. If you do your playing directly on the data, it&#39;s very easy to start fooling yourself about what&#39;s really there and what you just want to be there. </p>
+
+<h2>Realize that you&#39;re in the big leagues</h2>
+
+<p>Throughout school, you&#39;ve always been measured against your peers - your kindergarten macaroni crafts earned you a gold star because they were impressive for your experience level, not because they were competitive with a typical exhibit at the Louvre. In your first year of grad school, you are now competing with professional scientists who have been in the field for 40 years. This is intimidating (and one of the reasons why you start out being mentored by senior students and faculty members), but also exciting. You are on the front lines of scientific knowledge, answering real problems that no one has ever figured out before.</p>
+
+<h2>Know more than your advisor</h2>
+
+<p>This might sound contradictory to the previous point, since your advisor has a many-year head start in understanding your field, and you can&#39;t hope to have more total knowledge by the end of your PhD. But for the particular project you&#39;re working on, you should be finding papers on your own and reading everything you can. Publishing a paper that advances the field is going to require knowing more about that topic than anyone in the world, including your advisor.</p>
+
+<h2>Keep an end-of-the-day journal</h2>
+
+<p>Completing a PhD requires extremely long-term, self-guided planning, and it&#39;s easy to lose track of what you should be working on and what the critical next steps are. Different people have different solutions for this, but my favorite strategy was to take 10 minutes at the end of the day and write (in a physical, dead-tree notebook) a couple bullet points about what I did that day and what the next steps should be. This forces you to take stock of your current goals, gives you a little morale boost (especially when you can look back over the past week and remind yourself that you really did make progress), and lets you pick up where you left off when you come back to your projects (possibly days later).</p>
+
+<h2>Drink Water</h2>
+
+<p>Taking care of your physical health is often the first thing to go when stress sets in, but this is a sure way to completely derail your research career. Drinking more water is an easy fix for most grad students - you can avoid kidney stones (I learned that the hard way), you&#39;ll eat less junk, and having more bathroom breaks makes sure you take some breaks from your chair (no fitbit required). Some other no-brainers are to make sure you have an ergonomic typing setup (I know multiple PhDs that had to go on leave due to RSI) and keep a reasonable sleep schedule.</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blog/2015/03/23/networkmodel/">
+        A simple model for growing a brain
+      </a>
+    </h1>
+
+    <span class="post-date">23 Mar 2015</span>
+
+    <p>Today I had a chance to read <a href="http://www.ncbi.nlm.nih.gov/pubmed/25368200">a paper by Song, Kennedy, and Wang</a> about their model for explaining how brains are wired up at a high level (explaining how areas are connected, not the detailed wiring of neural circuits). It&#39;s very simple, but manages to capture some complicated aspects of brain structure.</p>
+
+<p>The goal of the model is to offer some explanation for area-to-area connection patterns across species (humans, monkeys, mice). For example, the human connection matrix looks like this (from their supplementary material):</p>
+
+<p><img src="/blog/public/connmat.png" alt="Connection Matrix"></p>
+
+<p>Gray squares show pairs of regions that (we think) are connected to each other. This looks complicated, and it is - every region has a different connection pattern, some are similar to each other (neighboring rows), some are very dissimilar, some regions (rows) have lots of connections and others have few, etc. The Song et al. paper starts by discussing the features of these matrices that seem predictable and similar across species, but the part I found more exciting was their proposed model for how you would grow a brain with these properties.</p>
+
+<p><img src="/blog/public/connmodel.jpg" alt="Connection Model"></p>
+
+<p>This figure from their paper shows the setup. You first randomly choose a bunch of points as the centers of brain regions and randomly create a bunch of neurons, assigning each neuron to belong to the closest region center (A-C). Then, to grow a connection out from a neuron, you pick a direction as a weighted average of the directions to all region centers (with closer regions weighted more heavily), and then grow in that direction a random amount (with short connections more likely than long connections) (D-G). That&#39;s it! Every neuron grows without talking to any other neuron, and they are not even really aiming anywhere in particular.</p>
+
+<p>This simple set of instructions is enough to produce some of the structures in real connectivity matrices, like relationships between how similar the connections are for two regions and how likely they are to be connected to one another. One of the take-aways is that spatial position is a very important feature for wiring brain regions - just adding a bias to connect close regions rather than distant regions is enough to explain a lot of the brain data. This sounds sort of obvious, but spatial position is often ignored in many analysis methods, and I&#39;ve been recently proposing ways of incorporating spatial information for understanding connectivity at both the <a href="http://www.ncbi.nlm.nih.gov/pubmed/25737822">whole-brain</a> and <a href="http://www.ncbi.nlm.nih.gov/pubmed/22846660">region</a> level.</p>
+
+<p>There is a lot missing from this paper - it makes a literal <a href="http://en.wikipedia.org/wiki/Spherical_cow">&quot;spherical cow&quot;</a> assumption that the brain is a solid ellipse, assumes that neurons are fired in straight lines like a laser, and doesn&#39;t account for how brain size changes during development. But in some ways it makes the result even more impressive, since they can explain a lot of the data without using any of these details.</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -299,68 +377,11 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
     Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/02/13/gazzaniga/">
-        Michael Gazzaniga&#58; Tales from Both Sides of the Brain
-      </a>
-    </h1>
-
-    <span class="post-date">13 Feb 2015</span>
-
-    <p><img src="/blog/public/gazzaniga.jpg" alt="Gazzaniga"></p>
-
-<p>Michael Gazzaniga&#39;s new book is <a href="http://www.amazon.com/Tales-Both-Sides-Brain-Neuroscience/dp/0062228803">Tales from Both Sides of the Brain: A Life in Neuroscience</a>, which is a memoir about his scientific study of split-brain patients. If you&#39;re unfamiliar with this work, people who have had their two brain hemispheres surgically separated (for medical reasons) show some <a href="http://www.nature.com/news/the-split-brain-a-tale-of-two-halves-1.10213">amazingly interesting behaviors</a>, which raise deep questions about consciousness and free will. Gazzaniga set out to simply write a standard popular science book about his research, but ended up publishing a much more autobiographical book that discusses the actual process of scientific discovery. As he writes in the preface:</p>
-
-<blockquote>
-<p>Most attempts at capturing the history of a scientific saga describe the seemingly ordered and logical way an idea developed... I want to present a different picture: science carried out in friendship, where discoveries are deeply embedded in the social relations of people from all walks of life. It is a wonderful way of life, spending one&#39;s years with smart people, puzzling over the mysteries and surprises of nature.</p>
-</blockquote>
-
-<p>This is a fact of scientific research that isn&#39;t often highlighted - personalities and relationships are central to the scientific community, even though it rarely looks that way to the public.</p>
-
-<hr>
-
-<p>One of the main takeaways from the talk for me was how young the field of neuroscience is, compared to most other hard sciences. Gazzaniga started his work in the early 1960s, when <a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(15)60224-0/fulltext">the term &quot;neuroscience&quot; barely even existed</a>. The fact that the founders of the field are still around should remind us that neuroscience is in its infancy, and we still know very little. Instead of being depressing, it&#39;s kind of liberating - it means that most of the big ideas and unifying theories are still out there to be discovered, and we should take everything we &quot;know&quot; so far with a grain of salt.</p>
-
-<p>Gazzaniga said that when he started at Caltech, there were basically two rules:  </p>
-
-<ol>
-<li>Do important things: don&#39;t do an experiment just because it&#39;s a new thing to try.</li>
-<li>If it&#39;s important, just do it: don&#39;t spend too much time planning and worrying about exactly the right way to test something. In my experience, it&#39;s often hard to even tell ahead of time what the hard parts are going to be, and trying things out is a must faster way to make the experiment better.</li>
-</ol>
-
-<p>Given the early state of the field, neuroscientists should take these to heart. We&#39;re still looking for the big principles of the brain and mind. Now is not the time to be polishing up the details of our models - we&#39;re still brainstorming.</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/01/27/helloworld/">
-        Hello World
-      </a>
-    </h1>
-
-    <span class="post-date">27 Jan 2015</span>
-
-    <p><img src="/blog/public/NG2-flare.jpg" alt="Greg Dunn Glial Flare"></p>
-
-<div class="message">
-  I visualize a time when we will be to robots what dogs are to humans. And I am rooting for the machines. -Claude Shannon, Omni Magazine (1987)
-</div>
-
-<p>I&#39;m a soon-to-be PhD who has spent the last few years at the intersection of machine learning (i.e. building systems to model complex data) and human neuroscience (i.e. trying to collect data on a complex system). I believe that both of these fields are going to have a profound impact in the coming decades, in terms of how we interact with technology, how we communicate, and how we see ourselves. In contrast to my <a href="http://www.chrisbaldassano.com">published papers</a>, in which I have to actually support my points with hard evidence, this blog is an opportunity to speculate about where we are and what&#39;s coming next.</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/blog/page4">Older</a>
   
   
     

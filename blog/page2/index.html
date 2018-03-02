@@ -99,6 +99,10 @@
         
       
     
+      
+        
+      
+    
 
     <a class="sidebar-nav-item" href="/blog/atom.xml">Atom feed</a>
     
@@ -129,6 +133,88 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2016/07/08/deep/">
+        How deep is the brain?
+      </a>
+    </h1>
+
+    <span class="post-date">08 Jul 2016</span>
+
+    <p>Recent AI advances in <a href="https://research.googleblog.com/2015/08/the-neural-networks-behind-google-voice.html">speech recognition</a>, <a href="https://deepmind.com/alpha-go">game-playing</a>, <a href="http://www.nytimes.com/2014/11/18/science/researchers-announce-breakthrough-in-content-recognition-software.html">image understanding</a>, and <a href="https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html">language translation</a> have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &quot;multiplying and zeroing&quot; doesn&#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &quot;deep neural networks.&quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &quot;neural&quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &quot;the first device to think as the human brain.&quot;</p>
+
+<p><img src="/blog/public/nytimes_crop.png" alt="NYT"></p>
+
+<p>Deep neural networks remained mostly a fringe idea for decades, since they typically didn&#39;t perform very well, due (in retrospect) to the limited computational power and small dataset sizes of the era. But over the past decade these networks have begun to rival human capabilities on highly complicated tasks, making it more plausible that they could really be emulating human brains. We&#39;ve also started to get much better data about how the brain itself operates, so we can start to make some comparisons.</p>
+
+<p>At least for visual images, a consensus started to emerge about what these deep neural networks were actually doing, and how it matched up to the brain. These networks operate as a series of &quot;multiply and zero&quot; filters, which build up more and more complicated descriptions of the image. The first filter looks for lines, the second filter combines the lines into corners and curves, the third filter combines the corners into shapes, etc. If we look in the visual system of the brain, we find a similar layered structure, with the early layers of the brain doing something like the early filters of the neural networks, and later layers of the brain looking like the later filters of the neural networks.</p>
+
+<p><img src="/blog/public/layers.png" alt="NN and brain layers">
+Zeiler &amp; Fergus 2014, Güçlü &amp; van Gerven 2015</p>
+
+<p>It seemed like things were mostly making sense, until two recent developments:
+1. The best-performing networks started requiring a <em>lot</em> of filters. For example, one of the <a href="http://arxiv.org/abs/1603.05027">current state-of-the-art networks</a> uses 1,001 layers. Although we don&#39;t know exactly how many layers the brain&#39;s visual system has, it is almost certainly less than 100.<br>
+2. These networks actually don&#39;t get that much worse if you randomly remove layers from the <em>middle</em> of the chain. This makes very little sense if you think that each filter is combining shapes from the previous filter - it&#39;s like saying that you can skip one step of a recipe and things will still work out fine.</p>
+
+<p>Should we just throw up our hands and say that these networks just have way more layers than the brain (they&#39;re &quot;deeper&quot;) and we can&#39;t understand how they work? <a href="http://arxiv.org/abs/1604.03640">Liao and Poggio</a> have a recent preprint that proposes a possible solution to both of these issues: maybe the later layers are all doing the same operation over and over, so that the filter chain looks like this:</p>
+
+<p><img src="/blog/public/unrolled.png" alt="Feedforward NN"></p>
+
+<p>Why would you want to repeat the same operation many times? Often it is a lot easier to figure out how to make a small step toward your goal and then repeat, instead of going directly to the goal. For example, imagine you want to set a microwave for twelve minutes, but all the buttons are unlabeled and in random positions. Typing 1-2-0-0-GO is going to take a lot of trial and error, and if you mess up in the middle you have to start from scratch. But if you&#39;re able to find the &quot;add 30 seconds&quot; button, you can just hit it 24 times and you&#39;ll be set. This also shows why skipping a step isn&#39;t a big deal - if you hit the button 23 times instead, it shouldn&#39;t cause major issues.</p>
+
+<p>But if the last layers are just the same filter over and over, we can actually just replace them with a single filter in a loop, that takes its output and feeds it back into its input. This will act like a deep network, except that the extra layers are occurring in <em>time</em>:</p>
+
+<p><img src="/blog/public/rnn.png" alt="Recurrent NN"></p>
+
+<p>So Liao and Poggio&#39;s hypothesis is that <strong>very deep neural networks are like a brain that is moderately deep in both space and time.</strong> The true depth of the brain is hidden, since even though it doesn&#39;t have a huge number of regions it gets to run these regions in loops over time. Their paper has some experiments to show that this is plausible, but it will take some careful comparisons with neuroscience data to say if they are correct.</p>
+
+<p>Of course, it seems inevitable that at some point in the near future we will in fact start building neural networks that are &quot;deeper&quot; than the brain, in one way or another. Even if we don&#39;t discover new models that can learn better than a brain can, computers have lots of unfair advantages - they&#39;re not limited to a 1500 cm<sup>3</sup> skull, they have direct access to the internet, they can instantly teach each other things they&#39;ve learned, and they never get bored. Once we have a neural network that is similar in complexity to the human brain but can run on computer hardware, its capabilities might be advanced enough to design an even more intelligent machine on its own, and so on: maybe the &quot;first ultraintelligent machine is the <em>last</em> invention that man need ever make.&quot; <a href="http://mindstalk.net/vinge/vinge-sing.html">(Vernor Vinge)</a> </p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blog/2016/05/20/corner/">
+        The corner of your eye
+      </a>
+    </h1>
+
+    <span class="post-date">20 May 2016</span>
+
+    <p>We usually think that our eyes work like a camera, giving us a sharp, colorful picture of the world all the way from left to right and top to bottom. But we actually only get this kind of detail in a tiny window right where our eyes are pointed. If you hold your thumb out at arm&#39;s length, the width of your thumbnail is about the size of your most precise central (also called &quot;foveal&quot;) vision. Outside of that narrow spotlight, both color perception and sharpness drop off rapidly - doing high-precision tasks like reading a word is almost impossible unless you&#39;re looking right at it.</p>
+
+<p>The rest of your visual field is your &quot;peripheral&quot; vision, which has only imprecise information about shape, location, and color. Out here in the corner of your eye you can&#39;t be sure of much, which is used as a constant source of fear and uncertainty in horror movies and the occult:</p>
+
+<div class="message">
+<p>What's that in the mirror, or the corner of your eye?
+
+<p>What's that footstep following, but never passing by?
+
+<p>Perhaps they're all just waiting, perhaps when we're all dead,
+
+<p>Out they'll come a-slithering from underneath the bed.... 
+<p><a href="https://www.youtube.com/watch?v=vJiJZiOaJFQ">Doctor Who "Listen"</a>
+</div>
+
+<p>What does this peripheral information get used for during visual processing? It was shown over a decade ago (by one of my current mentors, <a href="http://www.weizmann.ac.il/neurobiology/labs/malach/sites/neurobiology.labs.malach/files/2002_04_Hasson_neuron.pdf">Uri Hasson</a>) that flashing pictures in your central and peripheral vision activate different brain regions. The hypothesis is that peripheral information gets used for tasks like determining where you are, learning the layout of the room around you, and planning where to look next. But this experimental setup is pretty unrealistic. In real life we have related information coming into both central and peripheral vision at the same time, which is constantly changing and depends on where we decide to look. Can we track how visual information flows through the brain during natural viewing?</p>
+
+<p>Today a new paper from me and my PhD advisors (<a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a> and <a href="http://www.psychology.illinois.edu/people/dmbeck">Diane Beck</a>) is out in the Journal of Vision: <a href="http://jov.arvojournals.org/article.aspx?articleid=2524115">Pinpointing the peripheral bias in neural scene-processing networks during natural viewing (open access)</a>. I looked at fMRI data (collected and shared generously by Mike Arcaro,Sabine Kastner, Janice Chen, and Asieh Zadbood) while people were watching clips from movies and TV shows. They were free to move their eyes around and watch as you normally would, except that they were inside a huge superconducting magnet rather than on the couch (and had less popcorn). We can disentangle central and peripheral information by tracking how these streams flow out of their initial processing centers in visual cortex to regions performing more complicated functions like object recognition and navigation.</p>
+
+<p>We can make maps that show where foveal information ends up (colored orange/red) and where peripheral information ends up (colored blue/purple). I&#39;m showing this on an &quot;inflated&quot; brain surface where we&#39;ve smoothed out all the wrinkles to make it easier to look at:</p>
+
+<p><img src="/blog/public/periphery.png" alt="Foveal and Peripheral regions"></p>
+
+<p>This roughly matches what we had previously seen with the simpler experiments: central information heads to regions for recognizing objects, letters, and faces, while peripheral information gets used by areas that process environments and big landmarks. But it also reveals some finer structure we didn&#39;t know about before. Some scene processing regions care more about the &quot;near&quot; periphery just outside the fovea and still have access to relatively high-resolution information, while others draw information from the &quot;far&quot; periphery that only provides coarse information about your current location. There are also detectable foveal vs. peripheral differences in the frontal lobe of the brain, which is pretty surprising, since this part of the brain is supposed to be performing abstract reasoning and planning that shouldn&#39;t be all that related to where the information is coming from.</p>
+
+<p>This paper was my first foray into the fun world of movie-watching data, which I&#39;ve become obsessed with during my postdoc. Contrary to the what everyone&#39;s parents told them, watching TV doesn&#39;t turn off your brain - you use almost every part of your brain to understand and follow along with the story, and answering questions about videos is such a challenging problem that even the latest computer AIs are pretty terrible at it (though some of <a href="http://vision.stanford.edu/publications.html">my former labmates</a> have started making them better). We&#39;re finding that movies drive much stronger and more complex activity patterns compared to the usual paradigm of flashing individual images, and we&#39;re starting to answer questions raised by cognitive scientists in the 1970s about how complicated situations are understood and remembered - stay tuned!</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2016/04/13/configural/">
         Cutups and configural processing
       </a>
@@ -156,7 +242,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 
 <p>Since the whole can have a meaning that is more than the sum of its parts, our brains must be somehow putting these parts together. This process is referred to as &quot;configural processing,&quot; since understanding what we&#39;re hearing or seeing requires looking not just at the parts but at their configuration. Work from <a href="http://media.wix.com/ugd/b75639_179a3f18a5774393b1bf37e9c1d1cb11.pdf">Uri Hasson&#39;s lab</a> (before I joined as a postdoc) has looked at how meaning gets pieced together throughout a story, and found a network of brain regions that help join sentences together to understand a narrative. They used stimuli very similar to the cut-ups, in which sentences were cut out and then put back together in a random order, and showed that these brain regions stopped responding consistently when the overall meaning was taken away (even though the parts were the same).</p>
 
-<p>Today I (along with my PhD advisors, <a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a> and <a href="http://www.psychology.illinois.edu/people/dmbeck">Diane Beck</a>) have a new paper out in Cerebral Cortex, titled <a href="http://cercor.oxfordjournals.org/cgi/reprint/bhw077?ijkey=iUBNzaBCkEO1hN4&amp;keytype=ref">Human-object interactions are more than the sum of their parts (free-access link)</a>. This paper looks at how things get combined across space (rather than time) in the visual system. We were looking specifically at images containing either a person, an object, or both, and tried to find brain regions where a <em>meaningful</em> human-object interaction looked different from just a sum of person plus object.</p>
+<p>Today I (along with my PhD advisors, <a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a> and <a href="http://www.psychology.illinois.edu/people/dmbeck">Diane Beck</a>) have a new paper out in Cerebral Cortex, titled <a href="http://cercor.oxfordjournals.org/cgi/reprint/bhw077?ijkey=iUBNzaBCkEO1hN4&keytype=ref">Human-object interactions are more than the sum of their parts (free-access link)</a>. This paper looks at how things get combined across space (rather than time) in the visual system. We were looking specifically at images containing either a person, an object, or both, and tried to find brain regions where a <em>meaningful</em> human-object interaction looked different from just a sum of person plus object.</p>
 
 <p><img src="/blog/public/sum_of_parts.png" alt="SumOfParts"></p>
 
@@ -259,80 +345,6 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 <p>Interestingly, there is a clear counterexample to my argument in the work of <a href="http://web.mit.edu/yamins/www/">Dan Yamins</a>, a postdoc with <a href="http://dicarlolab.mit.edu/">Jim DiCarlo</a>. Dan has shown that a neural network model that learns to label objects in a large set of images ends up looking a lot like the visual processing regions of the brain (in terms of its functional properties). This is surprising, since you could imagine that there might be lots of other ways to understand images.</p>
 
 <p>I wonder if this works because the brain is itself a Big Data mining machine, trained up through childhood to build models of our experiences. Then finding the strongest patterns in big datasets of experiences (images, videos, audio) might come up with the same solution as the brain. Or maybe our neural network models are starting to approximate the broad functional properties of the brain, which makes them a good hypothesis-driven model for finding patterns (rather than just blind data mining). As <a href="http://www.psychology.ucsd.edu/people/profiles/jwixted.html">John Wixted</a> stressed at the <a href="http://memory.psych.upenn.edu/CEMS_2015">CEMS</a> conference last week, hypothesis-free data anlysis has a seductive purity, but the true value of datasets (regardless of their size) comes only through the lens of carefully constructred ideas.</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/03/31/phdadvice/">
-        Seven things I learned as a PhD student
-      </a>
-    </h1>
-
-    <span class="post-date">31 Mar 2015</span>
-
-    <p>Doing great research is tough. There are so many factors outside of your control: experiments not panning out, unfair reviewers, competing labs, limited funding sources. I&#39;ve tried to distill down some of the strategies that worked well for me and my labmates (these are most relevant to my background in science/engineering, but some might apply to other fields as well):</p>
-
-<h2>Get your hands dirty</h2>
-
-<p><img src="/blog/public/frizzle.jpg" alt="Magic School Bus"></p>
-
-<p>Some early grad students get stuck in a loop of doing a lot of general talking about the kind of things they want to work on, but never really get started. Taking time to learn and plan your experiments is great, but there are a lot of things you can&#39;t learn without diving into real data. You&#39;re almost certainly going to mess things up the first one or two (or twenty) times, so start making mistakes as soon as possible. Having a deeper understanding of the data you&#39;re dealing with will be invaluable in driving the kinds of questions you&#39;ll ask and the design of your experiments.</p>
-
-<h2>Investigate things that don&#39;t make sense</h2>
-
-<p>When you&#39;re looking at the results of an analysis, often there will be something that just doesn&#39;t quite line up: there&#39;s one value of 1.01 when the maximum measurement should be 1, two data points are exactly on top of one another, 1% of the data points are giving &quot;NaN&quot;s. It&#39;s easy to just brush these under the rug (&quot;it&#39;s just a couple datapoints&quot;), but getting to the bottom of these is critical. Often they will reveal some flaw in your analysis that might mean all your results are invalid, or (if you&#39;re lucky!) they might point to some new science hiding being an unexpected pattern in the data.</p>
-
-<h2>Explore, then replicate</h2>
-
-<p>The best way to approach an unfamiliar problem is to first collect (or extract from your full data) a pilot dataset, and start looking for patterns. You don&#39;t need to be rigorous about statistics, multiple comparisons, or model complexity - what are the strongest signals you can find? Are there ways of transforming the data that make it more amenable to your models? Then, once you&#39;ve optimized your analysis, you apply it to new (or held-out) data, and meticulously measure how well it performs. If you do your playing directly on the data, it&#39;s very easy to start fooling yourself about what&#39;s really there and what you just want to be there. </p>
-
-<h2>Realize that you&#39;re in the big leagues</h2>
-
-<p>Throughout school, you&#39;ve always been measured against your peers - your kindergarten macaroni crafts earned you a gold star because they were impressive for your experience level, not because they were competitive with a typical exhibit at the Louvre. In your first year of grad school, you are now competing with professional scientists who have been in the field for 40 years. This is intimidating (and one of the reasons why you start out being mentored by senior students and faculty members), but also exciting. You are on the front lines of scientific knowledge, answering real problems that no one has ever figured out before.</p>
-
-<h2>Know more than your advisor</h2>
-
-<p>This might sound contradictory to the previous point, since your advisor has a many-year head start in understanding your field, and you can&#39;t hope to have more total knowledge by the end of your PhD. But for the particular project you&#39;re working on, you should be finding papers on your own and reading everything you can. Publishing a paper that advances the field is going to require knowing more about that topic than anyone in the world, including your advisor.</p>
-
-<h2>Keep an end-of-the-day journal</h2>
-
-<p>Completing a PhD requires extremely long-term, self-guided planning, and it&#39;s easy to lose track of what you should be working on and what the critical next steps are. Different people have different solutions for this, but my favorite strategy was to take 10 minutes at the end of the day and write (in a physical, dead-tree notebook) a couple bullet points about what I did that day and what the next steps should be. This forces you to take stock of your current goals, gives you a little morale boost (especially when you can look back over the past week and remind yourself that you really did make progress), and lets you pick up where you left off when you come back to your projects (possibly days later).</p>
-
-<h2>Drink Water</h2>
-
-<p>Taking care of your physical health is often the first thing to go when stress sets in, but this is a sure way to completely derail your research career. Drinking more water is an easy fix for most grad students - you can avoid kidney stones (I learned that the hard way), you&#39;ll eat less junk, and having more bathroom breaks makes sure you take some breaks from your chair (no fitbit required). Some other no-brainers are to make sure you have an ergonomic typing setup (I know multiple PhDs that had to go on leave due to RSI) and keep a reasonable sleep schedule.</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/03/23/networkmodel/">
-        A simple model for growing a brain
-      </a>
-    </h1>
-
-    <span class="post-date">23 Mar 2015</span>
-
-    <p>Today I had a chance to read <a href="http://www.ncbi.nlm.nih.gov/pubmed/25368200">a paper by Song, Kennedy, and Wang</a> about their model for explaining how brains are wired up at a high level (explaining how areas are connected, not the detailed wiring of neural circuits). It&#39;s very simple, but manages to capture some complicated aspects of brain structure.</p>
-
-<p>The goal of the model is to offer some explanation for area-to-area connection patterns across species (humans, monkeys, mice). For example, the human connection matrix looks like this (from their supplementary material):</p>
-
-<p><img src="/blog/public/connmat.png" alt="Connection Matrix"></p>
-
-<p>Gray squares show pairs of regions that (we think) are connected to each other. This looks complicated, and it is - every region has a different connection pattern, some are similar to each other (neighboring rows), some are very dissimilar, some regions (rows) have lots of connections and others have few, etc. The Song et al. paper starts by discussing the features of these matrices that seem predictable and similar across species, but the part I found more exciting was their proposed model for how you would grow a brain with these properties.</p>
-
-<p><img src="/blog/public/connmodel.jpg" alt="Connection Model"></p>
-
-<p>This figure from their paper shows the setup. You first randomly choose a bunch of points as the centers of brain regions and randomly create a bunch of neurons, assigning each neuron to belong to the closest region center (A-C). Then, to grow a connection out from a neuron, you pick a direction as a weighted average of the directions to all region centers (with closer regions weighted more heavily), and then grow in that direction a random amount (with short connections more likely than long connections) (D-G). That&#39;s it! Every neuron grows without talking to any other neuron, and they are not even really aiming anywhere in particular.</p>
-
-<p>This simple set of instructions is enough to produce some of the structures in real connectivity matrices, like relationships between how similar the connections are for two regions and how likely they are to be connected to one another. One of the take-aways is that spatial position is a very important feature for wiring brain regions - just adding a bias to connect close regions rather than distant regions is enough to explain a lot of the brain data. This sounds sort of obvious, but spatial position is often ignored in many analysis methods, and I&#39;ve been recently proposing ways of incorporating spatial information for understanding connectivity at both the <a href="http://www.ncbi.nlm.nih.gov/pubmed/25737822">whole-brain</a> and <a href="http://www.ncbi.nlm.nih.gov/pubmed/22846660">region</a> level.</p>
-
-<p>There is a lot missing from this paper - it makes a literal <a href="http://en.wikipedia.org/wiki/Spherical_cow">&quot;spherical cow&quot;</a> assumption that the brain is a solid ellipse, assumes that neurons are fired in straight lines like a laser, and doesn&#39;t account for how brain size changes during development. But in some ways it makes the result even more impressive, since they can explain a lot of the data without using any of these details.</p>
 
 
     Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>

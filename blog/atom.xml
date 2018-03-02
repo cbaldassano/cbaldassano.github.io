@@ -4,7 +4,7 @@
  <title>Rooting for the machines</title>
  <link href="http://blog.chrisbaldassano.com//atom.xml" rel="self"/>
  <link href="http://blog.chrisbaldassano.com//"/>
- <updated>2017-08-02T18:52:21+01:00</updated>
+ <updated>2018-03-02T11:23:00-05:00</updated>
  <id>http://blog.chrisbaldassano.com/</id>
  <author>
    <name>Chris Baldassano</name>
@@ -13,9 +13,116 @@
 
  
  <entry>
+   <title>The three ingredients of reproducible research</title>
+   <link href="http://blog.chrisbaldassano.com//2018/03/02/reproducible/"/>
+   <updated>2018-03-02T00:00:00-05:00</updated>
+   <id>http://blog.chrisbaldassano.com//2018/03/02/reproducible</id>
+   <content type="html">&lt;p&gt;Much of the conversation about research methods in science has focused on the &lt;a href=&quot;https://digest.bps.org.uk/2015/08/27/this-is-what-happened-when-psychologists-tried-to-replicate-100-previously-published-findings/&quot;&gt;&amp;quot;replication crisis&amp;quot;&lt;/a&gt; - the fact that many classic studies (especially in psychology) are often not showing the same results when performed carefully by independent research groups. Although there are some debates about &lt;a href=&quot;https://news.harvard.edu/gazette/story/2016/03/study-that-undercut-psych-research-got-it-wrong/&quot;&gt;exactly how bad&lt;/a&gt; the problem is, a consensus is emerging about how to improve the ways we conduct experiments and analyses: &lt;a href=&quot;https://www.theguardian.com/science/head-quarters/2014/may/20/psychology-registration-revolution&quot;&gt;pre-registering&lt;/a&gt; study hypotheses before seeing the data, using &lt;a href=&quot;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2205186&quot;&gt;larger sample sizes&lt;/a&gt;, being more willing to &lt;a href=&quot;https://www.psychologicalscience.org/publications/replication&quot;&gt;publish (informative) null results&lt;/a&gt;, and maybe being &lt;a href=&quot;https://imai.princeton.edu/research/files/significance.pdf&quot;&gt;more conservative&lt;/a&gt; about what evidence counts as &amp;quot;proof.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;But there is actually an even simpler problem we haven&amp;#39;t fully tackled, which is not &amp;quot;replicability&amp;quot; (being able to get the same result in new data from a new experiment) but &amp;quot;reproducibility&amp;quot; - the ability to demonstrate how we got the result from the original data in the first place. Being able trace and record the exact path from data to results is important for documenting precisely how the analysis works, and allows other researchers to examine the details for themselves if they are skeptical. It also makes it much easier for future work (either by the same authors or others) to keep analyses comparable across different experiments.&lt;/p&gt;
+
+&lt;p&gt;Describing how data was analyzed is of course supposed to be one of the main points of a published paper, but in practice it is almost impossible to recreate the exact processing pipeline of a study just from reading the paper. Here are some real examples that I have experienced firsthand in my research:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Trying to replicate a results from papers that used a randomization procedure called phase scrambling, I realized that there are actually at least two ways of doing this scrambling and papers usually don&amp;#39;t specify which one they use&lt;/li&gt;
+&lt;li&gt;Confusion over exactly what probability measure was calculated in a published study set off a minor panic when the study authors started to think their code was wrong, before realizing that their analysis was actually working as intended&lt;/li&gt;
+&lt;li&gt;Putting the same brain data into different versions of AFNI (a neuroimaging software package) can produce different statistical maps, due to a change in the way the False Discovery Rate is calculated&lt;/li&gt;
+&lt;li&gt;A collaborator was failing to reproduce one of my results even with my code - turned out that the code worked in MATLAB versions 2015b and 2017b but not 2017a (for reasons that are still unclear)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These issues show that reproducible research actually requires three pieces:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Publicly available data&lt;/li&gt;
+&lt;li&gt;Open-source code&lt;/li&gt;
+&lt;li&gt;A well-defined computing environment&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first two things we know basically how to do, at least in theory - data can be uploaded to a number of services that are typically free to researchers (and standards are starting to emerge for complex data formats like &lt;a href=&quot;http://bids.neuroimaging.io/&quot;&gt;neuroimaging data&lt;/a&gt;), and code can be shared (and version-controlled) through platforms like GitHub. But the last piece has been mostly overlooked - how can we take a &amp;quot;snapshot&amp;quot; of all the behind-the-scene infrastructure, like the programming language version and all the libraries the code depends on? This is honestly often the biggest barrier to reproducing results - downloading data and code is easy, but actually getting the code to run (and run exactly as it did for the original analysis) can be a descent into madness, especially on a highly-configurable linux machine.&lt;/p&gt;
+
+&lt;p&gt;For my &lt;a href=&quot;https://www.biorxiv.org/content/early/2018/01/24/252718&quot;&gt;recent preprint&lt;/a&gt;, I tried out a possible solution to this problem: an online service called CodeOcean. This platform allow you to create an isolated &amp;quot;capsule&amp;quot; that contains your data, your code, and a description of the programming environment (set up with a simple GUI). You can then execute your code (on their servers), creating a verified set of results - the whole thing is then labeled with a DOI, and &lt;a href=&quot;https://doi.org/10.24433/CO.a27d1d90-d227-4600-b876-051a801c7c20&quot;&gt;is publicly viewable&lt;/a&gt; with just a browser. Interestingly the public capsule is still &lt;em&gt;live&lt;/em&gt;, meaning that anyone can edit the code and click Run to see how the results change (any changes they make affect only their own view of the capsule). Note that I wouldn&amp;#39;t recommend blindly clicking Run on my capsule since the analysis takes multiple hours, but if you&amp;#39;re interested in messing with it you can edit the run.sh file to only conduct a manageable subset of the analyses (e.g. only on a single region of interest). CodeOcean is still under development, and there are a number of features I haven&amp;#39;t tried yet (including the ability to run live Jupyter Notebooks, and a way to create a simple GUI for exposing parameters in your code).&lt;/p&gt;
+
+&lt;p&gt;For now this is set up as a post-publication (or post-preprint) service and isn&amp;#39;t intended for actually working on the analyses (the computing power you have access to is limited and has a quota), but as cloud computing continues to become more convenient and affordable I could eventually see entire scientific workflows moving online.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Live-blogging SfN 2017</title>
+   <link href="http://blog.chrisbaldassano.com//2017/11/16/sfn/"/>
+   <updated>2017-11-16T00:00:00-05:00</updated>
+   <id>http://blog.chrisbaldassano.com//2017/11/16/sfn</id>
+   <content type="html">&lt;p&gt;[I wrote these posts during the Society for Neuroscience 2017 meeting, as one of the Official Annual Meeting Bloggers. These blog posts originally appeared on SfN&amp;#39;s Neuronline platform.]&lt;/p&gt;
+
+&lt;h2&gt;SuperEEG: ECoG data breaks free from electrodes&lt;/h2&gt;
+
+&lt;p&gt;The &amp;quot;gold standard&amp;quot; for measuring neural activity in human brains is ECoG (electrocorticography), using electrodes implanted directly onto the surface of the brain. Unlike methods that measure blood oxygenation (which have poor temporal resolution) or that measure signals on the scalp (which have poor spatial resolution), ECoG data has both high spatial and temporal precision. Most of the ECoG data that has been collected comes from patients who are being treated for epileptic seizures and have had electrodes implanted in order to determine where the seizures are starting.&lt;/p&gt;
+
+&lt;p&gt;The big problem with ECoG data, however, is that each patient typically only has about 150 implanted electrodes, meaning that we can only measure brain activity in 150 spots (compared to about 100,000 spots for functional MRI). It would seem like there is no way around this - if you don’t measure activity from some part of the brain, then you can’t know anything about what is happening there, right?&lt;/p&gt;
+
+&lt;p&gt;Actually, you can, or at least you can guess! &lt;a href=&quot;http://www.context-lab.com/&quot;&gt;Lucy Owen, Andrew Heusser, and Jeremy Manning&lt;/a&gt; have developed a new analysis tool called SuperEEG, based on the idea that measuring from one region of the brain can actually tell you a lot about another unmeasured region, if the two regions are highly correlated (or anti-correlated). By using many ECoG subjects to learn the correlation structure of the brain, we can extrapolate from measurements in a small set of electrodes to estimate neural activity across the whole brain.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/SuperEEG.png&quot; alt=&quot;Super EEG&quot;&gt;
+Figure from &lt;a href=&quot;https://app.box.com/s/j1w3985f3gc4t7pkb60rd9y5w7la210t&quot;&gt;their SfN poster&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This breaks ECoG data free from little islands of electrodes and allows us to carry out analyses across the brain. Not all brain regions can be well-estimated using this method (due to the typical placement locations of the electrodes and the correlation structure of brain activity), but it works surprisingly well for most of the cortex:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/SuperEEG2.jpg&quot; alt=&quot;Super EEG2&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;This could also help with the original medical purpose of implanting these electrodes, by allowing doctors to track seizure activity in 3D as it spreads through the brain. It could even be used to help surgeons choose the locations where electrodes should be placed in new patients, to make sure that seizures can be tracked as broadly and accurately as possible.&lt;/p&gt;
+
+&lt;h2&gt;Hippocampal subregions growing old together&lt;/h2&gt;
+
+&lt;p&gt;To understand and remember our experiences, we need to think both big and small. We need to keep track of our spatial location at broad levels (&amp;quot;what town am I in?&amp;quot;) all the way down to precise levels (&amp;quot;what part of the room am I in?&amp;quot;). We need to keep track of time on scales from years to fractions of a second. We need to access our memories at both a coarse grain (&amp;quot;what do I usually bring to the beach?&amp;quot;) and a fine grain (&amp;quot;remember that time I forgot the sunscreen?&amp;quot;).&lt;/p&gt;
+
+&lt;p&gt;Data from both rodents and humans has suggested that different parts of the hippocampus keep track of different levels of granularity, with posterior hippocampus focusing on the fine details and anterior hippocampus seeing the bigger picture. Iva Brunec and her co-authors recently &lt;a href=&quot;https://www.biorxiv.org/content/early/2017/08/24/179655&quot;&gt;posted a preprint&lt;/a&gt; showing that temporal and spatial correlations change along the long axis of the hippocampus - in anterior hippocampus all the voxels are similar to each other and change slowly over time, while in posterior hippocampus the voxels are more distinct from each other and change more quickly over time.&lt;/p&gt;
+
+&lt;p&gt;In their latest work, they look at how these functional properties of the hippocampus change over the course of our lives. Surprisingly, this anterior-posterior distinction actually increases with age, becoming the most dramatic in the oldest subjects in their sample.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/Iva1.png&quot; alt=&quot;Iva1&quot;&gt;
+The interaction between the two halves of the hippocampus also changes - while in young adults activity timecourses in the posterior and anterior hippocampus are uncorrelated, they start to become anti-correlated in older adults, perhaps suggesting that the complementary relationship between the two regions has started to break down. Also, their functional connectivity with the rest of the brain shifts over time, with posterior hippocampus decoupling from posterior medial regions and anterior hippocampus increasing its coupling to medial prefrontal regions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/Iva2.png&quot; alt=&quot;Iva2&quot;&gt;
+These results raise a number of intriguing questions about the cause of these shifts, and their impacts on cognition and memory throughout the lifespan. Is this shift toward greater coupling with regions that represent coarse-grained schematic information compensating for degeneration in regions that represent details? What is the “best” balance between coarse- and fine-timescale information for processing complex stimuli like movies and narratives, and at what age is it achieved? How do these regions mature before age 18, and how do their developmental trajectories vary across people? By following the analysis approach of Iva and her colleagues on new datasets, we should hopefully be able to answer many of these questions in future studies.&lt;/p&gt;
+
+&lt;h2&gt;The Science of Scientific Bias&lt;/h2&gt;
+
+&lt;p&gt;This year’s David Kopf lecture on Neuroethics was given by Dr. Jo Handelsman, entitled &lt;a href=&quot;http://www.abstractsonline.com/pp8/#!/4376/presentation/1298&quot;&gt;“The Fallacy of Fairness: Diversity in Academic Science”&lt;/a&gt;. Dr. Handelsman is a microbiologist who recently spent three years as the Associate Director for Science at the White House Office of Science and Technology Policy, and has also led some of the most well-known &lt;a href=&quot;http://www.pnas.org/content/109/41/16474.abstract&quot;&gt;studies of gender bias in science&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/IMG_1255.JPG&quot; alt=&quot;IMG_1255.JPG&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;She began her talk by pointing out that increasing diversity in science is not only a moral obligation, but also has major potential benefits for scientific discovery. Diverse groups have been shown to produce more effective, innovative, and well-reasoned solutions to complex problems. I think this is especially true in psychology - if we are trying to create theories of how all humans think and act, we shouldn’t be building teams composed of a thin slice of humanity.&lt;/p&gt;
+
+&lt;p&gt;Almost all scientists agree in principle that we should not be discriminating based on race or gender. However, the process of recruiting, mentoring, hiring, and promotion relies heavily on “gut feelings” and subtle social cues, which are highly susceptible to implicit bias. Dr. Handelsman covered a wide array of studies over the past several decades, ranging from observational analyses to randomized controlled trials of scientists making hiring decisions. I’ll just mention two of the studies she described which I found the most interesting:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;How it is possible that people can be making biased decisions, but still think they were objective when they reflect on those decisions? A fascinating study by &lt;a href=&quot;http://journals.sagepub.com/doi/abs/10.1111/j.0956-7976.2005.01559.x&quot;&gt;Uhlmann &amp;amp; Cohen&lt;/a&gt; showed that subjects rationalized biased hiring decisions after the fact by redefining their evaluation criteria. For example, when choosing whether to hire a male candidate or a female candidate, who both had (randomized) positive and negative aspects to their resumes, the subjects would decide that the positive aspects of the male candidate were the most important for the job and that he therefore deserved the position. This is interestingly similar to the way that &lt;a href=&quot;https://fivethirtyeight.com/features/science-isnt-broken/&quot;&gt;p-hacking&lt;/a&gt; distorts scientific results, and the solution to the problem may be the same. Just as &lt;a href=&quot;https://cos.io/prereg/&quot;&gt;pre-registration&lt;/a&gt; forces scientists to define their analyses ahead of time, Uhlmann &amp;amp; Cohen showed that forcing subjects to commit to their importance criteria before seeing the applications eliminated the hiring bias.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Even relatively simple training exercises can be effective in making people more aware of implicit bias. Dr. Handelsman and her colleagues created a set of short videos called &lt;a href=&quot;https://academics.skidmore.edu/blogs/vids/&quot;&gt;VIDS (Video Interventions for Diversity in STEM)&lt;/a&gt;, consisting of narrative films illustrating issues that have been studied in the implicit bias literature, along with expert videos describing the findings of these studies. They then ran &lt;a href=&quot;https://academics.skidmore.edu/blogs/vids/files/2017/02/Pietrietal_2017.pdf&quot;&gt;multiple experiments&lt;/a&gt; showing that these videos were effective at educating viewers, and made them more likely to notice biased behavior. I plan on making these videos required viewing in my lab, and would encourage everyone working in STEM to watch them as well (the narrative videos are only 30 minutes total).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/IMG_1261.JPG&quot; alt=&quot;IMG_1261.JPG&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;Drawing out visual memories&lt;/h2&gt;
+
+&lt;p&gt;If you close your eyes and try to remember something you saw earlier today, what exactly do you see? Can you visualize the right things in the right places? Are there certain key objects that stand out the most? Are you misremembering things that weren’t really there?&lt;/p&gt;
+
+&lt;p&gt;Visual memory for natural images has &lt;a href=&quot;http://jov.arvojournals.org/article.aspx?articleid=2191865&quot;&gt;typically been studied&lt;/a&gt; with recognition experiments, in which subjects have to recognize whether an image is one they have seen before or not. But recognition is quite different from freely recalling a memory (without being shown it again), and can involve different neural mechanisms. How can we study visual recall, testing whether the mental images people are recalling are correct?&lt;/p&gt;
+
+&lt;p&gt;One way option is to have subjects give verbal descriptions of what they remember, but this might not capture all the details of their mental representation, such as the precise relationships between the objects or whether their imagined viewpoint of the scene is correct. Instead, NIMH researchers Elizabeth Hall, Wilma Bainbridge, and Chris Baker had subjects draw photographs from memory, and then analyzed the contents of those drawings.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/drawing.JPG&quot; alt=&quot;drawing.JPG&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a creative but challenging approach, since it requires quantitatively characterizing how well the drawings (all 1,728!) match the original photographs. They crowdsource this task using Amazon Mechanical Turk, getting high-quality ratings that include: how well can the original photograph be identified based on the drawing, what objects were correctly drawn, what objects were falsely remembered as being in the image, and how close the objects were to their correct locations. There are also “control” drawings made by subjects with full information (that get to look at the image while they draw) or minimal information (just a category label) that were rated for comparison.&lt;/p&gt;
+
+&lt;p&gt;The punchline is that subjects can remember many of the images, and produce surprisingly detailed drawings that are quite similar to those drawn by the control group that could look at the pictures. They reproduce the majority of the objects, place them in roughly the correct locations, and draw very few incorrect objects, making it very easy to match the drawings with the original photographs. The only systematic distortion is that the drawings depicted the scenes as being slightly farther away than they actually were, which nicely replicates previous results on &lt;a href=&quot;http://www.scholarpedia.org/article/Boundary_extension&quot;&gt;boundary extension&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is a neat task that subjects are remarkably good at (which is not always the case in memory experiments!), and could be a great tool for investigating the neural mechanisms of naturalistic perception and memory. Another &lt;a href=&quot;http://www.abstractsonline.com/pp8/#!/4376/presentation/26803&quot;&gt;intriguing SfN presentation&lt;/a&gt; showed that is possible to have subjects draw while in an fMRI scanner, allowing this paradigm to be used in neuroimaging experiments. I wonder if this approach could also be extended into drawing comic strips of remembered events that unfold over time, or to illustrate mental images based on stories told through audio or text.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Reality, now in extra chunky</title>
    <link href="http://blog.chrisbaldassano.com//2017/08/02/chunking/"/>
-   <updated>2017-08-02T00:00:00+01:00</updated>
+   <updated>2017-08-02T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2017/08/02/chunking</id>
    <content type="html">&lt;p&gt;Our brains receive a constant stream of information about the world through our senses. Often sci-fi depictions of mind-reading or memory implants depict our experiences and memories as being like a continuous, unbroken filmstrip.&lt;/p&gt;
 
@@ -46,7 +153,7 @@
  <entry>
    <title>Parenting the last human generation</title>
    <link href="http://blog.chrisbaldassano.com//2017/06/05/parent/"/>
-   <updated>2017-06-05T00:00:00+01:00</updated>
+   <updated>2017-06-05T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2017/06/05/parent</id>
    <content type="html">&lt;p&gt;For most of human history, parents had a pretty good idea of the kind of world they were preparing their children for. Children would be trained to take over their parents&amp;#39; business, or apprentice in a local trade, or aim for a high-status marriage. Even once children began to have more choice in their futures, it was easy to predict what kind of skills they would need to succeed: reading and handwriting, arithmetic, basic knowledge of science and history.&lt;/p&gt;
 
@@ -65,7 +172,7 @@
  <entry>
    <title>Connecting past and present in visual perception</title>
    <link href="http://blog.chrisbaldassano.com//2016/10/25/twonet/"/>
-   <updated>2016-10-25T00:00:00+01:00</updated>
+   <updated>2016-10-25T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2016/10/25/twonet</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 &lt;p&gt;There are two kinds of people in the world—those who divide everything in the world into two kinds of things and those who don’t.
@@ -108,7 +215,7 @@
  <entry>
    <title>How deep is the brain?</title>
    <link href="http://blog.chrisbaldassano.com//2016/07/08/deep/"/>
-   <updated>2016-07-08T00:00:00+01:00</updated>
+   <updated>2016-07-08T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2016/07/08/deep</id>
    <content type="html">&lt;p&gt;Recent AI advances in &lt;a href=&quot;https://research.googleblog.com/2015/08/the-neural-networks-behind-google-voice.html&quot;&gt;speech recognition&lt;/a&gt;, &lt;a href=&quot;https://deepmind.com/alpha-go&quot;&gt;game-playing&lt;/a&gt;, &lt;a href=&quot;http://www.nytimes.com/2014/11/18/science/researchers-announce-breakthrough-in-content-recognition-software.html&quot;&gt;image understanding&lt;/a&gt;, and &lt;a href=&quot;https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html&quot;&gt;language translation&lt;/a&gt; have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &amp;quot;multiplying and zeroing&amp;quot; doesn&amp;#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &amp;quot;deep neural networks.&amp;quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &amp;quot;neural&amp;quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &amp;quot;the first device to think as the human brain.&amp;quot;&lt;/p&gt;
 
@@ -144,20 +251,20 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
  <entry>
    <title>The corner of your eye</title>
    <link href="http://blog.chrisbaldassano.com//2016/05/20/corner/"/>
-   <updated>2016-05-20T00:00:00+01:00</updated>
+   <updated>2016-05-20T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2016/05/20/corner</id>
    <content type="html">&lt;p&gt;We usually think that our eyes work like a camera, giving us a sharp, colorful picture of the world all the way from left to right and top to bottom. But we actually only get this kind of detail in a tiny window right where our eyes are pointed. If you hold your thumb out at arm&amp;#39;s length, the width of your thumbnail is about the size of your most precise central (also called &amp;quot;foveal&amp;quot;) vision. Outside of that narrow spotlight, both color perception and sharpness drop off rapidly - doing high-precision tasks like reading a word is almost impossible unless you&amp;#39;re looking right at it.&lt;/p&gt;
 
 &lt;p&gt;The rest of your visual field is your &amp;quot;peripheral&amp;quot; vision, which has only imprecise information about shape, location, and color. Out here in the corner of your eye you can&amp;#39;t be sure of much, which is used as a constant source of fear and uncertainty in horror movies and the occult:&lt;/p&gt;
 
 &lt;div class=&quot;message&quot;&gt;
-&lt;p&gt;What&#39;s that in the mirror, or the corner of your eye?
+&lt;p&gt;What's that in the mirror, or the corner of your eye?
 
-&lt;p&gt;What&#39;s that footstep following, but never passing by?
+&lt;p&gt;What's that footstep following, but never passing by?
 
-&lt;p&gt;Perhaps they&#39;re all just waiting, perhaps when we&#39;re all dead,
+&lt;p&gt;Perhaps they're all just waiting, perhaps when we're all dead,
 
-&lt;p&gt;Out they&#39;ll come a-slithering from underneath the bed.... 
+&lt;p&gt;Out they'll come a-slithering from underneath the bed.... 
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vJiJZiOaJFQ&quot;&gt;Doctor Who &quot;Listen&quot;&lt;/a&gt;
 &lt;/div&gt;
 
@@ -178,7 +285,7 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
  <entry>
    <title>Cutups and configural processing</title>
    <link href="http://blog.chrisbaldassano.com//2016/04/13/configural/"/>
-   <updated>2016-04-13T00:00:00+01:00</updated>
+   <updated>2016-04-13T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2016/04/13/configural</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 “The love of complexity without reductionism makes art; the love of complexity with reductionism makes science.” — E.O. Wilson
@@ -200,7 +307,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 
 &lt;p&gt;Since the whole can have a meaning that is more than the sum of its parts, our brains must be somehow putting these parts together. This process is referred to as &amp;quot;configural processing,&amp;quot; since understanding what we&amp;#39;re hearing or seeing requires looking not just at the parts but at their configuration. Work from &lt;a href=&quot;http://media.wix.com/ugd/b75639_179a3f18a5774393b1bf37e9c1d1cb11.pdf&quot;&gt;Uri Hasson&amp;#39;s lab&lt;/a&gt; (before I joined as a postdoc) has looked at how meaning gets pieced together throughout a story, and found a network of brain regions that help join sentences together to understand a narrative. They used stimuli very similar to the cut-ups, in which sentences were cut out and then put back together in a random order, and showed that these brain regions stopped responding consistently when the overall meaning was taken away (even though the parts were the same).&lt;/p&gt;
 
-&lt;p&gt;Today I (along with my PhD advisors, &lt;a href=&quot;http://vision.stanford.edu/feifeili/&quot;&gt;Fei-Fei Li&lt;/a&gt; and &lt;a href=&quot;http://www.psychology.illinois.edu/people/dmbeck&quot;&gt;Diane Beck&lt;/a&gt;) have a new paper out in Cerebral Cortex, titled &lt;a href=&quot;http://cercor.oxfordjournals.org/cgi/reprint/bhw077?ijkey=iUBNzaBCkEO1hN4&amp;amp;keytype=ref&quot;&gt;Human-object interactions are more than the sum of their parts (free-access link)&lt;/a&gt;. This paper looks at how things get combined across space (rather than time) in the visual system. We were looking specifically at images containing either a person, an object, or both, and tried to find brain regions where a &lt;em&gt;meaningful&lt;/em&gt; human-object interaction looked different from just a sum of person plus object.&lt;/p&gt;
+&lt;p&gt;Today I (along with my PhD advisors, &lt;a href=&quot;http://vision.stanford.edu/feifeili/&quot;&gt;Fei-Fei Li&lt;/a&gt; and &lt;a href=&quot;http://www.psychology.illinois.edu/people/dmbeck&quot;&gt;Diane Beck&lt;/a&gt;) have a new paper out in Cerebral Cortex, titled &lt;a href=&quot;http://cercor.oxfordjournals.org/cgi/reprint/bhw077?ijkey=iUBNzaBCkEO1hN4&amp;keytype=ref&quot;&gt;Human-object interactions are more than the sum of their parts (free-access link)&lt;/a&gt;. This paper looks at how things get combined across space (rather than time) in the visual system. We were looking specifically at images containing either a person, an object, or both, and tried to find brain regions where a &lt;em&gt;meaningful&lt;/em&gt; human-object interaction looked different from just a sum of person plus object.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/public/sum_of_parts.png&quot; alt=&quot;SumOfParts&quot;&gt;&lt;/p&gt;
 
@@ -211,7 +318,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 &lt;div class=&quot;message&quot;&gt;
 &lt;p&gt;Interviewer:  In view of all this, what will happen to fiction in the next twenty-five years?
 
-&lt;p&gt;Burroughs: In the first place, I think there&#39;s going to be more and more merging of art and science. Scientists are already studying the creative process, and I think the whole line between art and science will break down and that scientists, I hope, will become more creative and writers more scientific. [...] Science will also discover for us how association blocks actually form.
+&lt;p&gt;Burroughs: In the first place, I think there's going to be more and more merging of art and science. Scientists are already studying the creative process, and I think the whole line between art and science will break down and that scientists, I hope, will become more creative and writers more scientific. [...] Science will also discover for us how association blocks actually form.
 
 &lt;p&gt;Interviewer: Do you think this will destroy the magic? 
 
@@ -225,7 +332,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  <entry>
    <title>Just how Amazing is The Amazing Race?</title>
    <link href="http://blog.chrisbaldassano.com//2015/12/01/race/"/>
-   <updated>2015-12-01T00:00:00+00:00</updated>
+   <updated>2015-12-01T00:00:00-05:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/12/01/race</id>
    <content type="html">&lt;h2&gt;The Amazing Race&lt;/h2&gt;
 
@@ -268,7 +375,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  <entry>
    <title>The Big Data bust of the 1500s&#58; lessons from the first scientific data miner</title>
    <link href="http://blog.chrisbaldassano.com//2015/05/11/bigdata/"/>
-   <updated>2015-05-11T00:00:00+01:00</updated>
+   <updated>2015-05-11T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/05/11/bigdata</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/geocentric.png&quot; alt=&quot;Geoheliocentric Model&quot;&gt;&lt;/p&gt;
 
@@ -297,7 +404,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  <entry>
    <title>Seven things I learned as a PhD student</title>
    <link href="http://blog.chrisbaldassano.com//2015/03/31/phdadvice/"/>
-   <updated>2015-03-31T00:00:00+01:00</updated>
+   <updated>2015-03-31T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/03/31/phdadvice</id>
    <content type="html">&lt;p&gt;Doing great research is tough. There are so many factors outside of your control: experiments not panning out, unfair reviewers, competing labs, limited funding sources. I&amp;#39;ve tried to distill down some of the strategies that worked well for me and my labmates (these are most relevant to my background in science/engineering, but some might apply to other fields as well):&lt;/p&gt;
 
@@ -336,7 +443,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  <entry>
    <title>A simple model for growing a brain</title>
    <link href="http://blog.chrisbaldassano.com//2015/03/23/networkmodel/"/>
-   <updated>2015-03-23T00:00:00+01:00</updated>
+   <updated>2015-03-23T00:00:00-04:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/03/23/networkmodel</id>
    <content type="html">&lt;p&gt;Today I had a chance to read &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/25368200&quot;&gt;a paper by Song, Kennedy, and Wang&lt;/a&gt; about their model for explaining how brains are wired up at a high level (explaining how areas are connected, not the detailed wiring of neural circuits). It&amp;#39;s very simple, but manages to capture some complicated aspects of brain structure.&lt;/p&gt;
 
@@ -359,7 +466,7 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  <entry>
    <title>The Hero's Powerpoint</title>
    <link href="http://blog.chrisbaldassano.com//2015/03/01/herostalk/"/>
-   <updated>2015-03-01T00:00:00+00:00</updated>
+   <updated>2015-03-01T00:00:00-05:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/03/01/herostalk</id>
    <content type="html">&lt;p&gt;What makes a good story? It turns out that, even among stories about very different things (romance, aliens, animated fluffy critters saving the world) there are some elements that are often the same. This topic is fascinating in its own right, but I find that it is also of great help for preparing academic talks. The goals of a talk (to keep the listener engaged and excited) are the same as those of a storyteller, and so it can be helpful to borrow some tips from the successful stories of the past few thousand years.&lt;/p&gt;
 
@@ -438,7 +545,7 @@ The hero returns to their ordinary world reborn, and we see the consequences of 
  <entry>
    <title>Are you thinking what I'm thinking?</title>
    <link href="http://blog.chrisbaldassano.com//2015/02/24/conchords/"/>
-   <updated>2015-02-24T00:00:00+00:00</updated>
+   <updated>2015-02-24T00:00:00-05:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/02/24/conchords</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/fotc.jpg&quot; alt=&quot;Jemaine and Bret&quot;&gt;&lt;/p&gt;
 
@@ -494,7 +601,7 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  <entry>
    <title>Jerry Kaplan&#58; The Law of Artificial Intelligence</title>
    <link href="http://blog.chrisbaldassano.com//2015/02/19/kaplan/"/>
-   <updated>2015-02-19T00:00:00+00:00</updated>
+   <updated>2015-02-19T00:00:00-05:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/02/19/kaplan</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/kaplan.jpg&quot; alt=&quot;Kaplan&quot;&gt;&lt;/p&gt;
 
@@ -513,7 +620,7 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  <entry>
    <title>Michael Gazzaniga&#58; Tales from Both Sides of the Brain</title>
    <link href="http://blog.chrisbaldassano.com//2015/02/13/gazzaniga/"/>
-   <updated>2015-02-13T00:00:00+00:00</updated>
+   <updated>2015-02-13T00:00:00-05:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/02/13/gazzaniga</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/gazzaniga.jpg&quot; alt=&quot;Gazzaniga&quot;&gt;&lt;/p&gt;
 
@@ -543,7 +650,7 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  <entry>
    <title>Hello World</title>
    <link href="http://blog.chrisbaldassano.com//2015/01/27/helloworld/"/>
-   <updated>2015-01-27T00:00:00+00:00</updated>
+   <updated>2015-01-27T00:00:00-05:00</updated>
    <id>http://blog.chrisbaldassano.com//2015/01/27/helloworld</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/NG2-flare.jpg&quot; alt=&quot;Greg Dunn Glial Flare&quot;&gt;&lt;/p&gt;
 

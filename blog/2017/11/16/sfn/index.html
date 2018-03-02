@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Live-blogging SfN 2017 &middot; Rooting for the machines
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/blog/public/css/syntax.css">
+  <link rel="stylesheet" href="/blog/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Blog feed" href="/atom.xml">
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15871783-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ChrisBaldassano">
+  <meta name="twitter:creator" content="@ChrisBaldassano">
+  
+    <meta name="twitter:title" content="Live-blogging SfN 2017">
+  
+  
+    <meta name="twitter:url" content="http://blog.chrisbaldassano.com//2017/11/16/sfn/">
+  
+  
+    <meta name="twitter:description" content="[I wrote these posts during the Society for Neuroscience 2017 meeting, as one of the Official Annual Meeting Bloggers. These blog posts originally appeared on SfN&#39;s Neuronline platform.]
+">
+  
+
+
+  
+  <meta name="twitter:image" content="http://blog.chrisbaldassano.com//public/SuperEEG.png">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A blog about real minds, artificial minds, using artificial minds to understand real minds, and using real minds to inspire artificial minds</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://www.chrisbaldassano.com">Main</a>
+    <a class="sidebar-nav-item" href="/blog/">Blog</a>
+
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/blog/archive/">Blog Archive</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <a class="sidebar-nav-item" href="/blog/atom.xml">Atom feed</a>
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog" title="Home">Rooting for the machines</a>
+            <small>A Blog by Chris Baldassano</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Live-blogging SfN 2017</h1>
+  <span class="post-date">16 Nov 2017</span>
+  <p>[I wrote these posts during the Society for Neuroscience 2017 meeting, as one of the Official Annual Meeting Bloggers. These blog posts originally appeared on SfN&#39;s Neuronline platform.]</p>
+
+<h2>SuperEEG: ECoG data breaks free from electrodes</h2>
+
+<p>The &quot;gold standard&quot; for measuring neural activity in human brains is ECoG (electrocorticography), using electrodes implanted directly onto the surface of the brain. Unlike methods that measure blood oxygenation (which have poor temporal resolution) or that measure signals on the scalp (which have poor spatial resolution), ECoG data has both high spatial and temporal precision. Most of the ECoG data that has been collected comes from patients who are being treated for epileptic seizures and have had electrodes implanted in order to determine where the seizures are starting.</p>
+
+<p>The big problem with ECoG data, however, is that each patient typically only has about 150 implanted electrodes, meaning that we can only measure brain activity in 150 spots (compared to about 100,000 spots for functional MRI). It would seem like there is no way around this - if you don’t measure activity from some part of the brain, then you can’t know anything about what is happening there, right?</p>
+
+<p>Actually, you can, or at least you can guess! <a href="http://www.context-lab.com/">Lucy Owen, Andrew Heusser, and Jeremy Manning</a> have developed a new analysis tool called SuperEEG, based on the idea that measuring from one region of the brain can actually tell you a lot about another unmeasured region, if the two regions are highly correlated (or anti-correlated). By using many ECoG subjects to learn the correlation structure of the brain, we can extrapolate from measurements in a small set of electrodes to estimate neural activity across the whole brain.</p>
+
+<p><img src="/blog/public/SuperEEG.png" alt="Super EEG">
+Figure from <a href="https://app.box.com/s/j1w3985f3gc4t7pkb60rd9y5w7la210t">their SfN poster</a></p>
+
+<p>This breaks ECoG data free from little islands of electrodes and allows us to carry out analyses across the brain. Not all brain regions can be well-estimated using this method (due to the typical placement locations of the electrodes and the correlation structure of brain activity), but it works surprisingly well for most of the cortex:</p>
+
+<p><img src="/blog/public/SuperEEG2.jpg" alt="Super EEG2"></p>
+
+<p>This could also help with the original medical purpose of implanting these electrodes, by allowing doctors to track seizure activity in 3D as it spreads through the brain. It could even be used to help surgeons choose the locations where electrodes should be placed in new patients, to make sure that seizures can be tracked as broadly and accurately as possible.</p>
+
+<h2>Hippocampal subregions growing old together</h2>
+
+<p>To understand and remember our experiences, we need to think both big and small. We need to keep track of our spatial location at broad levels (&quot;what town am I in?&quot;) all the way down to precise levels (&quot;what part of the room am I in?&quot;). We need to keep track of time on scales from years to fractions of a second. We need to access our memories at both a coarse grain (&quot;what do I usually bring to the beach?&quot;) and a fine grain (&quot;remember that time I forgot the sunscreen?&quot;).</p>
+
+<p>Data from both rodents and humans has suggested that different parts of the hippocampus keep track of different levels of granularity, with posterior hippocampus focusing on the fine details and anterior hippocampus seeing the bigger picture. Iva Brunec and her co-authors recently <a href="https://www.biorxiv.org/content/early/2017/08/24/179655">posted a preprint</a> showing that temporal and spatial correlations change along the long axis of the hippocampus - in anterior hippocampus all the voxels are similar to each other and change slowly over time, while in posterior hippocampus the voxels are more distinct from each other and change more quickly over time.</p>
+
+<p>In their latest work, they look at how these functional properties of the hippocampus change over the course of our lives. Surprisingly, this anterior-posterior distinction actually increases with age, becoming the most dramatic in the oldest subjects in their sample.</p>
+
+<p><img src="/blog/public/Iva1.png" alt="Iva1">
+The interaction between the two halves of the hippocampus also changes - while in young adults activity timecourses in the posterior and anterior hippocampus are uncorrelated, they start to become anti-correlated in older adults, perhaps suggesting that the complementary relationship between the two regions has started to break down. Also, their functional connectivity with the rest of the brain shifts over time, with posterior hippocampus decoupling from posterior medial regions and anterior hippocampus increasing its coupling to medial prefrontal regions.</p>
+
+<p><img src="/blog/public/Iva2.png" alt="Iva2">
+These results raise a number of intriguing questions about the cause of these shifts, and their impacts on cognition and memory throughout the lifespan. Is this shift toward greater coupling with regions that represent coarse-grained schematic information compensating for degeneration in regions that represent details? What is the “best” balance between coarse- and fine-timescale information for processing complex stimuli like movies and narratives, and at what age is it achieved? How do these regions mature before age 18, and how do their developmental trajectories vary across people? By following the analysis approach of Iva and her colleagues on new datasets, we should hopefully be able to answer many of these questions in future studies.</p>
+
+<h2>The Science of Scientific Bias</h2>
+
+<p>This year’s David Kopf lecture on Neuroethics was given by Dr. Jo Handelsman, entitled <a href="http://www.abstractsonline.com/pp8/#!/4376/presentation/1298">“The Fallacy of Fairness: Diversity in Academic Science”</a>. Dr. Handelsman is a microbiologist who recently spent three years as the Associate Director for Science at the White House Office of Science and Technology Policy, and has also led some of the most well-known <a href="http://www.pnas.org/content/109/41/16474.abstract">studies of gender bias in science</a>.</p>
+
+<p><img src="/blog/public/IMG_1255.JPG" alt="IMG_1255.JPG"></p>
+
+<p>She began her talk by pointing out that increasing diversity in science is not only a moral obligation, but also has major potential benefits for scientific discovery. Diverse groups have been shown to produce more effective, innovative, and well-reasoned solutions to complex problems. I think this is especially true in psychology - if we are trying to create theories of how all humans think and act, we shouldn’t be building teams composed of a thin slice of humanity.</p>
+
+<p>Almost all scientists agree in principle that we should not be discriminating based on race or gender. However, the process of recruiting, mentoring, hiring, and promotion relies heavily on “gut feelings” and subtle social cues, which are highly susceptible to implicit bias. Dr. Handelsman covered a wide array of studies over the past several decades, ranging from observational analyses to randomized controlled trials of scientists making hiring decisions. I’ll just mention two of the studies she described which I found the most interesting:</p>
+
+<ul>
+<li><p>How it is possible that people can be making biased decisions, but still think they were objective when they reflect on those decisions? A fascinating study by <a href="http://journals.sagepub.com/doi/abs/10.1111/j.0956-7976.2005.01559.x">Uhlmann &amp; Cohen</a> showed that subjects rationalized biased hiring decisions after the fact by redefining their evaluation criteria. For example, when choosing whether to hire a male candidate or a female candidate, who both had (randomized) positive and negative aspects to their resumes, the subjects would decide that the positive aspects of the male candidate were the most important for the job and that he therefore deserved the position. This is interestingly similar to the way that <a href="https://fivethirtyeight.com/features/science-isnt-broken/">p-hacking</a> distorts scientific results, and the solution to the problem may be the same. Just as <a href="https://cos.io/prereg/">pre-registration</a> forces scientists to define their analyses ahead of time, Uhlmann &amp; Cohen showed that forcing subjects to commit to their importance criteria before seeing the applications eliminated the hiring bias.</p></li>
+<li><p>Even relatively simple training exercises can be effective in making people more aware of implicit bias. Dr. Handelsman and her colleagues created a set of short videos called <a href="https://academics.skidmore.edu/blogs/vids/">VIDS (Video Interventions for Diversity in STEM)</a>, consisting of narrative films illustrating issues that have been studied in the implicit bias literature, along with expert videos describing the findings of these studies. They then ran <a href="https://academics.skidmore.edu/blogs/vids/files/2017/02/Pietrietal_2017.pdf">multiple experiments</a> showing that these videos were effective at educating viewers, and made them more likely to notice biased behavior. I plan on making these videos required viewing in my lab, and would encourage everyone working in STEM to watch them as well (the narrative videos are only 30 minutes total).</p></li>
+</ul>
+
+<p><img src="/blog/public/IMG_1261.JPG" alt="IMG_1261.JPG"></p>
+
+<h2>Drawing out visual memories</h2>
+
+<p>If you close your eyes and try to remember something you saw earlier today, what exactly do you see? Can you visualize the right things in the right places? Are there certain key objects that stand out the most? Are you misremembering things that weren’t really there?</p>
+
+<p>Visual memory for natural images has <a href="http://jov.arvojournals.org/article.aspx?articleid=2191865">typically been studied</a> with recognition experiments, in which subjects have to recognize whether an image is one they have seen before or not. But recognition is quite different from freely recalling a memory (without being shown it again), and can involve different neural mechanisms. How can we study visual recall, testing whether the mental images people are recalling are correct?</p>
+
+<p>One way option is to have subjects give verbal descriptions of what they remember, but this might not capture all the details of their mental representation, such as the precise relationships between the objects or whether their imagined viewpoint of the scene is correct. Instead, NIMH researchers Elizabeth Hall, Wilma Bainbridge, and Chris Baker had subjects draw photographs from memory, and then analyzed the contents of those drawings.</p>
+
+<p><img src="/blog/public/drawing.JPG" alt="drawing.JPG"></p>
+
+<p>This is a creative but challenging approach, since it requires quantitatively characterizing how well the drawings (all 1,728!) match the original photographs. They crowdsource this task using Amazon Mechanical Turk, getting high-quality ratings that include: how well can the original photograph be identified based on the drawing, what objects were correctly drawn, what objects were falsely remembered as being in the image, and how close the objects were to their correct locations. There are also “control” drawings made by subjects with full information (that get to look at the image while they draw) or minimal information (just a category label) that were rated for comparison.</p>
+
+<p>The punchline is that subjects can remember many of the images, and produce surprisingly detailed drawings that are quite similar to those drawn by the control group that could look at the pictures. They reproduce the majority of the objects, place them in roughly the correct locations, and draw very few incorrect objects, making it very easy to match the drawings with the original photographs. The only systematic distortion is that the drawings depicted the scenes as being slightly farther away than they actually were, which nicely replicates previous results on <a href="http://www.scholarpedia.org/article/Boundary_extension">boundary extension</a>.</p>
+
+<p>This is a neat task that subjects are remarkably good at (which is not always the case in memory experiments!), and could be a great tool for investigating the neural mechanisms of naturalistic perception and memory. Another <a href="http://www.abstractsonline.com/pp8/#!/4376/presentation/26803">intriguing SfN presentation</a> showed that is possible to have subjects draw while in an fMRI scanner, allowing this paradigm to be used in neuroimaging experiments. I wonder if this approach could also be extended into drawing comic strips of remembered events that unfold over time, or to illustrate mental images based on stories told through audio or text.</p>
+
+
+Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+</div>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

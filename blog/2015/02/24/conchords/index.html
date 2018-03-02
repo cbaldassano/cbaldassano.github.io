@@ -48,6 +48,53 @@
   
   
     <meta name="twitter:description" content="
+
+Flight of the Conchords has been one of my favorite comedy bands for years, mixing general silliness with some insightful satire on life and relationships. They have a whole catalog of great songs (one of which is highly relevant to the title of this blog), but one of my favorite exchanges is at 1:00 into their song &quot;We&#39;re Both in Love with a Sexy Lady&quot;:
+
+
+
+
+Bret: Are you thinking what I&#39;m thinking?
+
+Jemaine: No, I&#39;m thinking what I&#39;m thinking.
+
+Bret: So you&#39;re not thinking what I&#39;m thinking?
+
+Jemaine: No, &#39;cause you&#39;re thinking I&#39;m thinking what you&#39;re thinking.
+
+
+Both of Jemaine&#39;s lines touch on deep concepts in cognitive science, so let&#39;s take them one at a time:
+
+I&#39;m thinking what I&#39;m thinking
+
+Jemaine&#39;s first objection is that of course he&#39;s not thinking Bret&#39;s thoughts, he&#39;s thinking his own! It is actually very unclear exactly what it means for two people to have &quot;the same&quot; thought. For systems with a standardized architecture like computers, it makes perfect sense to say that a file on my computer is the same as a file on your computer - each file consists of an ordered list of 0s and 1s, and we can just compare these two lists to see if they are the same. For neural systems, however, we can&#39;t hope to do this same kind of comparison. It seems implausible that two people could have a one-to-one correspondence between the neurons in their brains and have the same pattern of firing on these neurons. Is there a way to summarize the current state of the brain in a way that abstracts away from the architecture of a particular person&#39;s brain, and allows us to compare thoughts between people?
+
+The answer is, of course, that humans invented such a system about a hundred thousand years ago, called language. The fact that we are able to convert our thoughts into words, and decode others&#39; words into our own thoughts, is an incredible feat. In a sense, we are all bilingual - our internal thoughts are represented by patterns of brain activity unique to our own brains, and we can translate these to and from a language that is understood by others. This sentence is some dynamic state in my brain which I have compressed into a string of characters, which your brain is then uncompressing to create a corresponding state in your brain. Language is not perfect, and we can sometimes struggle to translate our thoughts into words, but considering the complexity of the human brain (with 100 trillion connections between neurons) we can do an impressive job of copying thoughts between brains using a one-dimensional channel of text or speech.
+
+There has been some early work on building computer systems which can perform this same kind of task, producing a natural language description of some complex internal representation of information. For example, both Stanford and Google have built artificial neural network systems that can look at an image, produce some numerical vector representation of its content, and then translate that representation into a sentence that humans can understand. My labmate Andrej Karpathy has put up a cool demo of sample sentences (you can refresh to get new ones) to show how well this is currently working. It&#39;s clearly far below human performance, but describes a surprising number of images correctly.
+
+Going back to human brains: though we can&#39;t expect a neuron-level correspondence between brains, might there be a more coarse similarity at the millimeter scale? Maybe the average activity of a clump of ~10,000 neurons in my brain when I think about dogs looks like the average activity in a similarly-positioned clump of neurons in your brain. There have been a great deal of interesting neuroimaging experiments testing this hypothesis, and it seems that there are a number of brain regions with this property. In fact, the more in-sync a listener&#39;s brain is to the speaker&#39;s, the better they comprehend what the speaker is saying.
+
+You&#39;re thinking I&#39;m thinking what you&#39;re thinking.
+
+Jemaine&#39;s second objection is that Bret is currently thinking about a model of Jemaine&#39;s mind, and since Jemaine isn&#39;t thinking about his own mind their thoughts can&#39;t be the same. The ability to make these kind of statements, about the mental states of others, is called having a Theory of Mind. In fact, understanding Jemaine&#39;s sentence is a fourth-order theory of mind task for us as listeners: Jemaine thinks that Bret thinks that Jemaine is thinking what Bret is thinking. The fact that we can even comprehend this sentence is remarkable. No other animal (as far as we know) has the ability to build these high-order models of the thoughts of others, and humans require years of practice.
+
+If you want to test how good your theory of mind skills are, take a look at one of the questions used in studies of schoolchildren:
+
+
+There was a little girl called Anna who had a big problem on her mind. It was her mums birthday the very next day. Anna wanted to get her mum a birthday present, but she just didn&#39;t know what to buy. She thought and she thought. Tomorrow was nearly here! Anna remembered that her brother, Ben, had already asked mum what
+mum would like most of all for her birthday. Ben was out riding his bike so Anna decided to look around his room to see if she could find what present he had got for mum. Anna went in and found a big bunch of beautiful flowers with a little card that said: &#39;Happy Birthday Mum, love from Ben.&#39; Anna thought to herself &#39;mum must want flowers for her birthday!&#39; Just as Anna was leaving the room, Ben was coming up the stairs, but he didn&#39;t see Anna leaving his room. Anna didn&#39;t want Ben to know that she had been snooping round his room, so she said to Ben: &quot;Ben, have you got mum a birthday present?&quot; Ben thought for a minute, he didn&#39;t want Anna to copy him and get mum the same present, so he said: &quot;Yes, Anna, I have. I have got mum some perfume. What have you got for her?&quot; Anna replied: &quot;Erm, nothing yet, Ben&quot; and she walked away.
+
+Which is true?
+
+a) Ben thinks that Anna believes that he knows that Mum wants perfume for her birthday.
+
+b) Ben thinks that Anna knows that he knows that mum wants flowers for her birthday. 
+
+
+11 year-olds are unable to answer this question, while most adults can. It requires tracking the knowledge states of multiple people, and understanding how each is trying to deceive the other. (In case you&#39;re still struggling, the answer is (a)).
+
+There have been some efforts to incorporate basic theory of mind into AI assistants like Siri, Google Now, and Cortana, in the sense that they can keep track of basic context: if you ask about the weather and then say &quot;what about this weekend?&quot;, these systems will understand that you&#39;re still thinking about the weather and interpret your question in this context. However, I don&#39;t know of any systems that really try to build a deep understanding of the user&#39;s mental state or tackle higher-order theory of mind tasks. I predict that in the near future we&#39;ll start seeing assistants that keep track not only of what you should know, but also what you currently do and don&#39;t know, so that they can deliver information only when you need it. If my wife emails me to say that she&#39;s moved up the time of our dinner reservation, and my personal AI sees that I haven&#39;t read the email and haven&#39;t left for the restaurant, it should guess that I am mistaken about my wife&#39;s plans and interrupt what I&#39;m working on. Perhaps a more useful measure of an AI&#39;s conversational abilities than the Turing test is a theory-of-mind test: can an AI understand what we know, how we&#39;re feeling, and what we want? Feeding it some Flight of the Conchords as training data might be a good place to start.
 ">
   
 
@@ -93,6 +140,10 @@
         
       
     
+      
+    
+      
+        
       
     
       

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      The three ingredients of reproducible research &middot; Rooting for the machines
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/blog/public/css/syntax.css">
+  <link rel="stylesheet" href="/blog/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Blog feed" href="/atom.xml">
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15871783-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ChrisBaldassano">
+  <meta name="twitter:creator" content="@ChrisBaldassano">
+  
+    <meta name="twitter:title" content="The three ingredients of reproducible research">
+  
+  
+    <meta name="twitter:url" content="http://blog.chrisbaldassano.com//2018/03/02/reproducible/">
+  
+  
+    <meta name="twitter:description" content="Much of the conversation about research methods in science has focused on the &quot;replication crisis&quot; - the fact that many classic studies (especially in psychology) are often not showing the same results when performed carefully by independent research groups. Although there are some debates about exactly how bad the problem is, a consensus is emerging about how to improve the ways we conduct experiments and analyses: pre-registering study hypotheses before seeing the data, using larger sample sizes, being more willing to publish (informative) null results, and maybe being more conservative about what evidence counts as &quot;proof.&quot;
+">
+  
+
+
+  
+  <meta name="twitter:image" content="http://blog.chrisbaldassano.com/">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A blog about real minds, artificial minds, using artificial minds to understand real minds, and using real minds to inspire artificial minds</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://www.chrisbaldassano.com">Main</a>
+    <a class="sidebar-nav-item" href="/blog/">Blog</a>
+
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/blog/archive/">Blog Archive</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <a class="sidebar-nav-item" href="/blog/atom.xml">Atom feed</a>
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog" title="Home">Rooting for the machines</a>
+            <small>A Blog by Chris Baldassano</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">The three ingredients of reproducible research</h1>
+  <span class="post-date">02 Mar 2018</span>
+  <p>Much of the conversation about research methods in science has focused on the <a href="https://digest.bps.org.uk/2015/08/27/this-is-what-happened-when-psychologists-tried-to-replicate-100-previously-published-findings/">&quot;replication crisis&quot;</a> - the fact that many classic studies (especially in psychology) are often not showing the same results when performed carefully by independent research groups. Although there are some debates about <a href="https://news.harvard.edu/gazette/story/2016/03/study-that-undercut-psych-research-got-it-wrong/">exactly how bad</a> the problem is, a consensus is emerging about how to improve the ways we conduct experiments and analyses: <a href="https://www.theguardian.com/science/head-quarters/2014/may/20/psychology-registration-revolution">pre-registering</a> study hypotheses before seeing the data, using <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2205186">larger sample sizes</a>, being more willing to <a href="https://www.psychologicalscience.org/publications/replication">publish (informative) null results</a>, and maybe being <a href="https://imai.princeton.edu/research/files/significance.pdf">more conservative</a> about what evidence counts as &quot;proof.&quot;</p>
+
+<p>But there is actually an even simpler problem we haven&#39;t fully tackled, which is not &quot;replicability&quot; (being able to get the same result in new data from a new experiment) but &quot;reproducibility&quot; - the ability to demonstrate how we got the result from the original data in the first place. Being able trace and record the exact path from data to results is important for documenting precisely how the analysis works, and allows other researchers to examine the details for themselves if they are skeptical. It also makes it much easier for future work (either by the same authors or others) to keep analyses comparable across different experiments.</p>
+
+<p>Describing how data was analyzed is of course supposed to be one of the main points of a published paper, but in practice it is almost impossible to recreate the exact processing pipeline of a study just from reading the paper. Here are some real examples that I have experienced firsthand in my research:</p>
+
+<ul>
+<li>Trying to replicate a results from papers that used a randomization procedure called phase scrambling, I realized that there are actually at least two ways of doing this scrambling and papers usually don&#39;t specify which one they use</li>
+<li>Confusion over exactly what probability measure was calculated in a published study set off a minor panic when the study authors started to think their code was wrong, before realizing that their analysis was actually working as intended</li>
+<li>Putting the same brain data into different versions of AFNI (a neuroimaging software package) can produce different statistical maps, due to a change in the way the False Discovery Rate is calculated</li>
+<li>A collaborator was failing to reproduce one of my results even with my code - turned out that the code worked in MATLAB versions 2015b and 2017b but not 2017a (for reasons that are still unclear)</li>
+</ul>
+
+<p>These issues show that reproducible research actually requires three pieces:</p>
+
+<ol>
+<li>Publicly available data</li>
+<li>Open-source code</li>
+<li>A well-defined computing environment</li>
+</ol>
+
+<p>The first two things we know basically how to do, at least in theory - data can be uploaded to a number of services that are typically free to researchers (and standards are starting to emerge for complex data formats like <a href="http://bids.neuroimaging.io/">neuroimaging data</a>), and code can be shared (and version-controlled) through platforms like GitHub. But the last piece has been mostly overlooked - how can we take a &quot;snapshot&quot; of all the behind-the-scene infrastructure, like the programming language version and all the libraries the code depends on? This is honestly often the biggest barrier to reproducing results - downloading data and code is easy, but actually getting the code to run (and run exactly as it did for the original analysis) can be a descent into madness, especially on a highly-configurable linux machine.</p>
+
+<p>For my <a href="https://www.biorxiv.org/content/early/2018/01/24/252718">recent preprint</a>, I tried out a possible solution to this problem: an online service called CodeOcean. This platform allow you to create an isolated &quot;capsule&quot; that contains your data, your code, and a description of the programming environment (set up with a simple GUI). You can then execute your code (on their servers), creating a verified set of results - the whole thing is then labeled with a DOI, and <a href="https://doi.org/10.24433/CO.a27d1d90-d227-4600-b876-051a801c7c20">is publicly viewable</a> with just a browser. Interestingly the public capsule is still <em>live</em>, meaning that anyone can edit the code and click Run to see how the results change (any changes they make affect only their own view of the capsule). Note that I wouldn&#39;t recommend blindly clicking Run on my capsule since the analysis takes multiple hours, but if you&#39;re interested in messing with it you can edit the run.sh file to only conduct a manageable subset of the analyses (e.g. only on a single region of interest). CodeOcean is still under development, and there are a number of features I haven&#39;t tried yet (including the ability to run live Jupyter Notebooks, and a way to create a simple GUI for exposing parameters in your code).</p>
+
+<p>For now this is set up as a post-publication (or post-preprint) service and isn&#39;t intended for actually working on the analyses (the computing power you have access to is limited and has a quota), but as cloud computing continues to become more convenient and affordable I could eventually see entire scientific workflows moving online.</p>
+
+
+Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+</div>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
