@@ -133,6 +133,55 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2016/10/25/twonet/">
+        Connecting past and present in visual perception
+      </a>
+    </h1>
+
+    <span class="post-date">25 Oct 2016</span>
+
+    <div class="message">
+<p>There are two kinds of people in the world—those who divide everything in the world into two kinds of things and those who don’t.
+<p>Kenneth Boulding
+</div>
+
+<p>Scientists love dividing the world into categories. Whenever we are trying to study more than 1 or 2 things at a time, our first instinct is to sort them into boxes based on their similarities, whether we&#39;re looking at animals, rocks, stars, or diseases.</p>
+
+<p>There have been many proposals on how to divide up the human visual system: regions processing coarse vs. fine structure, or small objects vs. big objects, or <a href="/blog/2016/05/20/corner/">central vs. peripheral</a> information. In my new paper, <a href="http://eneuro.org/content/3/5/ENEURO.0178-16.2016">Two distinct scene processing networks connecting vision and memory</a>, I argue that regions activated by photographic images can be split into two different networks.
+<br/>
+<br/></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="/blog/public/visnet.png" alt="Visual network"></th>
+<th style="text-align: center"><img src="/blog/public/visnet_ex.png" alt="Visual network example"></th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p>The first group of scene-processing regions (near the back of the brain) care only about the image that is currently coming in through your eyes. They are looking for visual features like walls, landmarks, and architecture that will help you determine the structure of the environment around you. But they don&#39;t try to keep track of this information over time - as soon as you move your eyes, they forget all about the last view of the world.</p>
+
+<p><br/>
+<br/></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="/blog/public/memnet.png" alt="Memory navigation network"></th>
+<th style="text-align: center"><img src="/blog/public/photosynth_5fps.gif" alt="Memory network example"></th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p>The second group (a bit farther forward) uses the information from the first group to build up a stable model of the world and your place in it. They care less about exactly where your eyes are pointed and more about where you are in the world, creating a 3D model of the room or landscape around you and placing you on a map of what other places are nearby. These regions are strongly linked to your long-term memory system, and show the highest activity in familiar environments.</p>
+
+<p>I am very interested in this second group of regions that integrate information over time - what exactly are they keeping track of, and how do they get information in and out of long-term memory? I have a new manuscript with my collaborators at Princeton (currently working its way through the publication gaunlet) showing that these regions build <a href="http://biorxiv.org/content/early/2016/10/14/081018">abstract representations of events in movies and audio narration</a>, and am  running a new experiment looking at how event templates we learn over our lifetimes are used to help build these event representations.</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2016/07/08/deep/">
         How deep is the brain?
       </a>
@@ -310,41 +359,6 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
 <p>Of course there are some disadvantages to counting first place wins: the requires all teams to run all legs (which is logistically difficult and means we get to know each team less) and the winner might be locked-in before the final leg (ruining the suspense of the grand finale they usually have set up for the final tasks). This is likely a general tradeoff in games like this, between being fair (making the right team more likely to win) and being exciting (keeping the winner more uncertain until the end). As a game show, The Amazing Race probably makes the right choice (entertainment over fairness) but for more serious matters (political debate performance?) maybe we should pay attention to the winner of each round rather than the loser.</p>
 
 <p>All the MATLAB code and ranking data is available on <a href="https://bitbucket.org/cbaldassano/amazing-race">my bitbucket</a>.</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/05/11/bigdata/">
-        The Big Data bust of the 1500s&#58; lessons from the first scientific data miner
-      </a>
-    </h1>
-
-    <span class="post-date">11 May 2015</span>
-
-    <p><img src="/blog/public/geocentric.png" alt="Geoheliocentric Model"></p>
-
-<p>The Big Data craze is in full swing within many scientific fields, especially neuroscience. Since we can&#39;t hope to understand the tangled web of the brain by looking at only one tiny piece, groups have started to amass huge datasets describing brain <a href="http://neurosynth.org/">function</a> and <a href="http://www.nytimes.com/2015/01/11/magazine/sebastian-seungs-quest-to-map-the-human-brain.html">connections</a>. The idea is that, if we can get enough careful measurements all together, then we can have computers search for patterns that explain as much of the data as possible.</p>
-
-<p>This approach would have made perfect sense to <a href="http://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe</a>, a Danish astronomer born in 1546. Although people have been studying the skies since the dawn of civilization, Brahe was the first to make a detailed catalog of stellar and planetary positions.</p>
-
-<p><a href="http://www.fis.cinvestav.mx/%7Elmontano/sciam/scientificamerican0114-72.pdf">Scientific American&#39;s description</a> of his research program makes it clear that this was one of the first Big Data science projects:</p>
-
-<blockquote>
-<p>Brahe was a towering figure. He ran a huge research program with a castlelike observatory, a NASA-like budget, and the finest instruments and best assistants money could buy. [...] Harvard University historian Owen Gingerich often illustrates Brahe’s importance with a mid-17th-century compilation by Albert Curtius of all astronomical data gathered since antiquity: the great bulk of two millennia’s worth of data came from Brahe.</p>
-</blockquote>
-
-<p>Brahe then announced a model of planetary motion that fit his vast dataset exactly. You could use it to predict precisely where the stars and planets would be in the sky tomorrow. It relied on a fancy <a href="http://mathworld.wolfram.com/ProsthaphaeresisFormulas.html">prosthaphaeresis</a> algorithm that allowed for the computation of a massive number of multiplications. The only problem was that it was deeply, fundamentally wrong.</p>
-
-<p>It was called the Geoheliocentric Model, since it proposed that the sun orbited the stationary Earth and the other planets orbited the sun. It was attractive on philosophical, scientific, and intuitive grounds (of course the Earth isn&#39;t moving, what could possibly power such a fast motion of such a heavy object?). And it illustrates a critical problem with the data-mining approach to science: just because you have a model that predicts a pattern doesn&#39;t mean that the model corresponds to reality.</p>
-
-<p>What might be needed is not just more data, or more precise data, but new hypotheses that drive the collection of entirely different types of data. It doesn&#39;t mean that Big Data isn&#39;t going to be part of the solution (most neuroimaging datasets have been laughably small so far), but simply performing pattern recognition on larger and larger datasets doesn&#39;t guarantee that we&#39;re getting closer to the truth. The geoheliocentric model was eventually brought down not with bigger datasets, but by a targeted experiment looking at small annual <a href="http://en.wikipedia.org/wiki/Aberration_of_light">patterns of stellar motion</a>.</p>
-
-<p>Interestingly, there is a clear counterexample to my argument in the work of <a href="http://web.mit.edu/yamins/www/">Dan Yamins</a>, a postdoc with <a href="http://dicarlolab.mit.edu/">Jim DiCarlo</a>. Dan has shown that a neural network model that learns to label objects in a large set of images ends up looking a lot like the visual processing regions of the brain (in terms of its functional properties). This is surprising, since you could imagine that there might be lots of other ways to understand images.</p>
-
-<p>I wonder if this works because the brain is itself a Big Data mining machine, trained up through childhood to build models of our experiences. Then finding the strongest patterns in big datasets of experiences (images, videos, audio) might come up with the same solution as the brain. Or maybe our neural network models are starting to approximate the broad functional properties of the brain, which makes them a good hypothesis-driven model for finding patterns (rather than just blind data mining). As <a href="http://www.psychology.ucsd.edu/people/profiles/jwixted.html">John Wixted</a> stressed at the <a href="http://memory.psych.upenn.edu/CEMS_2015">CEMS</a> conference last week, hypothesis-free data anlysis has a seductive purity, but the true value of datasets (regardless of their size) comes only through the lens of carefully constructred ideas.</p>
 
 
     Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>

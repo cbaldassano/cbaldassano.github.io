@@ -133,6 +133,41 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2015/05/11/bigdata/">
+        The Big Data bust of the 1500s&#58; lessons from the first scientific data miner
+      </a>
+    </h1>
+
+    <span class="post-date">11 May 2015</span>
+
+    <p><img src="/blog/public/geocentric.png" alt="Geoheliocentric Model"></p>
+
+<p>The Big Data craze is in full swing within many scientific fields, especially neuroscience. Since we can&#39;t hope to understand the tangled web of the brain by looking at only one tiny piece, groups have started to amass huge datasets describing brain <a href="http://neurosynth.org/">function</a> and <a href="http://www.nytimes.com/2015/01/11/magazine/sebastian-seungs-quest-to-map-the-human-brain.html">connections</a>. The idea is that, if we can get enough careful measurements all together, then we can have computers search for patterns that explain as much of the data as possible.</p>
+
+<p>This approach would have made perfect sense to <a href="http://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe</a>, a Danish astronomer born in 1546. Although people have been studying the skies since the dawn of civilization, Brahe was the first to make a detailed catalog of stellar and planetary positions.</p>
+
+<p><a href="http://www.fis.cinvestav.mx/%7Elmontano/sciam/scientificamerican0114-72.pdf">Scientific American&#39;s description</a> of his research program makes it clear that this was one of the first Big Data science projects:</p>
+
+<blockquote>
+<p>Brahe was a towering figure. He ran a huge research program with a castlelike observatory, a NASA-like budget, and the finest instruments and best assistants money could buy. [...] Harvard University historian Owen Gingerich often illustrates Brahe’s importance with a mid-17th-century compilation by Albert Curtius of all astronomical data gathered since antiquity: the great bulk of two millennia’s worth of data came from Brahe.</p>
+</blockquote>
+
+<p>Brahe then announced a model of planetary motion that fit his vast dataset exactly. You could use it to predict precisely where the stars and planets would be in the sky tomorrow. It relied on a fancy <a href="http://mathworld.wolfram.com/ProsthaphaeresisFormulas.html">prosthaphaeresis</a> algorithm that allowed for the computation of a massive number of multiplications. The only problem was that it was deeply, fundamentally wrong.</p>
+
+<p>It was called the Geoheliocentric Model, since it proposed that the sun orbited the stationary Earth and the other planets orbited the sun. It was attractive on philosophical, scientific, and intuitive grounds (of course the Earth isn&#39;t moving, what could possibly power such a fast motion of such a heavy object?). And it illustrates a critical problem with the data-mining approach to science: just because you have a model that predicts a pattern doesn&#39;t mean that the model corresponds to reality.</p>
+
+<p>What might be needed is not just more data, or more precise data, but new hypotheses that drive the collection of entirely different types of data. It doesn&#39;t mean that Big Data isn&#39;t going to be part of the solution (most neuroimaging datasets have been laughably small so far), but simply performing pattern recognition on larger and larger datasets doesn&#39;t guarantee that we&#39;re getting closer to the truth. The geoheliocentric model was eventually brought down not with bigger datasets, but by a targeted experiment looking at small annual <a href="http://en.wikipedia.org/wiki/Aberration_of_light">patterns of stellar motion</a>.</p>
+
+<p>Interestingly, there is a clear counterexample to my argument in the work of <a href="http://web.mit.edu/yamins/www/">Dan Yamins</a>, a postdoc with <a href="http://dicarlolab.mit.edu/">Jim DiCarlo</a>. Dan has shown that a neural network model that learns to label objects in a large set of images ends up looking a lot like the visual processing regions of the brain (in terms of its functional properties). This is surprising, since you could imagine that there might be lots of other ways to understand images.</p>
+
+<p>I wonder if this works because the brain is itself a Big Data mining machine, trained up through childhood to build models of our experiences. Then finding the strongest patterns in big datasets of experiences (images, videos, audio) might come up with the same solution as the brain. Or maybe our neural network models are starting to approximate the broad functional properties of the brain, which makes them a good hypothesis-driven model for finding patterns (rather than just blind data mining). As <a href="http://www.psychology.ucsd.edu/people/profiles/jwixted.html">John Wixted</a> stressed at the <a href="http://memory.psych.upenn.edu/CEMS_2015">CEMS</a> conference last week, hypothesis-free data anlysis has a seductive purity, but the true value of datasets (regardless of their size) comes only through the lens of carefully constructred ideas.</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2015/03/31/phdadvice/">
         Seven things I learned as a PhD student
       </a>
@@ -347,31 +382,6 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
 <p>11 year-olds are unable to answer this question, while most adults can. It requires tracking the knowledge states of multiple people, and understanding how each is trying to deceive the other. (In case you&#39;re still struggling, the answer is (a)).</p>
 
 <p>There have been some efforts to incorporate basic theory of mind into AI assistants like Siri, Google Now, and Cortana, in the sense that they can keep track of basic context: if you ask about the weather and then say &quot;what about this weekend?&quot;, these systems will understand that you&#39;re still thinking about the weather and interpret your question in this context. However, I don&#39;t know of any systems that really try to build a deep understanding of the user&#39;s mental state or tackle higher-order theory of mind tasks. I predict that in the near future we&#39;ll start seeing assistants that keep track not only of what you should know, but also what you currently do and don&#39;t know, so that they can deliver information only when you need it. If my wife emails me to say that she&#39;s moved up the time of our dinner reservation, and my personal AI sees that I haven&#39;t read the email and haven&#39;t left for the restaurant, it should guess that I am mistaken about my wife&#39;s plans and interrupt what I&#39;m working on. Perhaps a more useful measure of an AI&#39;s conversational abilities than the Turing test is a theory-of-mind test: can an AI understand what we know, how we&#39;re feeling, and what we want? Feeding it some Flight of the Conchords as training data might be a good place to start.</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2015/02/19/kaplan/">
-        Jerry Kaplan&#58; The Law of Artificial Intelligence
-      </a>
-    </h1>
-
-    <span class="post-date">19 Feb 2015</span>
-
-    <p><img src="/blog/public/kaplan.jpg" alt="Kaplan"></p>
-
-<p>Jerry Kaplan has been an interesting force in the Stanford AI community over the past couple years. He&#39;s been a major player in Silicon Valley since the 80s, was one of the early pioneers of touch-sensitive tablets and online auctions, and wrote a book about his <a href="http://www.amazon.com/Startup-A-Silicon-Valley-Adventure/dp/0140257314">1987 pen-based operating system company</a> (which was ahead of its time, unfortunately for the company). Recently, however, he seems to have a new mission of fostering a broader discussion of the history and philosophy of AI, especially on the Stanford campus. He has been giving a number of talks on these topics, and <a href="http://web.stanford.edu/class/cs22/">taught a class</a> that brought in other AI speakers. </p>
-
-<p>His most recent talk, through the <a href="https://www.law.stanford.edu/organizations/programs-and-centers/codex-the-stanford-center-for-legal-informatics">Stanford CodeX center</a>, was partially a plug for his upcoming book, <a href="http://yalepress.yale.edu/yupbooks/book.asp?isbn=9780300213553">&quot;Humans Need Not Apply: A Guide to Wealth and Work in the Age of Artificial Intelligence&quot;</a> but focused specifically on how the legal system should handle the rise of autonomous systems. He draws a distinction between a system being &quot;conscious&quot; (which is far off for machines, and more of a philosophical question) and a system being a &quot;moral agent&quot; that is legally considered as an &quot;artificial person.&quot; Arguably corporations already fall under this definition, since they have rights (e.g. free speech) and can be charged with legal action independently from their employees (e.g. in the BP Deepwater Horizon spill).</p>
-
-<p>Can an AI be a moral agent? Jerry argues that systems like autonomous cars are able to predict the consequences of their actions and are in control of those actions (without requiring human approval), so they meet at least a basic definition of moral agency. As has been <a href="http://www.theatlantic.com/technology/archive/2013/10/the-ethics-of-autonomous-cars/280360/">discussed by others</a>, self-driving cars will have to make decisions analogous to the philosophical &quot;trolley problem,&quot; in which every possible action results in harm to humans and value judgments must be made. Since AIs can (implicitly or explicitly) have some encoded moral system, they should bear some responsibility for their actions.</p>
-
-<p>He proposed a few ways of actually enforcing this in practice. The simplest would be some type of licensing system, in which every AI system meeting some threshold of complexity would need to be registered with the government. If an AI is misbehaving in some way, such as a driverless taxi driving recklessly fast in hopes of a better tip, then its license would be revoked. The AI might just be destroyed, or if we think that the problem is fixable then it could be &quot;rehabilitated&quot; e.g. with new training data. There are many possible complications here (I asked him about how this would work if the AI is partially distributed in the cloud), but this general approach makes sense.</p>
-
-<p>I&#39;m happy that we&#39;re handing over more and more control to AIs, freeing up humans from mundane tasks and probably outperforming them in many areas (though this will require some restructuring of the economy, which is a topic for another post). There are, however, some very practical problems that we need to address sooner than later - I&#39;m glad to see that technically-minded people like Jerry are diving into these issues.</p>
 
 
     Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>

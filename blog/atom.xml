@@ -4,13 +4,81 @@
  <title>Rooting for the machines</title>
  <link href="http://blog.chrisbaldassano.com//atom.xml" rel="self"/>
  <link href="http://blog.chrisbaldassano.com//"/>
- <updated>2018-03-02T11:30:59-05:00</updated>
+ <updated>2018-11-08T10:33:59-05:00</updated>
  <id>http://blog.chrisbaldassano.com/</id>
  <author>
    <name>Chris Baldassano</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Building the present from the past</title>
+   <link href="http://blog.chrisbaldassano.com//2018/11/08/schema/"/>
+   <updated>2018-11-08T00:00:00-05:00</updated>
+   <id>http://blog.chrisbaldassano.com//2018/11/08/schema</id>
+   <content type="html">&lt;blockquote&gt;
+&lt;p&gt;All airports, he had long ago decided, look very much the same.​ It doesn’t actually matter where you are, you are in an airport:​ tiles and walkways and restrooms, gates and newsstands and fluorescent lights.​ This airport looked like an airport.​&lt;/p&gt;
+
+&lt;p&gt;-Neil Gaiman, American Gods​&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Each scene of a movie (or paragraph of a story) generates a pattern of activity in the viewer&amp;#39;s brain, and I showed in &lt;a href=&quot;http://www.dpmlab.org/papers/Neuron17.pdf&quot;&gt;my last paper&lt;/a&gt; that changes in these activity patterns correspond to new events happening in the story. But it is still mysterious exactly what information the brain is keeping track of in these activity patterns. We know that movie and audiobook versions of the same story &lt;a href=&quot;https://docs.wixstatic.com/ugd/b75639_46411e5d6ddb49c7bc47ed7660b2cf67.pdf&quot;&gt;generate similar patterns&lt;/a&gt; in many brain regions, which means that the information must be pretty abstract. Can we push this even farther? Can we find pattern similarities between &lt;em&gt;different&lt;/em&gt; narratives that describe events from the same &amp;quot;template&amp;quot;?&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;http://www.dpmlab.org/papers/9689.full.pdf&quot;&gt;my new paper&lt;/a&gt; we studied a kind of template called an event script, which describes a typical sequence of events that occurs in the world. For example, when you walk into a restaurant you have detailed expectations about what is going to happen next - you are going to be seated at a table, then given menus, then order your food, and then the food will come. Our hypothesis was that some brain regions would track this script information, and should look similar for &lt;em&gt;any&lt;/em&gt; story about restaurants regardless of the specific characters and storyline of this particular narrative.&lt;/p&gt;
+
+&lt;p&gt;We showed subjects movies and audiobooks of stories taking place in restaurants and stories taking place in airports. Here are examples of two of the restaurant movies (all of the stories are &lt;a href=&quot;https://figshare.com/articles/Event_Schema_Stimuli/5760306/3&quot;&gt;publicly available here&lt;/a&gt;):&lt;/p&gt;
+
+&lt;video controls width=&quot;720&quot;&gt;
+&lt;source src=&quot;https://ndownloader.figshare.com/files/10148874/preview/10148874/video_preview.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;video controls width=&quot;720&quot;&gt;
+&lt;source src=&quot;https://ndownloader.figshare.com/files/10148880/preview/10148880/video_preview.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;We then looked for brain regions that seemed to be tracking the restaurant or airport script during all of the stories, and found a whole network of regions:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/schemanet.png&quot; alt=&quot;SchemaRegions&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;An especially important region here is the medial prefrontal cortex, which is the part of your brain right behind the middle of your forehead. We found that this region only tracked the script when it made logical sense - if we scrambled the order of the script (e.g. showed people getting food before they ordered) then it no longer bothered to track what was going on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/public/mPFC.png#center&quot; alt=&quot;mPFC&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;I also used some of the analysis tools I previously developed for matching up brain data during perception and recall of the same story to find correspondences between &lt;em&gt;different&lt;/em&gt; stories with the same script template. For example, I can use brain activity from the superior frontal gyrus to figure out which parts of the &amp;quot;Up in the Air&amp;quot; story and the &amp;quot;How I Met Your Mother&amp;quot; story take place in the same places in the airport. Here are snippets of the stories that show similar patterns of brain activity:&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Script event&lt;/th&gt;
+&lt;th&gt;Up in the Air&lt;/th&gt;
+&lt;th&gt;How I Met Your Mother&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Enter aiport&lt;/td&gt;
+&lt;td&gt;Ryan looked up from his boarding pass and sighed. There was his new partner Natalie, awkwardly climbing out of a taxi at the curb of the airport.&lt;/td&gt;
+&lt;td&gt;Barney and Quinn walked into the airport pulling their matching pink tiger-stripe suitcases. Barney leaned over and kissed her on the cheek.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Airport security&lt;/td&gt;
+&lt;td&gt;Ryan shrugged. &amp;quot;Look at the other lines. I never get behind people traveling with infants - I&amp;#39;ve never seen a stroller collapse in less than twenty minutes. Old people are worse - their bodies are littered with hidden metal and they never seem to appreciate how little time they have left on earth.&amp;quot;&lt;/td&gt;
+&lt;td&gt;The guard motioned to several others for backup. &amp;quot;Sir, you need to open this box.&amp;quot; &amp;quot;Oh, I can&amp;#39;t do that. Magician&amp;#39;s code. A magician never reveals his tricks. The only person I could possibly reveal the trick to is another magician.&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Boarding gate&lt;/td&gt;
+&lt;td&gt;He stopped halfway to their gate and pointed at a luggage store. &amp;quot;If you&amp;#39;re going to be flying with me, you need to get a carry-on bag. You know how much time you lose by checking in?&amp;quot;&lt;/td&gt;
+&lt;td&gt;She tried to interrogate him as they sat in front of the gate, but he refused to spill the beans. &amp;quot;I told you, magician&amp;#39;s code.&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;On plane&lt;/td&gt;
+&lt;td&gt;&amp;quot;I like my own stuff. Don&amp;#39;t you like feeling connected to home?&amp;quot; Ryan laughed. &amp;quot;This is where I live. All the things you probably hate about traveling - the recycled air, the artificial lighting - are warm reminders that I am home.&amp;quot;&lt;/td&gt;
+&lt;td&gt;In its center was a diamond ring, which Barney plucked from the flower and held out to Quinn. &amp;quot;Quinn, will you marry me?&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;I&amp;#39;m currently analyzing some additional data from these subjects, collected while they tried to retell all 16 stories from memory. Our hypothesis is that these script templates should also be useful when trying to remember events, since they give us clues about what kinds of events to search for in our memories. I&amp;#39;m also fascinated by how these scripts get learned, and am hoping to study this learning process both in adults (who are learning a new scripts in the lab) and in children (who are learning real scripts over the course of years).&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>The three ingredients of reproducible research</title>

@@ -136,6 +136,80 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blog/2018/11/08/schema/">
+        Building the present from the past
+      </a>
+    </h1>
+
+    <span class="post-date">08 Nov 2018</span>
+
+    <blockquote>
+<p>All airports, he had long ago decided, look very much the same.​ It doesn’t actually matter where you are, you are in an airport:​ tiles and walkways and restrooms, gates and newsstands and fluorescent lights.​ This airport looked like an airport.​</p>
+
+<p>-Neil Gaiman, American Gods​</p>
+</blockquote>
+
+<p>Each scene of a movie (or paragraph of a story) generates a pattern of activity in the viewer&#39;s brain, and I showed in <a href="http://www.dpmlab.org/papers/Neuron17.pdf">my last paper</a> that changes in these activity patterns correspond to new events happening in the story. But it is still mysterious exactly what information the brain is keeping track of in these activity patterns. We know that movie and audiobook versions of the same story <a href="https://docs.wixstatic.com/ugd/b75639_46411e5d6ddb49c7bc47ed7660b2cf67.pdf">generate similar patterns</a> in many brain regions, which means that the information must be pretty abstract. Can we push this even farther? Can we find pattern similarities between <em>different</em> narratives that describe events from the same &quot;template&quot;?</p>
+
+<p>In <a href="http://www.dpmlab.org/papers/9689.full.pdf">my new paper</a> we studied a kind of template called an event script, which describes a typical sequence of events that occurs in the world. For example, when you walk into a restaurant you have detailed expectations about what is going to happen next - you are going to be seated at a table, then given menus, then order your food, and then the food will come. Our hypothesis was that some brain regions would track this script information, and should look similar for <em>any</em> story about restaurants regardless of the specific characters and storyline of this particular narrative.</p>
+
+<p>We showed subjects movies and audiobooks of stories taking place in restaurants and stories taking place in airports. Here are examples of two of the restaurant movies (all of the stories are <a href="https://figshare.com/articles/Event_Schema_Stimuli/5760306/3">publicly available here</a>):</p>
+
+<video controls width="720">
+<source src="https://ndownloader.figshare.com/files/10148874/preview/10148874/video_preview.mp4" type="video/mp4">
+</video>
+
+<video controls width="720">
+<source src="https://ndownloader.figshare.com/files/10148880/preview/10148880/video_preview.mp4" type="video/mp4">
+</video>
+
+<p>We then looked for brain regions that seemed to be tracking the restaurant or airport script during all of the stories, and found a whole network of regions:</p>
+
+<p><img src="/blog/public/schemanet.png" alt="SchemaRegions"></p>
+
+<p>An especially important region here is the medial prefrontal cortex, which is the part of your brain right behind the middle of your forehead. We found that this region only tracked the script when it made logical sense - if we scrambled the order of the script (e.g. showed people getting food before they ordered) then it no longer bothered to track what was going on.</p>
+
+<p><img src="/blog/public/mPFC.png#center" alt="mPFC"></p>
+
+<p>I also used some of the analysis tools I previously developed for matching up brain data during perception and recall of the same story to find correspondences between <em>different</em> stories with the same script template. For example, I can use brain activity from the superior frontal gyrus to figure out which parts of the &quot;Up in the Air&quot; story and the &quot;How I Met Your Mother&quot; story take place in the same places in the airport. Here are snippets of the stories that show similar patterns of brain activity:</p>
+
+<table><thead>
+<tr>
+<th>Script event</th>
+<th>Up in the Air</th>
+<th>How I Met Your Mother</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Enter aiport</td>
+<td>Ryan looked up from his boarding pass and sighed. There was his new partner Natalie, awkwardly climbing out of a taxi at the curb of the airport.</td>
+<td>Barney and Quinn walked into the airport pulling their matching pink tiger-stripe suitcases. Barney leaned over and kissed her on the cheek.</td>
+</tr>
+<tr>
+<td>Airport security</td>
+<td>Ryan shrugged. &quot;Look at the other lines. I never get behind people traveling with infants - I&#39;ve never seen a stroller collapse in less than twenty minutes. Old people are worse - their bodies are littered with hidden metal and they never seem to appreciate how little time they have left on earth.&quot;</td>
+<td>The guard motioned to several others for backup. &quot;Sir, you need to open this box.&quot; &quot;Oh, I can&#39;t do that. Magician&#39;s code. A magician never reveals his tricks. The only person I could possibly reveal the trick to is another magician.&quot;</td>
+</tr>
+<tr>
+<td>Boarding gate</td>
+<td>He stopped halfway to their gate and pointed at a luggage store. &quot;If you&#39;re going to be flying with me, you need to get a carry-on bag. You know how much time you lose by checking in?&quot;</td>
+<td>She tried to interrogate him as they sat in front of the gate, but he refused to spill the beans. &quot;I told you, magician&#39;s code.&quot;</td>
+</tr>
+<tr>
+<td>On plane</td>
+<td>&quot;I like my own stuff. Don&#39;t you like feeling connected to home?&quot; Ryan laughed. &quot;This is where I live. All the things you probably hate about traveling - the recycled air, the artificial lighting - are warm reminders that I am home.&quot;</td>
+<td>In its center was a diamond ring, which Barney plucked from the flower and held out to Quinn. &quot;Quinn, will you marry me?&quot;</td>
+</tr>
+</tbody></table>
+
+<p>I&#39;m currently analyzing some additional data from these subjects, collected while they tried to retell all 16 stories from memory. Our hypothesis is that these script templates should also be useful when trying to remember events, since they give us clues about what kinds of events to search for in our memories. I&#39;m also fascinated by how these scripts get learned, and am hoping to study this learning process both in adults (who are learning a new scripts in the lab) and in children (who are learning real scripts over the course of years).</p>
+
+
+    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blog/2018/03/02/reproducible/">
         The three ingredients of reproducible research
       </a>
@@ -310,55 +384,6 @@ These results raise a number of intriguing questions about the cause of these sh
 <p>As confusing as this is for me, it will be immensely harder for my children to be parents. I think of this current generation of toddlers as the last human generation - not because humanity is likely to wipe itself out within the next 20 years (though things are looking <a href="https://www.washingtonpost.com/news/politics/wp/2017/06/01/all-the-reasons-that-trumps-withdrawal-from-the-paris-climate-agreement-doesnt-make-sense/?utm_term=.f76783e873a8">increasingly worrying</a> on that front), but because I expect that by then humans and technology will start to become inseparable. Even now, being separated from our cell phones feels disconcerting - we have offloaded so much of our thinking, memory, and conversations to our devices that we feel smaller without them. By the time my grandchildren are teenagers, I expect that being denied access to technology will be absolutely crippling, to the point that they no longer have a coherent identity <a href="http://nautil.us/issue/28/2050/dont-worry-smart-machines-will-take-us-with-them">as a human alone</a>.</p>
 
 <p>When a software update could potentially make any skill obsolete, what skills should we cultivate?</p>
-
-
-    Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2016/10/25/twonet/">
-        Connecting past and present in visual perception
-      </a>
-    </h1>
-
-    <span class="post-date">25 Oct 2016</span>
-
-    <div class="message">
-<p>There are two kinds of people in the world—those who divide everything in the world into two kinds of things and those who don’t.
-<p>Kenneth Boulding
-</div>
-
-<p>Scientists love dividing the world into categories. Whenever we are trying to study more than 1 or 2 things at a time, our first instinct is to sort them into boxes based on their similarities, whether we&#39;re looking at animals, rocks, stars, or diseases.</p>
-
-<p>There have been many proposals on how to divide up the human visual system: regions processing coarse vs. fine structure, or small objects vs. big objects, or <a href="/blog/2016/05/20/corner/">central vs. peripheral</a> information. In my new paper, <a href="http://eneuro.org/content/3/5/ENEURO.0178-16.2016">Two distinct scene processing networks connecting vision and memory</a>, I argue that regions activated by photographic images can be split into two different networks.
-<br/>
-<br/></p>
-
-<table><thead>
-<tr>
-<th style="text-align: center"><img src="/blog/public/visnet.png" alt="Visual network"></th>
-<th style="text-align: center"><img src="/blog/public/visnet_ex.png" alt="Visual network example"></th>
-</tr>
-</thead><tbody>
-</tbody></table>
-
-<p>The first group of scene-processing regions (near the back of the brain) care only about the image that is currently coming in through your eyes. They are looking for visual features like walls, landmarks, and architecture that will help you determine the structure of the environment around you. But they don&#39;t try to keep track of this information over time - as soon as you move your eyes, they forget all about the last view of the world.</p>
-
-<p><br/>
-<br/></p>
-
-<table><thead>
-<tr>
-<th style="text-align: center"><img src="/blog/public/memnet.png" alt="Memory navigation network"></th>
-<th style="text-align: center"><img src="/blog/public/photosynth_5fps.gif" alt="Memory network example"></th>
-</tr>
-</thead><tbody>
-</tbody></table>
-
-<p>The second group (a bit farther forward) uses the information from the first group to build up a stable model of the world and your place in it. They care less about exactly where your eyes are pointed and more about where you are in the world, creating a 3D model of the room or landscape around you and placing you on a map of what other places are nearby. These regions are strongly linked to your long-term memory system, and show the highest activity in familiar environments.</p>
-
-<p>I am very interested in this second group of regions that integrate information over time - what exactly are they keeping track of, and how do they get information in and out of long-term memory? I have a new manuscript with my collaborators at Princeton (currently working its way through the publication gaunlet) showing that these regions build <a href="http://biorxiv.org/content/early/2016/10/14/081018">abstract representations of events in movies and audio narration</a>, and am  running a new experiment looking at how event templates we learn over our lifetimes are used to help build these event representations.</p>
 
 
     Comments? Complaints? Contact me <a href="https://twitter.com/ChrisBaldassano">@ChrisBaldassano</a>
