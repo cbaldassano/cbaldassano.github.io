@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Rooting for the machines</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2019-06-06T14:22:35-04:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://blog.chrisbaldassano.com//atom.xml" rel="self"/>
+ <link href="http://blog.chrisbaldassano.com//"/>
+ <updated>2019-06-06T14:29:48-04:00</updated>
+ <id>http://blog.chrisbaldassano.com/</id>
  <author>
    <name>Chris Baldassano</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Death by puppies - tenure-track year one</title>
-   <link href="http://localhost:4000/2019/06/06/puppies/"/>
+   <link href="http://blog.chrisbaldassano.com//2019/06/06/puppies/"/>
    <updated>2019-06-06T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2019/06/06/puppies</id>
+   <id>http://blog.chrisbaldassano.com//2019/06/06/puppies</id>
    <content type="html">&lt;p&gt;The end of this month will mark the end of my first year as a tenure-track assistant professor. I don&amp;#39;t know if I have much helpful advice to give, since I&amp;#39;m still new enough to the job that it&amp;#39;s hard for me to know what I&amp;#39;ve been doing right or wrong, and I&amp;#39;m very grateful to my collaborators and colleagues in my department for bearing with me as I&amp;#39;ve bumbled my way through my new responsibilities this year. But I do think I can shed some light on what junior faculty life is like, especially for grad students or postdocs who are, like I was, spending a lot of time trying to figure out whether academia is a career path worth attempting. (Though I admire those who were able to easily make up their minds - in grad school I asked a fellow student whether he wanted to pursue a tenure-track job, and he responded with a string of profanity that I will just translate here as &amp;quot;No.&amp;quot;)&lt;/p&gt;
 
 &lt;p&gt;I think this video sums up pretty well how this year has gone:&lt;/p&gt;
@@ -63,9 +63,9 @@
  
  <entry>
    <title>Building the present from the past</title>
-   <link href="http://localhost:4000/2018/11/08/schema/"/>
+   <link href="http://blog.chrisbaldassano.com//2018/11/08/schema/"/>
    <updated>2018-11-08T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2018/11/08/schema</id>
+   <id>http://blog.chrisbaldassano.com//2018/11/08/schema</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;All airports, he had long ago decided, look very much the same.​ It doesn’t actually matter where you are, you are in an airport:​ tiles and walkways and restrooms, gates and newsstands and fluorescent lights.​ This airport looked like an airport.​&lt;/p&gt;
 
@@ -131,9 +131,9 @@
  
  <entry>
    <title>The three ingredients of reproducible research</title>
-   <link href="http://localhost:4000/2018/03/02/reproducible/"/>
+   <link href="http://blog.chrisbaldassano.com//2018/03/02/reproducible/"/>
    <updated>2018-03-02T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2018/03/02/reproducible</id>
+   <id>http://blog.chrisbaldassano.com//2018/03/02/reproducible</id>
    <content type="html">&lt;p&gt;Much of the conversation about research methods in science has focused on the &lt;a href=&quot;https://digest.bps.org.uk/2015/08/27/this-is-what-happened-when-psychologists-tried-to-replicate-100-previously-published-findings/&quot;&gt;&amp;quot;replication crisis&amp;quot;&lt;/a&gt; - the fact that many classic studies (especially in psychology) are often not showing the same results when performed carefully by independent research groups. Although there are some debates about &lt;a href=&quot;https://news.harvard.edu/gazette/story/2016/03/study-that-undercut-psych-research-got-it-wrong/&quot;&gt;exactly how bad&lt;/a&gt; the problem is, a consensus is emerging about how to improve the ways we conduct experiments and analyses: &lt;a href=&quot;https://www.theguardian.com/science/head-quarters/2014/may/20/psychology-registration-revolution&quot;&gt;pre-registering&lt;/a&gt; study hypotheses before seeing the data, using &lt;a href=&quot;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2205186&quot;&gt;larger sample sizes&lt;/a&gt;, being more willing to &lt;a href=&quot;https://www.psychologicalscience.org/publications/replication&quot;&gt;publish (informative) null results&lt;/a&gt;, and maybe being &lt;a href=&quot;https://imai.princeton.edu/research/files/significance.pdf&quot;&gt;more conservative&lt;/a&gt; about what evidence counts as &amp;quot;proof.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;But there is actually an even simpler problem we haven&amp;#39;t fully tackled, which is not &amp;quot;replicability&amp;quot; (being able to get the same result in new data from a new experiment) but &amp;quot;reproducibility&amp;quot; - the ability to demonstrate how we got the result from the original data in the first place. Being able trace and record the exact path from data to results is important for documenting precisely how the analysis works, and allows other researchers to examine the details for themselves if they are skeptical. It also makes it much easier for future work (either by the same authors or others) to keep analyses comparable across different experiments.&lt;/p&gt;
@@ -165,9 +165,9 @@
  
  <entry>
    <title>Live-blogging SfN 2017</title>
-   <link href="http://localhost:4000/2017/11/16/sfn/"/>
+   <link href="http://blog.chrisbaldassano.com//2017/11/16/sfn/"/>
    <updated>2017-11-16T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2017/11/16/sfn</id>
+   <id>http://blog.chrisbaldassano.com//2017/11/16/sfn</id>
    <content type="html">&lt;p&gt;[I wrote these posts during the Society for Neuroscience 2017 meeting, as one of the Official Annual Meeting Bloggers. These blog posts originally appeared on SfN&amp;#39;s Neuronline platform.]&lt;/p&gt;
 
 &lt;h2&gt;SuperEEG: ECoG data breaks free from electrodes&lt;/h2&gt;
@@ -238,9 +238,9 @@ These results raise a number of intriguing questions about the cause of these sh
  
  <entry>
    <title>Reality, now in extra chunky</title>
-   <link href="http://localhost:4000/2017/08/02/chunking/"/>
+   <link href="http://blog.chrisbaldassano.com//2017/08/02/chunking/"/>
    <updated>2017-08-02T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2017/08/02/chunking</id>
+   <id>http://blog.chrisbaldassano.com//2017/08/02/chunking</id>
    <content type="html">&lt;p&gt;Our brains receive a constant stream of information about the world through our senses. Often sci-fi depictions of mind-reading or memory implants depict our experiences and memories as being like a continuous, unbroken filmstrip.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/public/finalcut.gif&quot; alt=&quot;Final Cut&quot;&gt;
@@ -269,9 +269,9 @@ These results raise a number of intriguing questions about the cause of these sh
  
  <entry>
    <title>Parenting the last human generation</title>
-   <link href="http://localhost:4000/2017/06/05/parent/"/>
+   <link href="http://blog.chrisbaldassano.com//2017/06/05/parent/"/>
    <updated>2017-06-05T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2017/06/05/parent</id>
+   <id>http://blog.chrisbaldassano.com//2017/06/05/parent</id>
    <content type="html">&lt;p&gt;For most of human history, parents had a pretty good idea of the kind of world they were preparing their children for. Children would be trained to take over their parents&amp;#39; business, or apprentice in a local trade, or aim for a high-status marriage. Even once children began to have more choice in their futures, it was easy to predict what kind of skills they would need to succeed: reading and handwriting, arithmetic, basic knowledge of science and history.&lt;/p&gt;
 
 &lt;p&gt;As technological progress has accelerated, this predictability is starting to break down. Companies like internet search engines didn&amp;#39;t even exist when most of Google&amp;#39;s 70,000 employees were born, and there is no way their parents could have guessed the kind of work they would eventually be doing. Some of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Skrillex&quot;&gt;best-known musicians in the world&lt;/a&gt; construct songs using software, and don&amp;#39;t play any of the instruments that would have been offered to them in elementary school.&lt;/p&gt;
@@ -288,9 +288,9 @@ These results raise a number of intriguing questions about the cause of these sh
  
  <entry>
    <title>Connecting past and present in visual perception</title>
-   <link href="http://localhost:4000/2016/10/25/twonet/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/10/25/twonet/"/>
    <updated>2016-10-25T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2016/10/25/twonet</id>
+   <id>http://blog.chrisbaldassano.com//2016/10/25/twonet</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 &lt;p&gt;There are two kinds of people in the world—those who divide everything in the world into two kinds of things and those who don’t.
 &lt;p&gt;Kenneth Boulding
@@ -331,9 +331,9 @@ These results raise a number of intriguing questions about the cause of these sh
  
  <entry>
    <title>How deep is the brain?</title>
-   <link href="http://localhost:4000/2016/07/08/deep/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/07/08/deep/"/>
    <updated>2016-07-08T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2016/07/08/deep</id>
+   <id>http://blog.chrisbaldassano.com//2016/07/08/deep</id>
    <content type="html">&lt;p&gt;Recent AI advances in &lt;a href=&quot;https://research.googleblog.com/2015/08/the-neural-networks-behind-google-voice.html&quot;&gt;speech recognition&lt;/a&gt;, &lt;a href=&quot;https://deepmind.com/alpha-go&quot;&gt;game-playing&lt;/a&gt;, &lt;a href=&quot;http://www.nytimes.com/2014/11/18/science/researchers-announce-breakthrough-in-content-recognition-software.html&quot;&gt;image understanding&lt;/a&gt;, and &lt;a href=&quot;https://research.googleblog.com/2015/07/how-google-translate-squeezes-deep.html&quot;&gt;language translation&lt;/a&gt; have all been based on a simple concept: multiply some numbers together, set some of them to zero, and then repeat. Since &amp;quot;multiplying and zeroing&amp;quot; doesn&amp;#39;t inspire investors to start throwing money at you, these models are instead presented under the much loftier banner of &amp;quot;deep neural networks.&amp;quot; Ever since the first versions of these networks were invented by Frank Rosenblatt in 1957, there has been controversy over how &amp;quot;neural&amp;quot; these models are. The New York Times proclaimed these first programs (which could accomplish tasks as astounding as distinguishing shapes on the left side versus shapes on the right side of a paper) to be &amp;quot;the first device to think as the human brain.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/public/nytimes_crop.png&quot; alt=&quot;NYT&quot;&gt;&lt;/p&gt;
@@ -367,9 +367,9 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
  
  <entry>
    <title>The corner of your eye</title>
-   <link href="http://localhost:4000/2016/05/20/corner/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/05/20/corner/"/>
    <updated>2016-05-20T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2016/05/20/corner</id>
+   <id>http://blog.chrisbaldassano.com//2016/05/20/corner</id>
    <content type="html">&lt;p&gt;We usually think that our eyes work like a camera, giving us a sharp, colorful picture of the world all the way from left to right and top to bottom. But we actually only get this kind of detail in a tiny window right where our eyes are pointed. If you hold your thumb out at arm&amp;#39;s length, the width of your thumbnail is about the size of your most precise central (also called &amp;quot;foveal&amp;quot;) vision. Outside of that narrow spotlight, both color perception and sharpness drop off rapidly - doing high-precision tasks like reading a word is almost impossible unless you&amp;#39;re looking right at it.&lt;/p&gt;
 
 &lt;p&gt;The rest of your visual field is your &amp;quot;peripheral&amp;quot; vision, which has only imprecise information about shape, location, and color. Out here in the corner of your eye you can&amp;#39;t be sure of much, which is used as a constant source of fear and uncertainty in horror movies and the occult:&lt;/p&gt;
@@ -401,9 +401,9 @@ Zeiler &amp;amp; Fergus 2014, Güçlü &amp;amp; van Gerven 2015&lt;/p&gt;
  
  <entry>
    <title>Cutups and configural processing</title>
-   <link href="http://localhost:4000/2016/04/13/configural/"/>
+   <link href="http://blog.chrisbaldassano.com//2016/04/13/configural/"/>
    <updated>2016-04-13T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2016/04/13/configural</id>
+   <id>http://blog.chrisbaldassano.com//2016/04/13/configural</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
 “The love of complexity without reductionism makes art; the love of complexity with reductionism makes science.” — E.O. Wilson
 &lt;/div&gt;
@@ -448,9 +448,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>Just how Amazing is The Amazing Race?</title>
-   <link href="http://localhost:4000/2015/12/01/race/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/12/01/race/"/>
    <updated>2015-12-01T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2015/12/01/race</id>
+   <id>http://blog.chrisbaldassano.com//2015/12/01/race</id>
    <content type="html">&lt;h2&gt;The Amazing Race&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Amazing_Race&quot;&gt;Amazing Race&lt;/a&gt; is one of the few reality TV shows that managed to survive the bubble of the early 2000s, with good reason. Rather than just trying to play up interpersonal dramas (though there is some of that too), it is set up like a traditional game show with a series of competitions between teams of two, who travel to different cities throughout the world over the course of the show. Eleven teams start out the race, and typically the last team to finish each day&amp;#39;s challenges gets booted from the show until only three teams are left. These three teams then have a final day of competition, with the winner being awarded $1 million.&lt;/p&gt;
@@ -491,9 +491,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>The Big Data bust of the 1500s&#58; lessons from the first scientific data miner</title>
-   <link href="http://localhost:4000/2015/05/11/bigdata/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/05/11/bigdata/"/>
    <updated>2015-05-11T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2015/05/11/bigdata</id>
+   <id>http://blog.chrisbaldassano.com//2015/05/11/bigdata</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/geocentric.png&quot; alt=&quot;Geoheliocentric Model&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The Big Data craze is in full swing within many scientific fields, especially neuroscience. Since we can&amp;#39;t hope to understand the tangled web of the brain by looking at only one tiny piece, groups have started to amass huge datasets describing brain &lt;a href=&quot;http://neurosynth.org/&quot;&gt;function&lt;/a&gt; and &lt;a href=&quot;http://www.nytimes.com/2015/01/11/magazine/sebastian-seungs-quest-to-map-the-human-brain.html&quot;&gt;connections&lt;/a&gt;. The idea is that, if we can get enough careful measurements all together, then we can have computers search for patterns that explain as much of the data as possible.&lt;/p&gt;
@@ -520,9 +520,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>Seven things I learned as a PhD student</title>
-   <link href="http://localhost:4000/2015/03/31/phdadvice/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/03/31/phdadvice/"/>
    <updated>2015-03-31T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2015/03/31/phdadvice</id>
+   <id>http://blog.chrisbaldassano.com//2015/03/31/phdadvice</id>
    <content type="html">&lt;p&gt;Doing great research is tough. There are so many factors outside of your control: experiments not panning out, unfair reviewers, competing labs, limited funding sources. I&amp;#39;ve tried to distill down some of the strategies that worked well for me and my labmates (these are most relevant to my background in science/engineering, but some might apply to other fields as well):&lt;/p&gt;
 
 &lt;h2&gt;Get your hands dirty&lt;/h2&gt;
@@ -559,9 +559,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>A simple model for growing a brain</title>
-   <link href="http://localhost:4000/2015/03/23/networkmodel/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/03/23/networkmodel/"/>
    <updated>2015-03-23T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2015/03/23/networkmodel</id>
+   <id>http://blog.chrisbaldassano.com//2015/03/23/networkmodel</id>
    <content type="html">&lt;p&gt;Today I had a chance to read &lt;a href=&quot;http://www.ncbi.nlm.nih.gov/pubmed/25368200&quot;&gt;a paper by Song, Kennedy, and Wang&lt;/a&gt; about their model for explaining how brains are wired up at a high level (explaining how areas are connected, not the detailed wiring of neural circuits). It&amp;#39;s very simple, but manages to capture some complicated aspects of brain structure.&lt;/p&gt;
 
 &lt;p&gt;The goal of the model is to offer some explanation for area-to-area connection patterns across species (humans, monkeys, mice). For example, the human connection matrix looks like this (from their supplementary material):&lt;/p&gt;
@@ -582,9 +582,9 @@ Police files of the world spurt out in a blast of bone meal, garden tools and ba
  
  <entry>
    <title>The Hero's Powerpoint</title>
-   <link href="http://localhost:4000/2015/03/01/herostalk/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/03/01/herostalk/"/>
    <updated>2015-03-01T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2015/03/01/herostalk</id>
+   <id>http://blog.chrisbaldassano.com//2015/03/01/herostalk</id>
    <content type="html">&lt;p&gt;What makes a good story? It turns out that, even among stories about very different things (romance, aliens, animated fluffy critters saving the world) there are some elements that are often the same. This topic is fascinating in its own right, but I find that it is also of great help for preparing academic talks. The goals of a talk (to keep the listener engaged and excited) are the same as those of a storyteller, and so it can be helpful to borrow some tips from the successful stories of the past few thousand years.&lt;/p&gt;
 
 &lt;p&gt;The idea of a repeated story structure that has existed since antiquity (the &amp;quot;hero&amp;#39;s journey&amp;quot;) was first popularized by &lt;a href=&quot;http://en.wikipedia.org/wiki/Joseph_Campbell&quot;&gt;Joseph Campbell&lt;/a&gt;, and then later championed by &lt;a href=&quot;http://www.skepticfiles.org/atheist2/hero.htm&quot;&gt;Chris Vogler&lt;/a&gt;. What follows is my personal summary of the major parts of this framework, as an amateur cinephile. I&amp;#39;ve illustrated each part with images from Frozen, Iron Man, and The Matrix, which all stick closely to this formula.&lt;/p&gt;
@@ -661,9 +661,9 @@ The hero returns to their ordinary world reborn, and we see the consequences of 
  
  <entry>
    <title>Are you thinking what I'm thinking?</title>
-   <link href="http://localhost:4000/2015/02/24/conchords/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/02/24/conchords/"/>
    <updated>2015-02-24T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2015/02/24/conchords</id>
+   <id>http://blog.chrisbaldassano.com//2015/02/24/conchords</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/fotc.jpg&quot; alt=&quot;Jemaine and Bret&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Flight of the Conchords has been one of my favorite comedy bands for years, mixing general silliness with some insightful satire on life and relationships. They have a whole catalog of great songs (&lt;a href=&quot;https://www.youtube.com/watch?v=BNC61-OOPdA&quot;&gt;one of which&lt;/a&gt; is highly relevant to the title of this blog), but one of my favorite exchanges is at 1:00 into their song &amp;quot;We&amp;#39;re Both in Love with a Sexy Lady&amp;quot;:&lt;/p&gt;
@@ -717,9 +717,9 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  
  <entry>
    <title>Jerry Kaplan&#58; The Law of Artificial Intelligence</title>
-   <link href="http://localhost:4000/2015/02/19/kaplan/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/02/19/kaplan/"/>
    <updated>2015-02-19T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2015/02/19/kaplan</id>
+   <id>http://blog.chrisbaldassano.com//2015/02/19/kaplan</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/kaplan.jpg&quot; alt=&quot;Kaplan&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Jerry Kaplan has been an interesting force in the Stanford AI community over the past couple years. He&amp;#39;s been a major player in Silicon Valley since the 80s, was one of the early pioneers of touch-sensitive tablets and online auctions, and wrote a book about his &lt;a href=&quot;http://www.amazon.com/Startup-A-Silicon-Valley-Adventure/dp/0140257314&quot;&gt;1987 pen-based operating system company&lt;/a&gt; (which was ahead of its time, unfortunately for the company). Recently, however, he seems to have a new mission of fostering a broader discussion of the history and philosophy of AI, especially on the Stanford campus. He has been giving a number of talks on these topics, and &lt;a href=&quot;http://web.stanford.edu/class/cs22/&quot;&gt;taught a class&lt;/a&gt; that brought in other AI speakers. &lt;/p&gt;
@@ -736,9 +736,9 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  
  <entry>
    <title>Michael Gazzaniga&#58; Tales from Both Sides of the Brain</title>
-   <link href="http://localhost:4000/2015/02/13/gazzaniga/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/02/13/gazzaniga/"/>
    <updated>2015-02-13T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2015/02/13/gazzaniga</id>
+   <id>http://blog.chrisbaldassano.com//2015/02/13/gazzaniga</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/gazzaniga.jpg&quot; alt=&quot;Gazzaniga&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Michael Gazzaniga&amp;#39;s new book is &lt;a href=&quot;http://www.amazon.com/Tales-Both-Sides-Brain-Neuroscience/dp/0062228803&quot;&gt;Tales from Both Sides of the Brain: A Life in Neuroscience&lt;/a&gt;, which is a memoir about his scientific study of split-brain patients. If you&amp;#39;re unfamiliar with this work, people who have had their two brain hemispheres surgically separated (for medical reasons) show some &lt;a href=&quot;http://www.nature.com/news/the-split-brain-a-tale-of-two-halves-1.10213&quot;&gt;amazingly interesting behaviors&lt;/a&gt;, which raise deep questions about consciousness and free will. Gazzaniga set out to simply write a standard popular science book about his research, but ended up publishing a much more autobiographical book that discusses the actual process of scientific discovery. As he writes in the preface:&lt;/p&gt;
@@ -766,9 +766,9 @@ mum would like most of all for her birthday. Ben was out riding his bike so Anna
  
  <entry>
    <title>Hello World</title>
-   <link href="http://localhost:4000/2015/01/27/helloworld/"/>
+   <link href="http://blog.chrisbaldassano.com//2015/01/27/helloworld/"/>
    <updated>2015-01-27T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2015/01/27/helloworld</id>
+   <id>http://blog.chrisbaldassano.com//2015/01/27/helloworld</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/blog/public/NG2-flare.jpg&quot; alt=&quot;Greg Dunn Glial Flare&quot;&gt;&lt;/p&gt;
 
 &lt;div class=&quot;message&quot;&gt;
