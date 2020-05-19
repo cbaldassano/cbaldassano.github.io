@@ -4,7 +4,7 @@
  <title>Rooting for the machines</title>
  <link href="http://blog.chrisbaldassano.com//atom.xml" rel="self"/>
  <link href="http://blog.chrisbaldassano.com//"/>
- <updated>2020-05-19T14:48:49-04:00</updated>
+ <updated>2020-05-19T14:55:01-04:00</updated>
  <id>http://blog.chrisbaldassano.com/</id>
  <author>
    <name>Chris Baldassano</name>
@@ -61,7 +61,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/blog/public/fit_ms.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Near the end of fitting the HMM realizes that the first two events can be merged, freeing up an extra event to split the final six timepoints into two separate events, as they should be. You can also see the event patterns for events 2 and 3 jump rapdily when it performs this split-merge.&lt;/p&gt;
+&lt;p&gt;Near the end of fitting the HMM realizes that the first two events can be merged, freeing up an extra event to split the final six timepoints into two separate events, as they should be. You can also see the event patterns for events 2 and 3 jump rapidly when it performs this split-merge.&lt;/p&gt;
 
 &lt;h2 id=&quot;testing-on-real-data&quot;&gt;Testing on real data&lt;/h2&gt;
 
