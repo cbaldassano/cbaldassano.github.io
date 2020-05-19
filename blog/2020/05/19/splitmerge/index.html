@@ -44,7 +44,7 @@
     <meta name="twitter:title" content="Split-Merge HMMs">
   
   
-    <meta name="twitter:url" content="http://blog.chrisbaldassano.com//2020/05/19/mergesplit/">
+    <meta name="twitter:url" content="http://blog.chrisbaldassano.com//2020/05/19/splitmerge/">
   
   
     <meta name="twitter:description" content="HMM: the early years
@@ -175,7 +175,7 @@ Back in Spring 2015, when I had just started as a postdoc at Princeton, Janice C
 
 <h2 id="split-merge-hmm-to-the-rescue">Split-Merge HMM to the rescue</h2>
 
-<p>In the new version of brainiak, I’ve now added a <code class="highlighter-rouge">split_merge</code> option to the EventSegment class. If enabled, this forces the HMM to try reallocating its events at every step of fitting, by finding a) neighboring pairs of events with very similar patterns, indicating that they should be merged, and b) events that could be split in half into two very different-looking events. It checks to see if it can find a better solution by simultaneously merging one of the pairs of (a) and splitting one of the events from (b), to keep the same number of events overall. The number of different combinations the HMM tries is controlled by a <code class="highlighter-rouge">split_merge_proposals</code> parameter (defaults to 1).</p>
+<p>In the new version of brainIAK, I’ve now added a <code class="highlighter-rouge">split_merge</code> option to the EventSegment class. If enabled, this forces the HMM to try reallocating its events at every step of fitting, by finding a) neighboring pairs of events with very similar patterns, indicating that they should be merged, and b) events that could be split in half into two very different-looking events. It checks to see if it can find a better solution by simultaneously merging one of the pairs of (a) and splitting one of the events from (b), to keep the same number of events overall. The number of different combinations the HMM tries is controlled by a <code class="highlighter-rouge">split_merge_proposals</code> parameter (defaults to 1).</p>
 
 <p>This will come at a cost of extra computational time (which will increase even more with more <code class="highlighter-rouge">split_merge_proposals</code>) - does this extra flexibility lead to better solutions? Let’s try fitting the simulated data with very uneven events again:</p>
 
@@ -187,7 +187,7 @@ Back in Spring 2015, when I had just started as a postdoc at Princeton, Janice C
 
 <p>This proof-of-concept shows that using split-merge can help on toy datasets, but does it make a difference on real fMRI data? I don’t have a conclusive answer to this question - if you are interested, try it out and let me know!</p>
 
-<p>I did try applying both HMM variants to some real fMRI data from <a href="https://brainiak.org/tutorials/12-hmm/">the brainiak tutorial</a>. This is group-average data from 17 subjects <a href="https://doi.org/10.1038/nn.4450">watching the 50 minutes of Sherlock</a>, downsampled into 141 coarse regions of interest. Fitting the original and split-merge HMMs using 60 events and then comparing to human-annotated boundaries, the original HMM is able to find 18 out of 53 boundaries (p=0.01 by permutation test), while the split-merge HMM is able to find 21 (p=0.002). Using split-merge seems to help a bit at the beginning of the show, where observers label many short events close together. Here is a plot of the first 12 minutes of the data, comparing the HMM boundaries to the human-annotated ones:</p>
+<p>I did try applying both HMM variants to some real fMRI data from <a href="https://brainiak.org/tutorials/12-hmm/">the brainIAK tutorial</a>. This is group-average data from 17 subjects <a href="https://doi.org/10.1038/nn.4450">watching the 50 minutes of Sherlock</a>, downsampled into 141 coarse regions of interest. Fitting the original and split-merge HMMs using 60 events and then comparing to human-annotated boundaries, the original HMM is able to find 18 out of 53 boundaries (p=0.01 by permutation test), while the split-merge HMM is able to find 21 (p=0.002). Using split-merge seems to help a bit at the beginning of the show, where observers label many short events close together. Here is a plot of the first 12 minutes of the data, comparing the HMM boundaries to the human-annotated ones:</p>
 
 <p><img src="/blog/public/bounds.png" alt="" /></p>
 

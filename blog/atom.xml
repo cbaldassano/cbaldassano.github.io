@@ -4,7 +4,7 @@
  <title>Rooting for the machines</title>
  <link href="http://blog.chrisbaldassano.com//atom.xml" rel="self"/>
  <link href="http://blog.chrisbaldassano.com//"/>
- <updated>2020-05-19T14:35:30-04:00</updated>
+ <updated>2020-05-19T14:48:49-04:00</updated>
  <id>http://blog.chrisbaldassano.com/</id>
  <author>
    <name>Chris Baldassano</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Split-Merge HMMs</title>
-   <link href="http://blog.chrisbaldassano.com//2020/05/19/mergesplit/"/>
+   <link href="http://blog.chrisbaldassano.com//2020/05/19/splitmerge/"/>
    <updated>2020-05-19T00:00:00-04:00</updated>
-   <id>http://blog.chrisbaldassano.com//2020/05/19/mergesplit</id>
+   <id>http://blog.chrisbaldassano.com//2020/05/19/splitmerge</id>
    <content type="html">&lt;h2 id=&quot;hmm-the-early-years&quot;&gt;HMM: the early years&lt;/h2&gt;
 &lt;p&gt;Back in Spring 2015, when I had just started as a postdoc at Princeton, &lt;a href=&quot;http://jchenlab.johnshopkins.edu/&quot;&gt;Janice Chen&lt;/a&gt; was wrestling with a data analysis problem in a &lt;a href=&quot;http://rdcu.be/nwPj&quot;&gt;new kind of dataset&lt;/a&gt; she had collected. She had fMRI data from subjects watching an hour-long movie and then freely recalling (over tens of minutes) the narrative. She wanted to see whether people’s brains during recall looked like they were replaying activity patterns during movie-watching - was it be possible to track which part of the movie people were thinking about during each moment of recall? I was absolutely captivated by this experiment, which broke all the rules about how you were supposed to collected fMRI data, especially since people were talking while being scanned (which conventional wisdom said should ruin your data). So I volunteered to help with analysis, which started as a side project and eventually turned into the main focus of my years at Princeton.&lt;/p&gt;
 
@@ -55,7 +55,7 @@
 
 &lt;h2 id=&quot;split-merge-hmm-to-the-rescue&quot;&gt;Split-Merge HMM to the rescue&lt;/h2&gt;
 
-&lt;p&gt;In the new version of brainiak, I’ve now added a &lt;code class=&quot;highlighter-rouge&quot;&gt;split_merge&lt;/code&gt; option to the EventSegment class. If enabled, this forces the HMM to try reallocating its events at every step of fitting, by finding a) neighboring pairs of events with very similar patterns, indicating that they should be merged, and b) events that could be split in half into two very different-looking events. It checks to see if it can find a better solution by simultaneously merging one of the pairs of (a) and splitting one of the events from (b), to keep the same number of events overall. The number of different combinations the HMM tries is controlled by a &lt;code class=&quot;highlighter-rouge&quot;&gt;split_merge_proposals&lt;/code&gt; parameter (defaults to 1).&lt;/p&gt;
+&lt;p&gt;In the new version of brainIAK, I’ve now added a &lt;code class=&quot;highlighter-rouge&quot;&gt;split_merge&lt;/code&gt; option to the EventSegment class. If enabled, this forces the HMM to try reallocating its events at every step of fitting, by finding a) neighboring pairs of events with very similar patterns, indicating that they should be merged, and b) events that could be split in half into two very different-looking events. It checks to see if it can find a better solution by simultaneously merging one of the pairs of (a) and splitting one of the events from (b), to keep the same number of events overall. The number of different combinations the HMM tries is controlled by a &lt;code class=&quot;highlighter-rouge&quot;&gt;split_merge_proposals&lt;/code&gt; parameter (defaults to 1).&lt;/p&gt;
 
 &lt;p&gt;This will come at a cost of extra computational time (which will increase even more with more &lt;code class=&quot;highlighter-rouge&quot;&gt;split_merge_proposals&lt;/code&gt;) - does this extra flexibility lead to better solutions? Let’s try fitting the simulated data with very uneven events again:&lt;/p&gt;
 
@@ -67,7 +67,7 @@
 
 &lt;p&gt;This proof-of-concept shows that using split-merge can help on toy datasets, but does it make a difference on real fMRI data? I don’t have a conclusive answer to this question - if you are interested, try it out and let me know!&lt;/p&gt;
 
-&lt;p&gt;I did try applying both HMM variants to some real fMRI data from &lt;a href=&quot;https://brainiak.org/tutorials/12-hmm/&quot;&gt;the brainiak tutorial&lt;/a&gt;. This is group-average data from 17 subjects &lt;a href=&quot;https://doi.org/10.1038/nn.4450&quot;&gt;watching the 50 minutes of Sherlock&lt;/a&gt;, downsampled into 141 coarse regions of interest. Fitting the original and split-merge HMMs using 60 events and then comparing to human-annotated boundaries, the original HMM is able to find 18 out of 53 boundaries (p=0.01 by permutation test), while the split-merge HMM is able to find 21 (p=0.002). Using split-merge seems to help a bit at the beginning of the show, where observers label many short events close together. Here is a plot of the first 12 minutes of the data, comparing the HMM boundaries to the human-annotated ones:&lt;/p&gt;
+&lt;p&gt;I did try applying both HMM variants to some real fMRI data from &lt;a href=&quot;https://brainiak.org/tutorials/12-hmm/&quot;&gt;the brainIAK tutorial&lt;/a&gt;. This is group-average data from 17 subjects &lt;a href=&quot;https://doi.org/10.1038/nn.4450&quot;&gt;watching the 50 minutes of Sherlock&lt;/a&gt;, downsampled into 141 coarse regions of interest. Fitting the original and split-merge HMMs using 60 events and then comparing to human-annotated boundaries, the original HMM is able to find 18 out of 53 boundaries (p=0.01 by permutation test), while the split-merge HMM is able to find 21 (p=0.002). Using split-merge seems to help a bit at the beginning of the show, where observers label many short events close together. Here is a plot of the first 12 minutes of the data, comparing the HMM boundaries to the human-annotated ones:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/public/bounds.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
